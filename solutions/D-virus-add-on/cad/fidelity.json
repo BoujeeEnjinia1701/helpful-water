@@ -1,0 +1,49 @@
+{
+ "level": "D3",
+ "stage": "P3",
+ "hash": "7a4e73bcbe3dae66",
+ "options": {
+  "D1": {
+   "title": "Tablet dose cap with ball timer",
+   "parts": 21,
+   "made_or_bought": 19,
+   "fasteners": 2,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.0,
+   "step_files": 19
+  },
+  "D2": {
+   "title": "Metered liquid doser with ball timer",
+   "parts": 24,
+   "made_or_bought": 21,
+   "fasteners": 3,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.1,
+   "step_files": 0
+  },
+  "D3": {
+   "title": "Erosion feeder in the raw bucket (dropped)",
+   "parts": 21,
+   "made_or_bought": 17,
+   "fasteners": 4,
+   "welds": 0,
+   "bare": [
+    "Follower spring, stainless"
+   ],
+   "bare_share": 0.059,
+   "interference": [],
+   "mass_kg": 0.1,
+   "step_files": 0
+  }
+ },
+ "failures": [],
+ "warnings": [],
+ "passed": true,
+ "seconds": 28.0
+}

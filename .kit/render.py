@@ -1,0 +1,367 @@
+#!/usr/bin/env python3
+"""Validate and render controlled documents to branded PDFs.
+
+Usage (from the repo root):
+    python .kit/render.py            # check and render every controlled doc
+    python .kit/render.py --check    # check only, no PDFs (used in CI on every push)
+
+A controlled document is any Markdown file whose front matter has a doc_id.
+Output: docs/pdf/<doc_id>_v<version>.pdf (older versions of the same doc are removed;
+they remain in Git history and in GitHub Releases).
+"""
+import re, subprocess, sys, datetime
+from pathlib import Path
+
+import yaml, markdown, jinja2
+
+KIT = Path(__file__).resolve().parent
+ROOT = KIT.parent
+OUT = ROOT / "docs" / "pdf"
+REQUIRED = ["doc_id", "title", "project", "doc_type", "version", "status", "date", "author", "license", "revisions"]
+STATUSES = {"Draft", "In review", "Released", "Superseded"}
+ID_RE = re.compile(r"^[A-Z]{3}-(PRC|PRB|REQ|CAL|DDR|BOM|DWG|TST|STD|BLD|DEC|STM|OPT|URS|PRS|RTM|REG|FEA|RSK|MKT|PLN|CLM|VER|FTO|SRC|PGM)-\d{3}$")
+VER_RE = re.compile(r"^\d+\.\d+$")
+FM_RE = re.compile(r"^---\n(.*?)\n---\n", re.S)
+
+
+def split(path: Path):
+    text = path.read_text(encoding="utf-8")
+    m = FM_RE.match(text)
+    if not m:
+        return None, text
+    return yaml.safe_load(m.group(1)) or {}, text[m.end():]
+
+
+def check(meta: dict, path: Path) -> list[str]:
+    errs = [f"missing field '{k}'" for k in REQUIRED if k not in meta]
+    if errs:
+        return errs
+    v = str(meta["version"])
+    if not ID_RE.match(str(meta["doc_id"])):
+        errs.append(f"doc_id '{meta['doc_id']}' does not match PRJ-TYP-NNN")
+    if not VER_RE.match(v):
+        errs.append(f"version '{v}' must look like 0.1 or 1.0 (quote it in YAML)")
+    if meta["status"] not in STATUSES:
+        errs.append(f"status '{meta['status']}' must be one of {sorted(STATUSES)}")
+    revs = meta["revisions"] or []
+    if not revs:
+        errs.append("revisions is empty")
+    else:
+        last = str(revs[-1].get("version"))
+        if last != v:
+            errs.append(f"version {v} does not match newest revision row {last}")
+        for r in revs:
+            for k in ("version", "date", "author", "change"):
+                if not r.get(k):
+                    errs.append(f"revision row {r} is missing '{k}'")
+    if meta["status"] == "Released" and v.startswith("0."):
+        errs.append("a Released document must be version 1.0 or later")
+    if "—" in path.read_text(encoding="utf-8"):
+        errs.append("contains an em dash; restructure the sentence")
+    return errs
+
+
+def git(*args) -> str:
+    try:
+        return subprocess.check_output(["git", *args], cwd=ROOT, text=True, stderr=subprocess.DEVNULL).strip()
+    except Exception:
+        return ""
+
+
+def repo_url() -> str:
+    y = ROOT / "project.yaml"
+    slug = yaml.safe_load(y.read_text())["slug"] if y.exists() else ROOT.name
+    pm = yaml.safe_load(y.read_text()) if y.exists() else {}
+    if pm.get("repo"):
+        return f"github.com/{pm['repo']}"
+    return f"github.com/BoujeeEnjinia1701/{slug}"
+
+
+TRL_NAMES = {1: "Basic principles observed", 2: "Technology concept formulated",
+             3: "Proof of concept", 4: "Validated in the lab", 5: "Validated in a relevant environment",
+             6: "System prototype demonstrated", 7: "System prototype in operational environment",
+             8: "System complete and qualified", 9: "Proven in operation"}
+
+
+def project_meta() -> dict:
+    y = ROOT / "project.yaml"
+    return yaml.safe_load(y.read_text()) if y.exists() else {}
+
+
+def trl_check(docs) -> list[str]:
+    """Verify that the evidence required for the claimed TRL exists (STANDARDS section 9)."""
+    pm = project_meta()
+    if pm.get("program"):
+        return program_check(pm, docs)
+    if "trl" not in pm:
+        return ["project.yaml has no 'trl' field"]
+    trl, errs = int(pm["trl"]), []
+    if not 1 <= trl <= 9:
+        return [f"trl {trl} must be between 1 and 9"]
+    if int(pm.get("trl_target", trl)) < trl:
+        errs.append("trl_target is below the current trl")
+    by_type = {}
+    for p, m, _ in docs:
+        by_type.setdefault(str(m["doc_id"]).split("-")[1], []).append((p, m))
+    def need(level, ok, what):
+        if trl >= level and not ok:
+            errs.append(f"TRL {trl} claimed but TRL {level} evidence is missing: {what}")
+    need(1, "PRB" in by_type, "problem statement (PRB)")
+    need(2, "PRC" in by_type and ("REQ" in by_type or "PRS" in by_type), "precis (PRC) and requirements (PRS, or REQ before kit 1.8)")
+    if trl >= 3:
+        model = ROOT / "cad/src/model.py"
+        need(3, "CAL" in by_type, "calculation note (CAL)")
+        need(3, model.exists() and "NotImplementedError" not in model.read_text(), "working cad/src/model.py")
+        need(3, any((ROOT / "cad/step").glob("*.step")), "STEP export in cad/step")
+        need(3, any((ROOT / "cad/drawings").glob("*-DWG-*.svg")), "drawing sheet in cad/drawings")
+        bom = ROOT / "bom/bom.csv"
+        import csv
+        rows = list(csv.DictReader(bom.open())) if bom.exists() else []
+        need(3, rows and all((r.get("unit_cost_usd") or "").strip() for r in rows), "every BOM row priced")
+        need(3, "BLD" in by_type, "prototype build plan (BLD, STANDARDS section 18)")
+        need(3, "DEC" in by_type, "design decisions register (DEC, STANDARDS section 18)")
+        need(3, pm.get("design_state") == "constructable", "design_state: constructable in project.yaml (STANDARDS section 18)")
+        need(3, (ROOT / "docs/05-build-plan/overview.png").exists(), "build plan pictures (docs/05-build-plan/overview.png)")
+    errs += pipeline_check(pm, trl, by_type)
+    envs = [str(m.get("environment", "")) for _, m in by_type.get("TST", [])]
+    need(4, bool(envs), "test report (TST)")
+    need(4, len(list((ROOT / "build-log").glob("*.md"))) > 1, "build log entries")
+    need(5, "relevant" in envs, "TST with environment: relevant")
+    if trl >= 6:
+        prc = [m for _, m in by_type.get("PRC", [])]
+        need(6, any(m["status"] == "Released" and float(m["version"]) >= 1.0 for m in prc), "precis released at v1.0+")
+        need(6, any(re.search(r"rev[A-Z]", f.name) or "Rev A" in f.read_text(errors="ignore")
+                    for f in (ROOT / "cad/drawings").glob("*-DWG-*.svg")), "drawing at a lettered revision")
+    for f in pm.get("trl_evidence") or []:
+        if not (ROOT / f).exists():
+            errs.append(f"trl_evidence lists a missing file: {f}")
+    return errs
+
+
+STAGES = ["P0", "P1", "P2", "P3", "P4", "P5", "P6"]
+STAGE_DOCS = {"P0": ["STM", "OPT", "REG", "FEA", "PLN"], "P1": ["URS", "PRS", "RSK", "MKT"], "P2": ["RTM", "CAL"], "P3": ["BLD", "DEC"]}
+
+
+def kit_version() -> tuple:
+    try:
+        return tuple(int(x) for x in (KIT / "KIT_VERSION").read_text().strip().split(".")[:2])
+    except Exception:
+        return (0, 0)
+
+
+def pipeline_check(pm, trl, by_type) -> list[str]:
+    """Pipeline stages, STEM check, concept options and traceability (STANDARDS sections 19 to 23).
+    Applies once a repo has been upgraded to kit 1.8 (project.yaml has a 'stage' field)."""
+    if "stage" not in pm:
+        return ["project.yaml has no 'stage' field (kit 1.8, STANDARDS section 19); run /upgrade-1.8"] if kit_version() >= (1, 8) and trl >= 2 else []
+    errs, stage = [], str(pm.get("stage"))
+    if stage not in STAGES:
+        return [f"stage '{stage}' must be one of P0 to P6"]
+    k = STAGES.index(stage)
+    if trl >= 3 and k < 3:
+        errs.append(f"TRL {trl} needs stage P3 or later, not {stage}")
+    if trl == 2 and k < 1:
+        errs.append(f"TRL 2 needs stage P1 or later, not {stage}")
+    for s in STAGES[: k + 1]:
+        for code in STAGE_DOCS.get(s, []):
+            if code not in by_type:
+                errs.append(f"stage {stage} reached but {s} deliverable {code} is missing (STANDARDS section 19)")
+    stem = str(pm.get("stem_check", "")).lower()
+    if trl >= 2 and stem == "fail":
+        errs.append("stem_check: fail; a concept with a failed STEM claim cannot be TRL 2 (STANDARDS section 20)")
+    if trl >= 2 and stem not in ("pass", "open", "fail"):
+        errs.append(f"stem_check is '{stem or 'missing'}'; set pass, open or fail from the STEM check (STANDARDS section 20)")
+    for p, m in by_type.get("STM", []):
+        if re.search(r"\|\s*\**Fails\**\s*\|", p.read_text(encoding="utf-8")) and stem != "fail":
+            errs.append(f"{p.name} has a Fails verdict but project.yaml says stem_check: {stem}")
+    opts = pm.get("concept_options") or []
+    if trl >= 2 and len(opts) < 2:
+        errs.append("fewer than two concept options in project.yaml concept_options (STANDARDS section 21)")
+    if trl >= 2 and opts and not (ROOT / "media/options.png").exists():
+        errs.append("media/options.png missing; run python .kit/options.py")
+    if kit_version() >= (1, 9):
+        r = subprocess.run([sys.executable, str(KIT / "cad_check.py"), "--status"], cwd=ROOT, capture_output=True, text=True)
+        if r.returncode:
+            errs += [l[5:] for l in r.stdout.splitlines() if l.startswith("FAIL")] or ["CAD fidelity check failed (STANDARDS section 24)"]
+    if k >= 3:
+        rsk = "\n".join(p.read_text(encoding="utf-8") for p, _ in by_type.get("RSK", []))
+        if "RPN" not in rsk:
+            errs.append("stage P3 needs a first-pass design FMEA in the risk document (STANDARDS section 23)")
+        if (ROOT / "docs/03a-user-requirements.md").exists():
+            r = subprocess.run([sys.executable, str(KIT / "trace.py"), "--check"], cwd=ROOT, capture_output=True, text=True)
+            errs += [l[5:] for l in r.stdout.splitlines() if l.startswith("FAIL")]
+    return errs
+
+
+MEDIA_REQUIRED = ["media/concept-blueprint.png", "media/hero.png", "media/model.glb"]
+MEDIA_OPTIONAL = ["media/cutaway.png", "media/exploded.png", "media/flow.png", "media/viewer.html"]
+STOREFRONT = ["media/render-hero.png", "media/card.png", "media/social-preview.png",
+              ".github/ISSUE_TEMPLATE/question.md", ".github/ISSUE_TEMPLATE/build-report.md",
+              ".github/ISSUE_TEMPLATE/design-suggestion.md", "CITATION.cff"]
+BEYOND_CAP_PATHS =["docs/05-tests", "docs/07-build", "bom/purchasing-checklist.md", "build-log/TEMPLATE.md"]
+
+
+def phase_check(docs) -> tuple[list[str], list[str]]:
+    """Portfolio phase rules (.kit/PHASE.yaml): TRL cap and concept media. Returns (errors, warnings)."""
+    ph_file = KIT / "PHASE.yaml"
+    if not ph_file.exists():
+        return [], []
+    ph = yaml.safe_load(ph_file.read_text()) or {}
+    cap = int(ph.get("trl_cap", 9))
+    pm = project_meta()
+    errs, warns = [], []
+    if pm.get("program"):
+        return errs, warns
+    trl, target = int(pm.get("trl", 0) or 0), int(pm.get("trl_target", 0) or 0)
+    scap = str(ph.get("stage_cap", "P6"))
+    if "stage" in pm and str(pm["stage"]) in STAGES and scap in STAGES and STAGES.index(str(pm["stage"])) > STAGES.index(scap):
+        errs.append(f"stage {pm['stage']} exceeds the portfolio stage cap {scap} (.kit/PHASE.yaml)")
+    if trl > cap:
+        errs.append(f"trl {trl} exceeds the portfolio cap of TRL {cap} (.kit/PHASE.yaml)")
+    if target > cap:
+        errs.append(f"trl_target {target} exceeds the portfolio cap of TRL {cap} (.kit/PHASE.yaml)")
+    if ph.get("phase") == "populate" and target < cap:
+        errs.append(f"trl_target {target} is below the TRL {cap} every repo targets in the populate phase (STANDARDS section 10); run /to-trl3")
+    tst = [p for p, m, _ in docs if "-TST-" in str(m["doc_id"])]
+    extra = [str(p.relative_to(ROOT)) for p in tst] + [b for b in BEYOND_CAP_PATHS if (ROOT / b).exists()]
+    if cap < 4 and extra:
+        warns.append("work beyond the TRL %d cap is present (keep, but do not extend): %s" % (cap, ", ".join(sorted(set(extra)))))
+    missing = [m for m in MEDIA_REQUIRED if not (ROOT / m).exists()]
+    if trl >= int(ph.get("media_required_from_trl", 2)) and missing:
+        msg = "concept media missing: " + ", ".join(missing) + " (see CLAUDE.md section 5)"
+        (errs if trl >= 3 else warns).append(msg)
+    if trl >= 3:
+        try:   # program repos: CITATION.cff and issue templates live at the repository top (STANDARDS section 25.4)
+            top = Path(subprocess.check_output(["git", "rev-parse", "--show-toplevel"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL).strip())
+        except Exception:
+            top = ROOT
+        store = [m for m in STOREFRONT if not (ROOT / m).exists() and not (top / m).exists()]
+        if store:
+            warns.append("storefront items missing (STANDARDS section 13; the release gate will block): " + ", ".join(store))
+        try:
+            sys.path.insert(0, str(KIT))
+            import image_qc
+            qfails, _ = image_qc.run(ROOT)
+            for q in qfails:
+                warns.append("image quality (STANDARDS section 13; the release gate will block): " + q)
+        except Exception as e:  # never let the image check break document control
+            warns.append(f"image quality check could not run: {e}")
+    return errs, warns
+
+
+CLAIM_BANNED = [r"\bpurif(y|ies|ied|ier|iers|ication)\b", r"\bsteril(e|ise|ises|ised|ize|izes|ized|isation|ization)\b",
+                r"virus[- ]proof", r"\bpotable\b", r"\b100 ?% safe\b", r"\bremoves? (all|every) (pathogens|germs|contaminants)\b",
+                r"\bmakes? (any|all) water (safe|drinkable)\b", r"\bclean drinking water\b"]
+CLAIM_CONTEXT = re.compile(r"\b(not|no|never|nor|without|cannot|can't|isn't|aren't|exclud|claim|standard|guide|protocol|benchmark|P231|NSF|EPA|WHO|"
+                           r"star|target|category|threshold|rule|wording|banned|avoid|unless|only after|reference|purifier claim|\bif\b)", re.I)
+
+
+def claims_check(body: str) -> list[str]:
+    """Water-safety claims rule (STANDARDS section 25.5): banned claim words only in a negated, cited or benchmark sentence."""
+    errs = []
+    text = re.sub(r"```.*?```", "", body, flags=re.S)
+    units = []
+    for line in text.splitlines():
+        units += [line] if line.lstrip().startswith("|") else re.split(r"(?<=[.!?])\s+", line)   # a table row is one unit
+    for sent in units:
+        for pat in CLAIM_BANNED:
+            for m in re.finditer(pat, sent, re.I):
+                before = sent[:m.start()]
+                quoted = before.count('"') % 2 == 1 or before.count("\u201c") > before.count("\u201d")
+                known = re.search(r"\b(known|test|reference)\s+$", before, re.I)
+                if not (quoted or known or CLAIM_CONTEXT.search(sent)):
+                    errs.append(f"claims rule: '{m.group(0)}' in an unqualified sentence: {sent.strip()[:110]}")
+    return errs
+
+
+def program_check(pm, docs) -> list[str]:
+    """Program repo (STANDARDS section 25.4): shared documents at the root, one kit project per solution."""
+    errs = []
+    types = {str(m["doc_id"]).split("-")[1] for _, m, _ in docs}
+    for code, what in (("PRB", "program problem statement"), ("URS", "shared user requirements"), ("CLM", "claims register"),
+                       ("REG", "regulatory register"), ("PLN", "program plan")):
+        if code not in types:
+            errs.append(f"program document missing: {what} ({code})")
+    for s in pm.get("solutions") or []:
+        d = ROOT / "solutions" / str(s.get("folder", ""))
+        if not (d / "project.yaml").exists():
+            errs.append(f"solution {s.get('code')} has no project.yaml at {d.relative_to(ROOT)}")
+        elif not (d / ".kit" / "render.py").exists():
+            errs.append(f"solution {s.get('code')} has no .kit copy (copy the root .kit into it)")
+    return errs
+
+
+def controlled_docs():
+    program = bool(project_meta().get("program"))
+    for p in sorted(ROOT.rglob("*.md")):
+        if any(part.startswith(".") for part in p.relative_to(ROOT).parts[:-1]):
+            continue
+        if program and p.relative_to(ROOT).parts[0] == "solutions":
+            continue   # each solution is checked from its own folder (STANDARDS section 25)
+        meta, body = split(p)
+        if meta and "doc_id" in meta:
+            yield p, meta, body
+
+
+def main():
+    only_check = "--check" in sys.argv
+    docs = list(controlled_docs())
+    failed = False
+    pmeta = project_meta()
+    water = str(pmeta.get("claims_rule", "")) == "water"
+    helpful = str(pmeta.get("partner", "")) == "Helpful Engineering"
+    for p, meta, body in docs:
+        errs = check(meta, p) + (claims_check(body) if water else [])
+        if helpful and str(meta.get("license", "")) not in body.strip()[-600:]:
+            errs.append(f"Helpful Engineering licensing guide: end the document with a licence line naming {meta.get('license')} (STANDARDS section 25.1)")
+        rel = p.relative_to(ROOT)
+        if errs:
+            failed = True
+            print(f"FAIL {rel}")
+            for e in errs:
+                print(f"     - {e}")
+        else:
+            print(f"ok   {rel}  {meta['doc_id']} v{meta['version']} {meta['status']}")
+    terrs = trl_check(docs)
+    if terrs:
+        failed = True
+        print("FAIL project.yaml TRL")
+        for e in terrs:
+            print(f"     - {e}")
+    else:
+        pm = project_meta()
+        print(f"ok   TRL {pm['trl']} ({TRL_NAMES[int(pm['trl'])]}), target TRL {pm.get('trl_target', pm['trl'])}")
+    perrs, pwarns = phase_check(docs)
+    for w in pwarns:
+        print(f"warn {w}")
+    if perrs:
+        failed = True
+        print("FAIL portfolio phase")
+        for e in perrs:
+            print(f"     - {e}")
+    if failed:
+        sys.exit(1)
+    if only_check or not docs:
+        return
+
+    from weasyprint import HTML  # imported late so --check needs no system libs
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader(KIT / "style"), autoescape=False)
+    tpl = env.get_template("doc.html.j2")
+    commit = git("rev-parse", "--short", "HEAD") or "uncommitted"
+    OUT.mkdir(parents=True, exist_ok=True)
+    for p, meta, body in docs:
+        meta["version"] = str(meta["version"])
+        for r in meta["revisions"]:
+            r["version"] = str(r["version"])
+        html_body = markdown.markdown(body, extensions=["tables", "fenced_code", "attr_list", "sane_lists", "toc"])
+        html = tpl.render(m=meta, body=html_body, css=(KIT / "style" / "doc.css").as_uri(),
+                          brand=project_meta().get("brand_line", "Design Molecule Lab · designmolecule.com"), repo=repo_url(), trl=project_meta().get("trl"), trl_name=TRL_NAMES.get(int(project_meta().get("trl") or 0), ""), source=str(p.relative_to(ROOT)), commit=commit)
+        for old in OUT.glob(f"{meta['doc_id']}_v*.pdf"):
+            old.unlink()
+        target = OUT / f"{meta['doc_id']}_v{meta['version']}.pdf"
+        HTML(string=html, base_url=str(p.parent)).write_pdf(target)
+        print(f"pdf  {target.relative_to(ROOT)}")
+
+
+if __name__ == "__main__":
+    main()

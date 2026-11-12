@@ -1,0 +1,434 @@
+{
+ "cited": {
+  "TAB": {
+   "1L": [
+    3.5,
+    2.0
+   ],
+   "20L": [
+    67.0,
+    40.0
+   ],
+   "5L": [
+    33.0,
+    20.0
+   ],
+   "1L_emergency": [
+    8.5,
+    5.0
+   ]
+  },
+  "NTU_BANDS": [
+   5.0,
+   50.0
+  ],
+  "SWS": {
+   "pct": 1.25,
+   "cap_ml": 3.0,
+   "litres": 20.0,
+   "max_1h": 2.0,
+   "min_24h": 0.2
+  },
+  "WHO_MIN_30MIN": 0.5,
+  "WHO_GV": 5.0,
+  "WHO_POINT_OF_USE": [
+   0.2,
+   1.0
+  ],
+  "TASTE": {
+   "detect_naocl": 0.7,
+   "detect_nadcc": 0.73,
+   "accept_naocl": 1.16,
+   "accept_nadcc": 1.26
+  },
+  "CT_VIRUS_4LOG": {
+   "0.5": 12,
+   "5": 8,
+   "10": 6,
+   "15": 4,
+   "20": 3,
+   "25": 2
+  },
+  "CT_VIRUS_4LOG_PH10": {
+   "0.5": 90,
+   "5": 60,
+   "10": 45,
+   "15": 30,
+   "20": 22,
+   "25": 15
+  },
+  "CT_CDC_1MGL": {
+   "E. coli O157:H7": 1.0,
+   "Hepatitis A virus": 16.0,
+   "Giardia": 45.0,
+   "Cryptosporidium": 15300.0
+  },
+  "CT_NOROVIRUS_GII_2LOG": 13.0,
+  "AKVO_CONTACT_MIN": {
+   ">18 C": 30,
+   "10-18 C": 60,
+   "<10 C": 120
+  },
+  "AKVO_PH": [
+   5.5,
+   7.5
+  ],
+  "AKVO_PH_UNRELIABLE": 9.0,
+  "PKA_HOCL_20C": 7.54,
+  "NADCC_GV": 50.0,
+  "CYA_GV": 40.0,
+  "SHELF": {
+   "tablet_strip_y": 5.0,
+   "tablet_tub_y": 3.0,
+   "liquid_months": 3.0
+  },
+  "HYPO_HALF_LIFE_COOL_Y": 1.0,
+  "HYPO_WARM": [
+   13.0,
+   8.0,
+   75.0
+  ],
+  "PDMS_VTC": 0.61,
+  "PDMS_EXPANSION_PER_K": 0.00096,
+  "ORING_STATIC_SQUEEZE": [
+   15.0,
+   30.0
+  ],
+  "SURFACE_TENSION_N_M": 0.072,
+  "HARKINS_BROWN": [
+   0.6,
+   0.72
+  ]
+ },
+ "assumed": {
+  "SCEN": {
+   "clear": {
+    "dose": 2.0,
+    "d30": 0.3,
+    "k_h": 0.035,
+    "ntu": "under 5 NTU"
+   },
+   "turbid_double": {
+    "dose": 4.0,
+    "d30": 1.0,
+    "k_h": 0.07,
+    "ntu": "5 to 50 NTU, settled, double dose"
+   },
+   "turbid_single": {
+    "dose": 2.0,
+    "d30": 1.0,
+    "k_h": 0.07,
+    "ntu": "5 to 50 NTU, single dose (misuse case)"
+   }
+  },
+  "TAU_MIN": 6.0,
+  "TIMER_TARGET_MIN": 45.0,
+  "VISC_TOL": 0.1,
+  "PDMS_EA_J_MOL": 15000.0,
+  "TIMER_T_MAX_C": 40.0,
+  "TIMER_FILL_C": 25.0,
+  "TIMER_T_RANGE_C": [
+   -10.0,
+   60.0
+  ],
+  "BOTTLES_L": [
+   0.5,
+   1.0,
+   1.5,
+   2.0
+  ],
+  "RHO_BALL": 7900.0,
+  "RHO_FLUID": 975.0,
+  "STAND_H": [
+   0.5,
+   24.0
+  ],
+  "L_PER_DAY_PERSONAL": 3.0,
+  "HOUSEHOLD": 5,
+  "L_PER_PERSON_DAY": 5.0,
+  "LIFE_Y": 2.0,
+  "SCALE_COST_USD": {
+   "moulded_parts": 0.45,
+   "seals": 0.1,
+   "timer": 0.35,
+   "labels": 0.1,
+   "assembly_qc_pack": 0.4
+  },
+  "TAB_COST_HUMANITARIAN_USD": 0.011,
+  "TAB_COST_RETAIL_USD": 0.2198
+ },
+ "results": {
+  "nadcc_available_cl": {
+   "anhydrous": 0.645,
+   "dihydrate": 0.554
+  },
+  "tablet_cl_share": {
+   "1L": 0.571,
+   "20L": 0.597,
+   "5L": 0.606,
+   "1L_emergency": 0.588
+  },
+  "drop_ml": {
+   "orifice_mm": 2.0,
+   "drops_1L": 5,
+   "range": [
+    0.0277,
+    0.0332
+   ],
+   "briefed_1_2mm_range": [
+    0.0166,
+    0.0199
+   ]
+  },
+  "bottle_range": {
+   "0.5": {
+    "one": 4.0,
+    "two": 8.0
+   },
+   "1.0": {
+    "one": 2.0,
+    "two": 4.0
+   },
+   "1.5": {
+    "one": 1.33,
+    "two": 2.67
+   },
+   "2.0": {
+    "one": 1.0,
+    "two": 2.0
+   }
+  },
+  "dose_mg_l": {
+   "D1_1L_one": 2.0,
+   "D1_1L_two": 4.0,
+   "D1_20L_one": 2.0,
+   "D1_20L_two": 4.0,
+   "D1_20L_one_25L": 1.6,
+   "D1_1L_in_1_5L": 1.333,
+   "D2_20L_one_cap": 1.875,
+   "D2_20L_two_caps": 3.75,
+   "D2_1L_drops_low": 1.73,
+   "D2_1L_drops_high": 2.076,
+   "D2_1L_3_drops_1_2mm_low": 0.623,
+   "D2_1L_3_drops_1_2mm_high": 0.747
+  },
+  "chamber_ml": 3.006,
+  "d2_bottle_litres_treated": 1000,
+  "scenarios": {
+   "clear": {
+    "c30": 1.7,
+    "c60": 1.671,
+    "c24h": 0.747,
+    "consumed_24h": 1.253,
+    "ct30": 52.74,
+    "ct60": 103.3,
+    "ct120": 201.79,
+    "ntu": "under 5 NTU",
+    "dose": 2.0,
+    "ct30_epa": 51.0,
+    "ct120_epa": 193.57,
+    "t_ct_virus_4log_5c_min": 4.2,
+    "t_ct_virus_4log_0c_min": 6.4,
+    "t_ct_hav_cdc_min": 8.6,
+    "t_ct_giardia_min": 25.5,
+    "days_ct_crypto": 6.2
+   },
+   "turbid_double": {
+    "c30": 3.0,
+    "c60": 2.897,
+    "c24h": 0.579,
+    "consumed_24h": 3.421,
+    "ct30": 95.8,
+    "ct60": 184.24,
+    "ct120": 352.1,
+    "ntu": "5 to 50 NTU, settled, double dose",
+    "dose": 4.0,
+    "ct30_epa": 90.0,
+    "ct120_epa": 324.12,
+    "t_ct_virus_4log_5c_min": 2.1,
+    "t_ct_virus_4log_0c_min": 3.2,
+    "t_ct_hav_cdc_min": 4.3,
+    "t_ct_giardia_min": 13.3,
+    "days_ct_crypto": 3.5
+   },
+   "turbid_single": {
+    "c30": 1.0,
+    "c60": 0.966,
+    "c24h": 0.193,
+    "consumed_24h": 1.807,
+    "ct30": 35.8,
+    "ct60": 65.28,
+    "ct120": 121.23,
+    "ntu": "5 to 50 NTU, single dose (misuse case)",
+    "dose": 2.0,
+    "ct30_epa": 30.0,
+    "ct120_epa": 108.04,
+    "t_ct_virus_4log_5c_min": 4.7,
+    "t_ct_virus_4log_0c_min": 7.7,
+    "t_ct_hav_cdc_min": 11.0,
+    "t_ct_giardia_min": 39.3,
+    "days_ct_crypto": 10.6
+   }
+  },
+  "ct_margin": {
+   "virus_4log_5c_at_30min": 6.38,
+   "virus_4log_0c_at_30min": 4.25,
+   "virus_4log_0c_at_120min": 16.13,
+   "virus_4log_ph10_5c_at_120min": 3.23,
+   "norovirus_gii_2log_at_30min": 3.92,
+   "hav_cdc_at_30min": 3.19,
+   "giardia_at_30min": 1.13,
+   "crypto_at_30min": 0.00333,
+   "turbid_double_virus_5c_at_30min": 11.25
+  },
+  "pka_hocl": {
+   "5": 7.75,
+   "20": 7.58,
+   "25": 7.54
+  },
+  "hocl_share": {
+   "6.0": 0.974,
+   "6.5": 0.923,
+   "7.0": 0.792,
+   "7.5": 0.547,
+   "8.0": 0.276,
+   "8.5": 0.108,
+   "9.0": 0.037
+  },
+  "hocl_share_5c": {
+   "7.0": 0.85,
+   "7.5": 0.642,
+   "8.0": 0.362,
+   "8.5": 0.152,
+   "9.0": 0.054
+  },
+  "hocl_ct30_clear": {
+   "6.0": 49.7,
+   "7.0": 40.41,
+   "7.5": 27.89,
+   "8.0": 14.09,
+   "8.5": 5.49,
+   "9.0": 1.88
+  },
+  "timer": {
+   "fall_mm": 13.0,
+   "lam": 0.5,
+   "faxen": 0.1796,
+   "wall_haberman_sayre": 0.1704,
+   "mu_pa_s": 534.0,
+   "cst": 548000.0,
+   "reynolds": 1.75834600041074e-08,
+   "t_nominal_min": 45.0,
+   "nominal_needed_min": 44.5,
+   "t_low_min": 40.5,
+   "t_10c_min": 62.0,
+   "cold_ratio": 1.38,
+   "t_35c_min": 37.0,
+   "t_40c_low_min": 30.3,
+   "t_briefed_34_40c_low_min": 22.9,
+   "runs_needed": {
+    ">18 C": 1,
+    "10-18 C": 2,
+    "<10 C": 3
+   },
+   "runs_total_min": {
+    ">18 C": 47.0,
+    "10-18 C": 94.0,
+    "<10 C": 167.0
+   },
+   "fluid_ml": 0.188,
+   "expansion_ul": [
+    -6.3,
+    6.3
+   ],
+   "expansion_share": 0.034
+  },
+  "overdose": {
+   "wrong_tablet_20L_in_1L_cl": 40.0,
+   "wrong_tablet_20L_in_1L_nadcc": 67.0,
+   "wrong_tablet_cya": 39.3,
+   "two_1L_tabs_cl": 4.0,
+   "three_1L_tabs_cl": 6.0,
+   "cya_at_4mgl": 4.11,
+   "tab_1L_d_mm": 8.0,
+   "tab_20L_d_mm": 13.0,
+   "well_1L_mm": 9.5,
+   "well_20L_mm": 14.5,
+   "keyed": true,
+   "wrong_tablet_1L_in_20L_cl": 0.1,
+   "two_1L_in_20L_cl": 0.2,
+   "three_fit_if_t_below_mm": {
+    "1L": 2.67,
+    "20L": 3.67
+   },
+   "well_ml": {
+    "1L": 0.57,
+    "20L": 1.82
+   },
+   "well_conc_g_l": {
+    "1L": 0.0,
+    "20L": 0.0
+   }
+  },
+  "oring_squeeze_pct": {
+   "nominal": 21.9,
+   "min": 15.1,
+   "max": 28.0,
+   "briefed_17_8_print_tol_min": 7.9,
+   "stretch_pct": 4.1
+  },
+  "membrane_exposure_mg_h_l_year": 14900.0,
+  "d2_decay": {
+   "cool_3mo_share": 0.841,
+   "warm_3mo_share": 0.555,
+   "warm_half_life_days": 107.0,
+   "dose_20L_warm_3mo": 1.04,
+   "dose_20L_warm_6mo": 0.58,
+   "note": "the warm rate is for a 13 % product; dilute 1.25 % decays more slowly, so this is a bound"
+  },
+  "d3": {
+   "stand_ratio": 48.0,
+   "allowed_ratio": 5.0,
+   "allowed_ratio_target": 2.0,
+   "dose_at_24h_if_2mgl_at_30min": 96.0,
+   "dose_at_30min_if_5mgl_at_24h": 0.104
+  },
+  "mass_g": {
+   "D1": 44.8,
+   "D2": 58.1,
+   "D3": 119.0
+  },
+  "d1_size_mm": {
+   "x": 52.5,
+   "y": 41.4,
+   "z": 51.5
+  },
+  "effort": {
+   "d2_squeeze_kpa_needed": 1.81,
+   "d2_squeeze_n_assumed": 10.0,
+   "grip_n": {
+    "child_10_11_weak": 124.0,
+    "elderly_f_weak": 144.0
+   },
+   "cap_close_torque_nm_assumed": 1.0,
+   "plug_turns": 3.5
+  },
+  "cost": {
+   "bom_usd": 9.15,
+   "device_usd": 5.95,
+   "consumables_usd": 3.2,
+   "target_usd": 10.0,
+   "scale_device_usd": 1.4,
+   "per_litre_1L_tabs_humanitarian": 0.0116,
+   "per_litre_1L_tabs_retail": 0.2204,
+   "per_litre_20L_tabs_humanitarian": 0.00063,
+   "per_person_year_1L_tabs_humanitarian": 12.74,
+   "per_household_year_20L_tabs": 5.72,
+   "tablets_per_household_year_20L": 456,
+   "life_litres_personal": 2190.0,
+   "life_litres_household": 18250.0,
+   "d2_bottle_usd_e4c": 0.33,
+   "d2_per_litre": 0.00033
+  }
+ }
+}

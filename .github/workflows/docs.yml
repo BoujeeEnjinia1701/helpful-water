@@ -1,0 +1,24 @@
+# Helpful Water (kit 1.9.1-he): check the program documents and every solution on each push.
+name: docs
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        folder: [".", "solutions/A-straw", "solutions/B-bottle-cartridge", "solutions/C-gravity", "solutions/D-virus-add-on"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get install -y -q libpango-1.0-0 libpangoft2-1.0-0 fontconfig
+      - run: pip install -q -r .kit/requirements.txt
+      - name: Check document control
+        working-directory: ${{ matrix.folder }}
+        run: python .kit/render.py --check

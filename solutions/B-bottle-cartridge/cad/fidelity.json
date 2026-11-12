@@ -1,0 +1,47 @@
+{
+ "level": "D3",
+ "stage": "P3",
+ "hash": "db449d6529739bc0",
+ "options": {
+  "B1": {
+   "title": "Squeeze cartridge",
+   "parts": 24,
+   "made_or_bought": 23,
+   "fasteners": 1,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.1,
+   "step_files": 23
+  },
+  "B2": {
+   "title": "Gravity drip stand",
+   "parts": 32,
+   "made_or_bought": 26,
+   "fasteners": 6,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.5,
+   "step_files": 0
+  },
+  "B3": {
+   "title": "Press cup",
+   "parts": 24,
+   "made_or_bought": 21,
+   "fasteners": 3,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.5,
+   "step_files": 0
+  }
+ },
+ "failures": [],
+ "warnings": [],
+ "passed": true,
+ "seconds": 48.6
+}

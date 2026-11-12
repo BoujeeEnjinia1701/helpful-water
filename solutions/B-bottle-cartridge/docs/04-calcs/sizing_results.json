@@ -1,0 +1,440 @@
+{
+ "assumed": {
+  "LP_CLEAN_LMH_BAR": 1000.0,
+  "LP_FOULED_SHARE": 0.5,
+  "LP_UPPER_LMH_BAR": 4500.0,
+  "GRIP_KG": {
+   "child_10_11_weak": 11.8,
+   "child_10_11_mid": 17.5,
+   "elderly_f_weak": 14.7,
+   "elderly_m_weak": 21.3,
+   "adult": 35.0
+  },
+  "SQUEEZE_SHARE": 0.4,
+  "WALL_LOSS": 0.8,
+  "CONTACT_H_M": 0.08,
+  "BED_VOID": 0.4,
+  "SPHERICITY": 0.75,
+  "CARBON_LIFE_L": 150.0,
+  "L_PER_DAY": 2.0,
+  "DESIGN_LIFE_MONTHS": 9.0,
+  "DUCKBILL_CRACK_KPA": 0.5,
+  "PRESS_N": {
+   "adult": 150.0,
+   "elderly_or_child": 80.0
+  },
+  "LIP_FRICTION_N": 10.0,
+  "SYRINGE_BORE_MM": 26.7,
+  "BACKFLUSH_PUSH_N": {
+   "gentle": 30.0,
+   "hard": 100.0
+  },
+  "SCALE_COST_USD": {
+   "module": 3.2,
+   "moulded_parts": 1.4,
+   "carbon_capsule": 0.35,
+   "seals_mesh_valve": 0.6,
+   "assembly_qc_pack": 1.5
+  }
+ },
+ "area_m2": {
+  "B1": 0.17391856930273097,
+  "B2": 0.294555727200579,
+  "B3": 0.17391856930273097
+ },
+ "packing": 0.5327783558792926,
+ "squeeze_kpa": {
+  "child_10_11_weak": 5.7859235,
+  "child_10_11_mid": 8.580818749999999,
+  "elderly_f_weak": 7.207887749999999,
+  "elderly_m_weak": 10.444082250000001,
+  "adult": 17.161637499999998,
+  "adult_max": 42.904093749999994
+ },
+ "b1": {
+  "child_10_11_weak": {
+   "clean": {
+    "q_ml_min": 159.5078296969237,
+    "membrane_kpa": 5.502845279940525,
+    "bed_kpa": 0.14821897849711152,
+    "lumen_kpa": 0.08412508554017094,
+    "outlet_kpa": 0.05031392581042432,
+    "mesh_kpa": 0.00042023021176710207
+   },
+   "fouled": {
+    "q_ml_min": 81.94629794665774,
+    "membrane_kpa": 5.654114907351941,
+    "bed_kpa": 0.07438597379077097,
+    "lumen_kpa": 0.043218814634751884,
+    "outlet_kpa": 0.014092891354150474,
+    "mesh_kpa": 0.00011091286838675383
+   }
+  },
+  "child_10_11_mid": {
+   "clean": {
+    "q_ml_min": 235.5008699411624,
+    "membrane_kpa": 8.124521868550046,
+    "bed_kpa": 0.22379151710141026,
+    "lumen_kpa": 0.12420412757309963,
+    "outlet_kpa": 0.1073852097396982,
+    "mesh_kpa": 0.0009160270357453276
+   },
+   "fouled": {
+    "q_ml_min": 121.38521797775437,
+    "membrane_kpa": 8.37531392750584,
+    "bed_kpa": 0.11151248065034496,
+    "lumen_kpa": 0.06401906329672684,
+    "outlet_kpa": 0.029729915370654177,
+    "mesh_kpa": 0.0002433631764333803
+   }
+  },
+  "elderly_f_weak": {
+   "clean": {
+    "q_ml_min": 198.25505046713693,
+    "membrane_kpa": 6.839581923723556,
+    "bed_kpa": 0.1863519999613052,
+    "lumen_kpa": 0.10456052916655327,
+    "outlet_kpa": 0.07674410721140515,
+    "mesh_kpa": 0.0006491899371783062
+   },
+   "fouled": {
+    "q_ml_min": 102.02346915663652,
+    "membrane_kpa": 7.039395705633911,
+    "bed_kpa": 0.09317827717286556,
+    "lumen_kpa": 0.053807597321177576,
+    "outlet_kpa": 0.02133425104708669,
+    "mesh_kpa": 0.0001719188249570739
+   }
+  },
+  "elderly_m_weak": {
+   "clean": {
+    "q_ml_min": 285.79281103088164,
+    "membrane_kpa": 9.859538708603923,
+    "bed_kpa": 0.27556458896202285,
+    "lumen_kpa": 0.150728304186829,
+    "outlet_kpa": 0.15690160503702769,
+    "mesh_kpa": 0.001349043210199769
+   },
+   "fouled": {
+    "q_ml_min": 147.62571129625405,
+    "membrane_kpa": 10.185850439417289,
+    "bed_kpa": 0.13669186248039975,
+    "lumen_kpa": 0.07785840741688349,
+    "outlet_kpa": 0.04332158646789333,
+    "mesh_kpa": 0.00035995421753534803
+   }
+  },
+  "adult": {
+   "clean": {
+    "q_ml_min": 464.73568284604784,
+    "membrane_kpa": 16.032871637890718,
+    "bed_kpa": 0.47114098876406696,
+    "lumen_kpa": 0.2451035108889551,
+    "outlet_kpa": 0.4089540980642608,
+    "mesh_kpa": 0.003567264391997337
+   },
+   "fouled": {
+    "q_ml_min": 241.88677468787844,
+    "membrane_kpa": 16.68965716479685,
+    "bed_kpa": 0.23028781877665883,
+    "lumen_kpa": 0.12757208000583986,
+    "outlet_kpa": 0.11315405736802568,
+    "mesh_kpa": 0.0009663790526254437
+   }
+  },
+  "adult_max": {
+   "clean": {
+    "q_ml_min": 1119.317695388904,
+    "membrane_kpa": 38.61523355015298,
+    "bed_kpa": 1.3377169345734141,
+    "lumen_kpa": 0.5903327570197301,
+    "outlet_kpa": 2.3401171965588876,
+    "mesh_kpa": 0.020693311694981658
+   },
+   "fouled": {
+    "q_ml_min": 598.276367884803,
+    "membrane_kpa": 41.27975778205129,
+    "bed_kpa": 0.6286549139487779,
+    "lumen_kpa": 0.3155334175168864,
+    "outlet_kpa": 0.6742357381486461,
+    "mesh_kpa": 0.005911898334396308
+   }
+  }
+ },
+ "b1_at_10kpa": {
+  "clean": {
+   "q_ml_min": 273.8329639282278,
+   "membrane_kpa": 9.446937093355949,
+   "bed_kpa": 0.2631255155476333,
+   "lumen_kpa": 0.14442063162636706,
+   "outlet_kpa": 0.14427826316700756,
+   "mesh_kpa": 0.001238496303043587
+  },
+  "fouled": {
+   "q_ml_min": 141.37543541348248,
+   "membrane_kpa": 9.754595105993378,
+   "bed_kpa": 0.13065972217762983,
+   "lumen_kpa": 0.07456198620491607,
+   "outlet_kpa": 0.039853066129773435,
+   "mesh_kpa": 0.0003301194943040633
+  }
+ },
+ "b1_at_10kpa_upper": {
+  "q_ml_min": 905.7622693514054,
+  "membrane_kpa": 6.943956764615072,
+  "bed_kpa": 1.0289079153106506,
+  "lumen_kpa": 0.47770274683710967,
+  "outlet_kpa": 1.535882185843832,
+  "mesh_kpa": 0.013550387393336716
+ },
+ "b2": {
+  "clean": {
+   "head_full_kpa": 5.157886808949276,
+   "head_empty_kpa": 2.4565462116999996,
+   "minutes_per_litre": 6.233333333333333,
+   "mean_ml_min": 160.42780748663102
+  },
+  "fouled": {
+   "head_full_kpa": 5.157886808949276,
+   "head_empty_kpa": 2.4565462116999996,
+   "minutes_per_litre": 11.933333333333334,
+   "mean_ml_min": 83.79888268156425
+  }
+ },
+ "b1_10c": {
+  "child_10_11_weak": {
+   "clean": {
+    "q_ml_min": 122.51725340198186,
+    "membrane_kpa": 5.524311205124747,
+    "bed_kpa": 0.1458796697151064,
+    "lumen_kpa": 0.08445324719118165,
+    "outlet_kpa": 0.031031454428850486,
+    "mesh_kpa": 0.00024792354011468013
+   },
+   "fouled": {
+    "q_ml_min": 62.76263902747029,
+    "membrane_kpa": 5.6599432392604605,
+    "bed_kpa": 0.07369170013526416,
+    "lumen_kpa": 0.04326336512594487,
+    "outlet_kpa": 0.00896013374144935,
+    "mesh_kpa": 6.506173688141603e-05
+   }
+  },
+  "elderly_f_weak": {
+   "clean": {
+    "q_ml_min": 152.4205871632626,
+    "membrane_kpa": 6.872654537847191,
+    "bed_kpa": 0.18274782003431303,
+    "lumen_kpa": 0.10506612878832164,
+    "outlet_kpa": 0.04703554678925438,
+    "mesh_kpa": 0.00038371654091970604
+   },
+   "fouled": {
+    "q_ml_min": 78.159379607964,
+    "membrane_kpa": 7.048423378170339,
+    "bed_kpa": 0.09210289654750668,
+    "lumen_kpa": 0.05387660287064524,
+    "outlet_kpa": 0.013383973735566275,
+    "mesh_kpa": 0.00010089867594158352
+   }
+  },
+  "adult": {
+   "clean": {
+    "q_ml_min": 359.53157956811054,
+    "membrane_kpa": 16.211303130406154,
+    "bed_kpa": 0.4516959215775622,
+    "lumen_kpa": 0.24783129330101736,
+    "outlet_kpa": 0.2486721573385213,
+    "mesh_kpa": 0.002134997376741496
+   },
+   "fouled": {
+    "q_ml_min": 185.63014763975985,
+    "membrane_kpa": 16.740151711541685,
+    "bed_kpa": 0.2242728844692197,
+    "lumen_kpa": 0.1279580492497605,
+    "outlet_kpa": 0.06868571320499117,
+    "mesh_kpa": 0.0005691415343373108
+   }
+  }
+ },
+ "b2_10c": {
+  "clean": {
+   "head_full_kpa": 5.157886808949276,
+   "head_empty_kpa": 2.4565462116999996,
+   "minutes_per_litre": 8.133333333333333,
+   "mean_ml_min": 122.95081967213116
+  },
+  "fouled": {
+   "head_full_kpa": 5.157886808949276,
+   "head_empty_kpa": 2.4565462116999996,
+   "minutes_per_litre": 15.566666666666666,
+   "mean_ml_min": 64.23982869379014
+  }
+ },
+ "b3": {
+  "adult": {
+   "clean": {
+    "q_ml_min": 989.8886715472858,
+    "membrane_kpa": 34.15007410131939,
+    "bed_kpa": 1.1475414372599106,
+    "lumen_kpa": 0.5220713574210687,
+    "outlet_kpa": 0.542401434385895,
+    "mesh_kpa": 0.01618437633267091,
+    "press_kpa": 36.37827270671893
+   },
+   "fouled": {
+    "q_ml_min": 513.4186909511842,
+    "membrane_kpa": 35.42476410721869,
+    "bed_kpa": 0.5274191515128578,
+    "lumen_kpa": 0.27077912962804207,
+    "outlet_kpa": 0.15095653705311804,
+    "mesh_kpa": 0.004353781306229963,
+    "press_kpa": 36.37827270671893
+   }
+  },
+  "elderly_or_child": {
+   "clean": {
+    "q_ml_min": 500.45272944611554,
+    "membrane_kpa": 17.265070594330968,
+    "bed_kpa": 0.5123020469385541,
+    "lumen_kpa": 0.2639408281929527,
+    "outlet_kpa": 0.14368622810954698,
+    "mesh_kpa": 0.004136655787441224,
+    "press_kpa": 18.189136353359466
+   },
+   "fouled": {
+    "q_ml_min": 257.4779993765755,
+    "membrane_kpa": 17.765417487656325,
+    "bed_kpa": 0.24624350090199812,
+    "lumen_kpa": 0.1357949560433662,
+    "outlet_kpa": 0.04058543550136116,
+    "mesh_kpa": 0.0010949732564165759,
+    "press_kpa": 18.189136353359466
+   }
+  }
+ },
+ "b3_volumes": {
+  "clean_ml": 558.5712468174482,
+  "fill_line_ml": 350.0
+ },
+ "carbon": {
+  "bed_ml": 13.9492997004694,
+  "mass_g": 6.835156853230005,
+  "ebct_s": {
+   "child_10_11_weak": 5.247127890953342,
+   "child_10_11_mid": 3.553948578777097,
+   "elderly_f_weak": 4.221622501197766,
+   "elderly_m_weak": 2.928548059026319,
+   "adult": 1.800933332475401,
+   "adult_max": 0.7477394357974169
+  },
+  "ebct_b2_s": 5.217038087975555,
+  "life_l": 150.0,
+  "capsules_per_year": 4.866666666666666
+ },
+ "mass_parts_g": {
+  "Neck collar with PCO 1881 thread": 17.14,
+  "Neck gasket (flat, EPDM)": 0.45,
+  "Duckbill air valve (silicone)": 0.07,
+  "Mesh prefilter disc, 150 um 316L": 0.58,
+  "Collar O-ring 33.4 x 2": 0.4,
+  "Carbon capsule body": 7.79,
+  "Retention pad, lower": 0.3,
+  "Carbon bed, 12 x 40 coconut GAC": 6.7,
+  "Retention pad, upper": 0.3,
+  "Carbon capsule lid": 1.48,
+  "Module end cap": 1.13,
+  "Module guard sleeve, perforated": 8.0,
+  "Fibre bundle, looped, outside-in": 11.32,
+  "Potting block (module)": 6.56,
+  "Module header with clean nipple": 7.84,
+  "Header O-ring 1, 33.4 x 2": 0.4,
+  "Header O-ring 2, 33.4 x 2": 0.4,
+  "Housing": 40.74,
+  "Spout gasket (flat, EPDM)": 0.29,
+  "Spout with nozzle and hinge lug": 3.03,
+  "Push-pull drink valve": 1.05,
+  "Valve O-ring 10 x 1.2": 0.05,
+  "Dust cover": 1.68,
+  "Hinge pin 1.5 x 9, stainless": 0.12
+ },
+ "mass_b1_dry_g": 117.8306970905048,
+ "hold_up_clean_ml": 5.672930934219769,
+ "lumen_ml": 15.158184553570752,
+ "clean_wet_ml": 20.83111548779052,
+ "lumen_capillary_rise_mm": 59.50728681746948,
+ "first_flush_ml": 50.0,
+ "mass_b1_wet_g": 181.75930906032127,
+ "b1_size_mm": {
+  "length": 216.8000001,
+  "diameter": 45.599999999999994
+ },
+ "hoop_mpa": {
+  "squeeze_max": 0.39686286718749997,
+  "backflush_hard": 1.6520733617809555
+ },
+ "backflush_kpa": {
+  "gentle": 53.58075767938234,
+  "hard": 178.60252559794114
+ },
+ "end_wall_mpa": {
+  "squeeze_max_ss": 1.1380042716601562,
+  "blocked_backflush_ss": 4.73732036490689,
+  "blocked_backflush_clamped": 2.8653147368388447
+ },
+ "end_wall_t_for_factor5_mm": 6.156180871226504,
+ "potting_push_n": 134.80340585504072,
+ "housing_thread_axial_n": 192.03523685281033,
+ "housing_thread_shear_mpa": 0.3251420977973156,
+ "bubble_kpa": {
+  "0.1um_pore": 2912.0000000000005,
+  "17um_defect": 17.129411764705885,
+  "50um_defect": 5.824000000000001,
+  "broken_lumen_500um": 0.5824
+ },
+ "air_test_smallest_defect_um": 16.96807778395273,
+ "sieve_ratio": {
+  "bacteria_0.5um": 5.0,
+  "crypto_4um": 40.0,
+  "giardia_8um": 80.0,
+  "virus_0.02_0.3um": [
+   0.19999999999999998,
+   2.9999999999999996
+  ]
+ },
+ "b2_stability": {
+  "z_cg_mm": 371.84827586206893,
+  "base_r_mm_v0": 65.0,
+  "base_r_mm": 115.0,
+  "tip_deg_v0": 9.915264242117566,
+  "tip_deg": 17.185056225674632,
+  "tip_force_n": 4.397650852915539
+ },
+ "duckbill_open_kpa": {
+  "upright": 0.5,
+  "tipped_full": 2.8684628813999997
+ },
+ "b2_vent": {
+  "bore_mm": 2.4,
+  "bond": 0.7743589476923075,
+  "purge_kpa": 2.872351774333333
+ },
+ "freeze_expansion": 0.09,
+ "neck": {
+  "skirt_mm": 15.5,
+  "h1881": 17.0,
+  "h1810": 21.0,
+  "clear_1881": 1.5,
+  "clear_1810": 5.5
+ },
+ "cost": {
+  "scale_unit_usd": 7.05,
+  "life_l": 547.1999999999999,
+  "extra_capsules": 3,
+  "life_cost_usd": 8.1,
+  "usd_per_l": 0.01480263157894737,
+  "usd_per_user_year": 10.799999999999999
+ },
+ "bom_usd": 18.35,
+ "bom_prototype_usd": 18.35
+}

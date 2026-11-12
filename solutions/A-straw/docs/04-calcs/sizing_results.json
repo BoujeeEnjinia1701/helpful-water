@@ -1,0 +1,277 @@
+{
+ "A_mem": 0.05639787131724396,
+ "packing": 0.4759329367225529,
+ "A_revA_max": 0.022116812281272144,
+ "A_revA_min": 0.011058406140636072,
+ "LP25": {
+  "MF 0.2 um": 3300.0,
+  "MF 0.1 um": 1800.0,
+  "UF 100 kDa (high)": 550.0,
+  "UF 100 kDa (low)": 215.0
+ },
+ "LP": {
+  "MF 0.2 um": 2931.0,
+  "MF 0.1 um": 1599.0,
+  "UF 100 kDa (high)": 489.0,
+  "UF 100 kDa (low)": 191.0
+ },
+ "flow": {
+  "MF 0.2 um": {
+   "child": 74.1,
+   "elderly": 116.2,
+   "revA": 178.6,
+   "adult": 281.0
+  },
+  "MF 0.1 um": {
+   "child": 45.2,
+   "elderly": 71.0,
+   "revA": 109.6,
+   "adult": 173.5
+  },
+  "UF 100 kDa (high)": {
+   "child": 15.3,
+   "elderly": 24.0,
+   "revA": 37.2,
+   "adult": 59.0
+  },
+  "UF 100 kDa (low)": {
+   "child": 6.1,
+   "elderly": 9.7,
+   "revA": 14.9,
+   "adult": 23.8
+  }
+ },
+ "flow_cold": {
+  "MF 0.2 um": {
+   "child": 49.1,
+   "elderly": 77.2,
+   "revA": 119.1,
+   "adult": 188.4
+  },
+  "MF 0.1 um": {
+   "child": 29.9,
+   "elderly": 47.0,
+   "revA": 72.6,
+   "adult": 115.2
+  },
+  "UF 100 kDa (high)": {
+   "child": 10.1,
+   "elderly": 15.9,
+   "revA": 24.5,
+   "adult": 39.0
+  },
+  "UF 100 kDa (low)": {
+   "child": 4.0,
+   "elderly": 6.4,
+   "revA": 9.9,
+   "adult": 15.7
+  }
+ },
+ "flow_tilted": {
+  "MF 0.2 um": 95.8,
+  "MF 0.1 um": 58.5,
+  "UF 100 kDa (high)": 19.8,
+  "UF 100 kDa (low)": 7.9
+ },
+ "wet_dip": 0.7058823529411765,
+ "wet_shallow": 0.11764705882352941,
+ "flow_dip_primed": {
+  "MF 0.2 um": {
+   "child": 86.5,
+   "elderly": 128.5,
+   "revA": 190.8,
+   "adult": 292.9
+  },
+  "MF 0.1 um": {
+   "child": 52.8,
+   "elderly": 78.6,
+   "revA": 117.1,
+   "adult": 181.0
+  }
+ },
+ "flow_dip_unprimed": {
+  "MF 0.2 um": {
+   "child": 64.8,
+   "elderly": 96.4,
+   "revA": 143.6,
+   "adult": 221.4
+  },
+  "MF 0.1 um": {
+   "child": 38.6,
+   "elderly": 57.5,
+   "revA": 85.8,
+   "adult": 132.8
+  }
+ },
+ "flow_shallow_unprimed": {
+  "MF 0.2 um": 26.4,
+  "MF 0.1 um": 14.7
+ },
+ "LP_needed_200": {
+  "upright 155 mm lift": 3419.0,
+  "dip line": 3124.0
+ },
+ "minutes_1p5L": {
+  "MF 0.2 um": {
+   "child": 20.0,
+   "elderly": 13.0,
+   "revA": 8.0,
+   "adult": 5.0
+  },
+  "MF 0.1 um": {
+   "child": 33.0,
+   "elderly": 21.0,
+   "revA": 14.0,
+   "adult": 9.0
+  }
+ },
+ "minutes_1p5L_child_cold": {
+  "MF 0.2 um": 31.0,
+  "MF 0.1 um": 50.0
+ },
+ "flux_design_LMH": 212.7739880907692,
+ "flow_fouled": {
+  "MF 0.2 um": {
+   "1e+13": {
+    "1": 169.0,
+    "5": 140.0,
+    "20": 85.0
+   },
+   "1e+14": {
+    "1": 116.0,
+    "5": 48.0,
+    "20": 15.0
+   }
+  },
+  "MF 0.1 um": {
+   "1e+13": {
+    "1": 106.0,
+    "5": 94.0,
+    "20": 65.0
+   },
+   "1e+14": {
+    "1": 82.0,
+    "5": 41.0,
+    "20": 14.0
+   }
+  }
+ },
+ "flow_revA80": 45.6,
+ "flow_revA40": 19.4,
+ "flow_revA80_02": 77.8,
+ "A_long": 0.08017344451961152,
+ "flow_long": {
+  "MF 0.2 um": {
+   "child": 82.8,
+   "elderly": 135.5,
+   "revA": 213.2,
+   "adult": 339.4
+  },
+  "MF 0.1 um": {
+   "child": 52.9,
+   "elderly": 86.9,
+   "revA": 137.5,
+   "adult": 220.9
+  }
+ },
+ "S200": {
+  "MF 0.2 um": 11.04,
+  "MF 0.1 um": 17.08,
+  "UF 100 kDa (high)": 47.33,
+  "UF 100 kDa (low)": 115.19
+ },
+ "S400": {
+  "MF 0.2 um": 20.94,
+  "MF 0.1 um": 33.04,
+  "UF 100 kDa (high)": 93.54,
+  "UF 100 kDa (low)": 229.26
+ },
+ "budget200_mf01": {
+  "lift": 1.518,
+  "intake": 0.003,
+  "membrane": 13.308,
+  "lumen": 0.604,
+  "grids": 0.055,
+  "screen": 0.004,
+  "carbon": 0.689,
+  "pad": 0.886,
+  "mouth": 0.018
+ },
+ "budget200_mf02": {
+  "lift": 1.518,
+  "intake": 0.003,
+  "membrane": 7.259,
+  "lumen": 0.604,
+  "grids": 0.055,
+  "screen": 0.004,
+  "carbon": 0.689,
+  "pad": 0.886,
+  "mouth": 0.018
+ },
+ "carbon_range_kPa": [
+  0.51,
+  1.97
+ ],
+ "sip_child_s": 265.0,
+ "V_bed_mL": 4.0212385965949355,
+ "m_bed_g": [
+  1.930194526365569,
+  2.0106192982974678
+ ],
+ "EBCT_s": {
+  "100": 2.41,
+  "200": 1.21,
+  "400": 0.6
+ },
+ "gland": {
+  "depth": 1.3499999999999996,
+  "squeeze": 0.24157303370786537,
+  "stretch": 0.02823654768247219,
+  "fill": 0.7680418336137272,
+  "extrusion_gap": 0.09999999999999964
+ },
+ "squeeze_range_printed": [
+  0.1470588235294119,
+  0.3279569892473121
+ ],
+ "squeeze_range_reamed": [
+  0.17647058823529427,
+  0.30107526881720453
+ ],
+ "revA_ring_od": 24,
+ "laplace_broken_kPa": 0.576,
+ "laplace_02um_kPa": 720.0,
+ "air_hold_kPa": 51.04342105263157,
+ "V_lumen_mL": 4.838052686528282,
+ "V_header_mL": 2.28079626650619,
+ "air_hold_mark_mL": 6.181151046965528,
+ "air_hold_min_defect_um": 5.642255046013456,
+ "thumb_overpressure_kPa": 190.98593171027443,
+ "thumb_N": 16.035763659303793,
+ "backflush_mLmin_50kPa": {
+  "MF 0.2 um": 741.0,
+  "MF 0.1 um": 556.0
+ },
+ "backflush_s_20mL": {
+  "MF 0.2 um": 1.6,
+  "MF 0.1 um": 2.2
+ },
+ "socket_bypass_mLmin": 506.2932072422415,
+ "A2_flow_mLmin": 10.159712086551556,
+ "A2_flow_best_mLmin": 9.882232305954007,
+ "Lp_pot_LMHbar": 555.7695039028468,
+ "A3_contact_s": 5.131791599638928,
+ "A3_needed_s": 57600,
+ "length_mm": 205.0,
+ "width_mm": 29.6,
+ "across_port_mm": 29.6,
+ "mass_g": 66.21099383474231,
+ "mass_dry_body_g": 62.27600754368187,
+ "water_held_mL": 40.33528435542945,
+ "mass_full_g": 106.54627819017176,
+ "bom_total": 17.46,
+ "refill": 1.21,
+ "cpl_proto": 0.010545,
+ "cpl_mass": 0.0017250000000000002,
+ "cpl_tablets": 0.02
+}

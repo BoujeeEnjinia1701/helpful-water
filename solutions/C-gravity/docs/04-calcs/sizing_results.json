@@ -1,0 +1,215 @@
+{
+ "assumed": {
+  "LP_CLEAN_LMH_BAR": 1000.0,
+  "LP_FOULED_SHARE": 0.5,
+  "MODULE_LIFE_L": 30000.0,
+  "K_FITTINGS": {
+   "bulkhead_entry": 0.5,
+   "strainer": 2.0,
+   "ball_valve_open": 0.2,
+   "barbs_and_tee": 4.0,
+   "exit": 1.0
+  },
+  "STAND_KG": 9.0,
+  "BUCKET_KG": 1.2,
+  "TIP_CRITERION_DEG": 15.0,
+  "PUSH_HEIGHT_M": 1.0,
+  "SYRINGE_PUSH_N": {
+   "gentle": 30.0,
+   "hard": 100.0
+  },
+  "TAP_CD": 0.6,
+  "CANDLE_LPH_FULL": 1.0,
+  "CANDLE_LIFE_L": 10000.0,
+  "BSF_MAX_LPM": 0.4,
+  "BSF_BATCH_L": 18.0,
+  "BSF_PAUSE_MIN_H": 1.0,
+  "BSF_RIPEN_DAYS": 30,
+  "SAND_BULK": 1600.0,
+  "CL_DOSE_MGL": {
+   "clear": 1.875,
+   "turbid": 3.75
+  },
+  "CL_RESIDUAL_30MIN_MGL": 0.5,
+  "CT_VIRUS_4LOG": {
+   "5C": 8.0,
+   "10C": 6.0,
+   "20C": 3.0
+  },
+  "CT_CRYPTO": 15300.0,
+  "PVDF_CL_LIFETIME_PPMH": 3000000.0,
+  "SCALE_COST_USD": {
+   "module": 8.0,
+   "two_buckets_lids": 6.0,
+   "tap_valve_fittings": 3.5,
+   "hoses": 1.2,
+   "printed_or_moulded_parts": 1.5,
+   "stand_local_timber": 6.0,
+   "assembly_qc_pack": 3.0
+  }
+ },
+ "area_m2": 0.6635,
+ "demand": {
+  "l_per_day": 45.0,
+  "sphere_range": [
+   27.5,
+   45.0
+  ],
+  "who_basic_l_per_day": 37.5
+ },
+ "overflow": {
+  "worst_batch_l": 19.4,
+  "clean_free_l": 19.56
+ },
+ "raw": {
+  "fill_l": 17.0,
+  "fill_depth_mm": 291.2,
+  "settle_zone_l": 2.65,
+  "batch_l": 14.35,
+  "rim_z_mm": 1270.0,
+  "brim_l": 22.1
+ },
+ "head": {
+  "outlet_z": 953.0,
+  "full_z": 1194.2,
+  "discharge_z": 536.0,
+  "head_m": [
+   0.417,
+   0.658
+  ],
+  "head_kpa": [
+   4.08,
+   6.44
+  ],
+  "mean_kpa": 5.26
+ },
+ "c1": {
+  "clean": {
+   "q_full_lph": 36.7,
+   "q_empty_lph": 23.6,
+   "q_mean_lph": 30.2,
+   "q_mean_ml_min": 503.0,
+   "stages_at_mean": {
+    "membrane_kpa": 4.545,
+    "lumen_kpa": 0.501,
+    "hose_kpa": 0.034,
+    "fittings_kpa": 0.182,
+    "total_kpa": 5.262
+   },
+   "batch_min": 28.2,
+   "batch_l": 14.1,
+   "batches_per_day": 3.19,
+   "hours_per_day": 1.5,
+   "elapsed_h_per_day": 6.3
+  },
+  "fouled": {
+   "q_full_lph": 19.9,
+   "q_empty_lph": 12.7,
+   "q_mean_lph": 16.3,
+   "q_mean_ml_min": 272.0,
+   "stages_at_mean": {
+    "membrane_kpa": 4.919,
+    "lumen_kpa": 0.271,
+    "hose_kpa": 0.018,
+    "fittings_kpa": 0.053,
+    "total_kpa": 5.262
+   },
+   "batch_min": 52.0,
+   "batch_l": 14.08,
+   "batches_per_day": 3.2,
+   "hours_per_day": 2.77,
+   "elapsed_h_per_day": 7.6
+  }
+ },
+ "clean_side_kpa_at_module": 1.72,
+ "module_raw_side_kpa_max": 8.16,
+ "stokes_mm_per_h": {
+  "2um": 13.0,
+  "5um": 81.0,
+  "10um": 324.0,
+  "20um": 1296.0,
+  "50um": 8100.3
+ },
+ "stokes_5c_mm_per_h": {
+  "10um": 213.2,
+  "20um": 852.7
+ },
+ "settle_depth_mm": 241.2,
+ "settle_h": {
+  "20C": 0.74,
+  "5C": 1.13
+ },
+ "stability": {
+  "frame_420": {
+   "half_base_m": 0.21,
+   "cg_m": 0.827,
+   "tip_deg": 14.2,
+   "push_n": 58.0
+  },
+  "feet_560": {
+   "half_base_m": 0.28,
+   "cg_m": 0.827,
+   "tip_deg": 18.7,
+   "push_n": 78.0
+  }
+ },
+ "mass_full_kg": 49.4,
+ "tap": {
+  "head_m": [
+   0.048,
+   0.262
+  ],
+  "l_per_min": [
+   1.75,
+   4.1
+  ],
+  "cup_250ml_s": 8.6
+ },
+ "backflush_kpa": {
+  "gentle": 53.6,
+  "hard": 178.6
+ },
+ "bubble_point_kpa_0p1um": 2912.0,
+ "air_test": {
+  "test_kpa": 100.0,
+  "push_n": 56.0,
+  "smallest_defect_um": 2.91,
+  "strokes": "displace the lumen water (about 52 mL), then pump air strokes through the check valve until a firm 56 N push holds"
+ },
+ "chlorine": {
+  "ct_30min": 15.0,
+  "virus_4log_ct_5c": 8.0,
+  "crypto_hours_at_dose": 136.0,
+  "dose_clear": 1.875,
+  "pvdf_exposure_ppmh_life": 98550.0,
+  "pvdf_share_of_limit": 0.0328
+ },
+ "lumens_ml": 51.8,
+ "hold_up_clean_ml": 83.0,
+ "c2": {
+  "q_full_lph": 4.0,
+  "batch_l": 16.0,
+  "batch_hours": 6.7,
+  "hours_per_day": 18.8,
+  "candle_area_m2": 0.028,
+  "life_l": 40000.0
+ },
+ "c3": {
+  "area_m2": 0.1207,
+  "loading_lph_m2_at_max": 199.0,
+  "batch_min": 64.0,
+  "batches_per_day": 2.5,
+  "media_kg": 124.0,
+  "ripening_days": 30
+ },
+ "bom_usd": 86.4,
+ "cost_per_litre_usd": 0.0029,
+ "module_life_years": 1.83,
+ "cost_per_person_year_usd": 9.44,
+ "scale_cost_usd": 29.2,
+ "c1_size_mm": {
+  "width": 560.0,
+  "depth": 560.0,
+  "height": 1303.0
+ }
+}

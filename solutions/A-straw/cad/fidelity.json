@@ -1,0 +1,47 @@
+{
+ "level": "D3",
+ "stage": "P3",
+ "hash": "91995cc01c61f498",
+ "options": {
+  "A1": {
+   "title": "Hollow-fibre straw with backflush",
+   "parts": 26,
+   "made_or_bought": 25,
+   "fasteners": 1,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.1,
+   "step_files": 25
+  },
+  "A2": {
+   "title": "Ceramic tube straw, scrub to clean",
+   "parts": 25,
+   "made_or_bought": 24,
+   "fasteners": 1,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.1,
+   "step_files": 0
+  },
+  "A3": {
+   "title": "Copper and charcoal straw (dropped)",
+   "parts": 20,
+   "made_or_bought": 19,
+   "fasteners": 1,
+   "welds": 0,
+   "bare": [],
+   "bare_share": 0.0,
+   "interference": [],
+   "mass_kg": 0.1,
+   "step_files": 0
+  }
+ },
+ "failures": [],
+ "warnings": [],
+ "passed": true,
+ "seconds": 21.3
+}

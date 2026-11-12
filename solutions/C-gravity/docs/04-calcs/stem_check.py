@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""HWC-STM-001 STEM check for Helpful Water C (household gravity filter). Run from the solution folder after sizing.py:
+
+    python docs/04-calcs/sizing.py && python docs/04-calcs/stem_check.py && python docs/04-calcs/stm_table.py
+
+Every physical, chemical and biological claim of the idea and of options C1, C2 and C3, with the water checks of
+STANDARDS section 25.6. Numbers come from docs/04-calcs/sizing_results.json (HWC-CAL-001). Rows closed by a fix made
+under Amish's standing instruction of 2026-10-23 name the decision (HWC-DEC-001 F1 to F4) in "closed_by".
+
+Licence: Apache-2.0 (Helpful Engineering licensing guide). Design Molecule Labs with Helpful Engineering.
+"""
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / ".kit"))
+from stem_check import Check, WITHIN, PLAUSIBLE, FIX, FAILS  # noqa: E402,F401
+
+r = json.loads((ROOT / "docs/04-calcs/sizing_results.json").read_text())
+c1, hd, ch = r["c1"], r["head"], r["chlorine"]
+c = Check(ROOT / "docs/04-calcs/stem_results.csv")
+LP = "assumed clean-water permeability 1,000 L/(m2 h bar), the value used by solutions A and B"
+
+# ---- demand and hydraulics (25.6) ----------------------------------------------------------------------------
+c.cited("S1", f"A household of five needs about {r['demand']['l_per_day']:.0f} L a day for drinking and cooking",
+        "Biology", "Human physiology and biomechanics", "Sphere Handbook basic survival needs: drinking and food 2.5 to 3 L, basic cooking 3 to 6 L per person per day",
+        f"5 x 9 L = 45 L (upper end of 27.5 to 45 L); the 7.5 L per person emergency minimum for consumption gives 37.5 L", WITHIN)
+c.claim("S2", f"C1 runs on a gravity head of {hd['head_kpa'][0]:.1f} to {hd['head_kpa'][1]:.1f} kPa ({hd['head_m'][0]:.2f} to {hd['head_m'][1]:.2f} m), inside the gravity range of STANDARDS 25.6",
+        "Physics", "Fluid mechanics", "p = rho g h from the raw outlet and fill line (0.95 and 1.19 m) to the clean discharge (0.54 m)",
+        hd["head_kpa"][1], 10.0, "kPa", rule="below")
+c.claim("S3", f"C1 treats the {r['demand']['l_per_day']:.0f} L day in under 3 hours of filtering even when the module is due for a backflush ({c1['fouled']['hours_per_day']:.1f} h fouled, {c1['clean']['hours_per_day']:.1f} h clean)",
+        "Physics", "Fluid mechanics", f"Falling-head drain of 3.2 batches of {c1['clean']['batch_l']:.1f} L through {r['area_m2']:.3f} m2 of outside fibre area; {LP}; fouled at half permeability",
+        c1["fouled"]["hours_per_day"], 3.0, "h", rule="below", margin=0.25)
+c.claim("S4", "Strainer, valve, hoses, fittings and lumens take under a fifth of the mean head, so the membrane sets the flow (18 % at the lowest head; a fouled strainer adds to it)",
+        "Physics", "Fluid mechanics", "Hagen-Poiseuille for the 9.5 mm hoses and the 0.5 mm lumens (half the leg loss, conservative against a third); K-factor sum 7.7 at the 7 mm barb bore; viscous losses and membrane flux both scale with viscosity, so the share holds in cold water",
+        round(c1["clean"]["stages_at_mean"]["total_kpa"] - c1["clean"]["stages_at_mean"]["membrane_kpa"], 2), round(0.2 * hd["mean_kpa"], 2), "kPa", rule="below")
+c.order_of_magnitude("S5", f"Flow arithmetic: 1,000 L/(m2 h bar) x {r['area_m2']:.2f} m2 x 0.05 bar is about 33 L/h gross, 30 L/h net of the other stages",
+        "Mathematics", "Units and dimensional analysis", claimed=33.0, estimate=c1["clean"]["q_mean_lph"], unit="L/h",
+        law="L/(m2 h bar) x m2 x bar = L/h")
+c.order_of_magnitude("S6", f"C1 flow of {c1['clean']['q_mean_lph']:.0f} L/h is of the same order as, and conservative against, a new commercial bucket hollow-fibre kit",
+        "Engineering and technology", "Standards practice", claimed=c1["clean"]["q_mean_lph"], estimate=50.0, unit="L/h",
+        law="Sawyer PointONE bucket kit: 46.5 to 54 L/h with a 0.3 m hose under a 19 L bucket (CAWST fact sheet)")
+# ---- persona efforts (25.6): gravity sets the flow; the efforts are pouring, the tap, the syringe -------------------
+c.cited("S7", "Flow does not depend on the user: a child or an elderly user gets the same flow, and draws water from the tap in about 9 s per 250 mL cup",
+        "Biology", "Ergonomics", f"Gravity drives the filter; tap orifice flow Q = Cd A sqrt(2 g h), Cd 0.6, 8 mm bore, 0.05 to 0.26 m head ({r['tap']['l_per_min'][0]:.1f} to {r['tap']['l_per_min'][1]:.1f} L/min)",
+        "The persona efforts are pouring a 5 L jug into a rim at 1.27 m (a carer task, not a child's), opening the tap and a gentle syringe push; tap force and pour height to measure in persona trials (HWP-VER-001 TH)", PLAUSIBLE)
+c.cited("S8", "A gentle 30 N push on the 60 mL syringe backflushes the module, inside an elderly user's strength",
+        "Biology", "Ergonomics", "p = F / A on a 26.7 mm bore: 30 N puts at most 54 kPa in the barrel; the luer tip, check valve and barb take much of it, so the stroke is slow and the membrane sees less; 30 N as a light push is assumed",
+        "Stroke time and membrane pressure to measure; push strength of older users to take from persona trials (TH); a catheter-tip syringe is the alternative if the luer loss is too high", PLAUSIBLE)
+# ---- separation (25.6) ----------------------------------------------------------------------------------------
+c.cited("S9", "An intact 0.1 um hollow-fibre membrane is a size barrier for bacteria (about 0.3 to 5 um) and protozoan cysts (about 3 to 15 um); no removal is claimed from the pore label",
+        "Biology", "Microbiology", "Size exclusion: Cryptosporidium oocysts 4 to 6 um and Giardia cysts 8 to 12 um are 40 to 120 times the pore; a commercial 0.1 um bucket module tested above 7 log Klebsiella and 5 log Cryptosporidium and Giardia (CAWST fact sheet)",
+        "A log reduction exists for this module only once an accredited laboratory measures it (HWP-VER-001 TA, TB)", WITHIN)
+c.cited("S10", "The membrane is not a virus barrier, so C carries the no-virus warning and pairs with chlorine in the raw bucket (solution D) where viruses are a risk",
+        "Biology", "Microbiology", "Enteric viruses about 0.02 to 0.1 um pass a 0.1 um pore; the cited 0.1 um bucket module lists viruses as not removed (CAWST)",
+        "No virus claim (Amish, 2026-11-11: no virus claim, co-treat); HWP-CLM-001 warning on the raw bucket label", WITHIN)
+c.claim("S11", f"Paired with D, 30 minutes at a measured free chlorine residual of 0.5 mg/L at the end of contact gives a CT of {ch['ct_30min']:.0f} mg min/L, above the 4 log virus CT even at 0.5 degC (12); mixing and the residual are D's to confirm",
+        "Chemistry", "Physical chemistry", "CT = C x t with C the residual at the end of contact; EPA free chlorine CT for 4 log virus inactivation, pH 6 to 9: 12 at 0.5 degC, 8 at 5 degC, 3 at 20 degC mg min/L",
+        ch["ct_30min"], 12.0, "mg min/L", rule="above")
+c.cited("S12", f"Chlorine does not inactivate Cryptosporidium at household doses ({ch['crypto_hours_at_dose']:.0f} h at 1.875 mg/L for a CT of 15,300, longer in cold water), nor reach a useful Giardia CT in 30 minutes, so the membrane after chlorination is what removes cysts",
+        "Biology", "Microbiology", "CT for Cryptosporidium with free chlorine about 15,300 mg min/L at about 25 degC (CDC hyperchlorination guidance); HWP-CLM-001: no Cryptosporidium claim from chlorine alone",
+        "Chlorinate first, then filter: the order of the C plus D system; each barrier covers the other's gap", WITHIN)
+c.claim("S13", f"The PVDF fibres tolerate a lifetime of household chlorine in the raw water ({ch['pvdf_exposure_ppmh_life']:,.0f} ppm h over 3 years at 3.75 mg/L, continuously wetted)",
+        "Chemistry", "Materials and polymer chemistry", "Lifetime chlorine tolerance of a PVDF UF membrane 3,000,000 ppm h (LG Water Solutions data, another maker's product); hydrophilising additives, potting and gaskets may tolerate less",
+        round(ch["pvdf_share_of_limit"] * 100, 1), 100.0, "% of limit", rule="below", margin=30.0)
+c.cited("S14", "Free chlorine passes the membrane, so a residual reaches the clean bucket and protects stored water; C has no carbon stage, because carbon downstream of the dose would remove that residual",
+        "Chemistry", "Physical chemistry", "Hypochlorous acid and hypochlorite are small dissolved species that a 0.1 um membrane does not retain; activated carbon reduces free chlorine fast (the basis of NSF/ANSI 42 chlorine claims); CDC SWS target above 0.2 mg/L after 24 h",
+        "Residual in the clean bucket to measure at 1 and 24 h with D (HWP-VER-001 TJ); chlorine taste is the trade-off (HWC-DEC-001 D3)", PLAUSIBLE)
+# ---- settling and prefilter (SC3) ----------------------------------------------------------------------------
+c.claim("S15", f"Settling for 1 h (1.5 h below 10 degC) drops silt of 10 um and larger below the outlet: {r['settle_h']['20C']:.2f} h needed at 20 degC and {r['settle_h']['5C']:.2f} h at 5 degC for the {r['settle_depth_mm']:.0f} mm column",
+        "Physics", "Fluid mechanics", "Stokes settling v = g d2 (rho_p - rho) / 18 mu, quartz 2,650 kg/m3, mu 1.0 (20 degC) and 1.52 mPa s (5 degC); clay (2 um, 13 mm/h) and colloids do not settle; pouring and draw-off can resuspend fines",
+        r["settle_h"]["5C"], 1.5, "h at 5 degC", rule="below")
+c.cited("S16", "Cotton cloth folded to eight layers in the fill ring removes coarse particles and plankton-attached organisms before the bucket",
+        "Biology", "Microbiology", "Colwell et al. 2003 (PNAS): worn, laundered sari cloth folded four to eight times has an effective pore of about 20 um; 48 % fewer cholera cases in 65 villages",
+        "A prefilter only; no pathogen claim rests on it; the cloth is specified as worn, soft and tightly woven, and its retention is measured at TRL 4 (TD)", WITHIN)
+c.cited("S17", "Turbid source water (SC3, 10 to 100 NTU) needs more backflushes, not a different design",
+        "Engineering and technology", "Standards practice", "Commercial 0.1 um bucket kit: backflush about every 3,800 L of clear water and every 40 L or less of very turbid water (CAWST)",
+        "Volume between backflushes at 1, 10, 50 and 100 NTU to measure (HWP-VER-001 TE); settle overnight above 50 NTU", PLAUSIBLE)
+# ---- fixes under the standing instruction ---------------------------------------------------------------------
+st = r["stability"]
+c.claim("S18", f"The loaded stand needs {st['feet_560']['tip_deg']:.1f} deg of tilt and {st['feet_560']['push_n']:.0f} N at 1 m to tip (the briefed 420 mm frame gave {st['frame_420']['tip_deg']:.1f} deg and failed); a child's pull can exceed 78 N, so a wall strap is proposed (HWC-DEC-001 D4)",
+        "Physics", "Mechanics and statics", "Tip angle atan(half base / centre of gravity height), raw bucket full, clean bucket empty; criterion 15 deg (assumed, as solution B)",
+        st["feet_560"]["tip_deg"], 15.0, "deg", rule="above", closed_by="HWC-DEC-001 F1")
+c.cited("S19", "The module runs full: shell air would block fibre area, so the module stands upright with its raw inlet on top and a bleed screw at the top of the shell, opened at first fill until water shows",
+        "Physics", "Fluid mechanics", "A wetted membrane holds air below its bubble point (hundreds of kPa for real 0.1 um fibres), so trapped shell air cannot pass the fibres; downflow in the hose (about 0.12 m/s) roughly cancels bubble rise, so venting through the inlet alone is not reliable",
+        "Failed as briefed (orientation free; air pockets over the U-bends), fixed by the upright mounting and a bleed screw on the top cap (supplier request); repeat the bleed after a dry spell", WITHIN, closed_by="HWC-DEC-001 F2")
+c.balance("S20", f"Even a raw bucket filled to the brim ({r['overflow']['worst_batch_l']:.1f} L above the settling zone) fits in the clean bucket when the user starts below the 2.5 L refill line",
+          "Mathematics", "Orders of magnitude", inputs={"clean bucket free volume above the refill line": r["overflow"]["clean_free_l"]},
+          outputs={"brim-full raw batch": r["overflow"]["worst_batch_l"]}, unit="L", law="Volume balance; as briefed, two 20 L containers overflow when the clean one is not empty, and a 5 L line still overflowed if the user overfilled past the 17 L mark; fixed with a 2.5 L refill line just above the tap", closed_by="HWC-DEC-001 F3")
+c.cited("S21", "Chlorine is added after settling, through the lid port, and the raw valve stays shut for 30 minutes",
+        "Chemistry", "Physical chemistry", "Turbidity shields organisms and adds chlorine demand (WHO, CDC: double dose for turbid water); an open valve during contact sends water to the filter before its 30 minutes",
+        "Failed as briefed (no hold point), fixed: a dosing port in the raw lid for D and a valve tag 'shut for 30 minutes after dosing'; mixing and dose belong to D", WITHIN, closed_by="HWC-DEC-001 F4")
+# ---- integrity and silent failure (25.6) -----------------------------------------------------------------------
+c.cited("S22", f"An air hold test shows a broken fibre as bubbles in the clear raw hose: the user pumps air strokes through a luer check valve until a firm {r['air_test']['push_n']:.0f} N push (100 kPa) holds",
+        "Physics", "Fluid mechanics", f"Young-Laplace dP = 4 gamma / d: at 100 kPa any opening above about 3 um passes air, while real 0.1 um fibres hold air to hundreds of kPa; the lumens hold {r['lumens_ml']:.0f} mL of water, which the first strokes push out through the walls; Boyle's law then needs several strokes, which the check valve allows; the push force is the user's gauge",
+        "Failed as first written (one 60 mL stroke cannot reach 100 kPa against a water-filled clean side), fixed with the check valve and a several-stroke procedure", WITHIN, closed_by="HWC-DEC-001 F5")
+c.cited("S23", "The air test finds gross damage, not small defects, so it is a monthly check and never proof of performance",
+        "Engineering and technology", "Sensing resolution", "Openings under about 3 um hold at 100 kPa; bacteria are 0.5 to 5 um; a broken fibre (0.5 mm lumen) passes air at 0.6 kPa",
+        "Instructions say 'retire if bubbles stream', never 'safe if no bubbles'; the module maker's production integrity test (HWP-VER-001 TI) is the real proof", WITHIN)
+c.claim("S24", f"The clean side is above atmospheric pressure ({r['clean_side_kpa_at_module']:.1f} kPa at the module outlet) while filtering, so a leaking clean fitting drips out and cannot draw dirty water in",
+        "Physics", "Fluid mechanics", "Hydrostatic pressure from the clean discharge (0.54 m) down to the module outlet (0.36 m); every clean-side joint outside the module sits below the discharge except the inlet barb at it",
+        r["clean_side_kpa_at_module"], 0.0, "kPa", rule="above")
+c.cited("S25", "Wet fibres can be damaged by freezing without any change in flow, so C carries a do-not-freeze warning and a retire-after-freezing rule",
+        "Physics", "Thermodynamics", "Water expands about 9 % on freezing; a silent failure mode that hollow-fibre makers warn of (concept validation questions, item 17)",
+        "No freeze claim; pictogram; after a suspected freeze the module is retired, not tested and reused; drain and store indoors (HWP-VER-001 TF)", WITHIN)
+c.cited("S26", f"The module shell, end caps and potting hold the highest raw pressure ({r['module_raw_side_kpa_max']:.1f} kPa) and a hard backflush ({r['backflush_kpa']['hard']:.0f} kPa)",
+        "Physics", "Strength of materials", "Thin-wall hoop stress p r / t on a 50 x 2 mm shell is 2.1 MPa at 179 kPa, far below 10 MPa (assumed for PP or ABS); the end load (about 300 N) on caps and potting is not checked; a palm push of 200 N doubles the pressure",
+        "Supplier's burst and backwash rating to obtain (HWC-DEC-001 C2); the instruction is a gentle push", PLAUSIBLE)
+c.cited("S27", f"A gentle backflush ({r['backflush_kpa']['gentle']:.0f} kPa) stays inside the module maker's backwash limit",
+        "Engineering and technology", "Standards practice", "p = F / syringe bore area; the maximum backwash pressure of the bought module is not yet known",
+        "To confirm from the supplier (HWC-DEC-001 C2); the instruction is a gentle push with water drawn from the clean tap", PLAUSIBLE)
+# ---- hygiene and materials (25.6) ------------------------------------------------------------------------------
+c.cited("S28", f"Without chlorine, water standing on the clean side ({r['hold_up_clean_ml']:.0f} mL: {r['lumens_ml']:.0f} mL in the lumens, the rest in the tee and clean hose) and in the clean bucket can regrow bacteria between batches",
+        "Biology", "Microbiology", "Biofilm grows on wetted surfaces downstream of membranes (Rev A specification section 05); stored water is recontaminated in handling (HWP-SRC-001 SC5)",
+        "Mitigations: closed bucket with tap and screened vent, no dipping, weekly chlorine rinse of the clean bucket, discard the first cup after a pause of more than a day, D residual where used; regrowth to measure (HWP-VER-001 TE, TG)", PLAUSIBLE)
+c.cited("S29", "Every wetted material is from a family available in NSF/ANSI/CAN 61 grades: HDPE buckets, PP valve, tap and fittings, silicone hose, EPDM gaskets, 316 stainless strainer, PVDF fibres, polyurethane or epoxy potting",
+        "Chemistry", "Materials and polymer chemistry", "NSF/ANSI/CAN 61 and 372; buckets must be new food-grade, never reused chemical pails; plasticised PVC hose is avoided because plasticisers can leach",
+        "Extractables of the actual grades and the potting (HWP-VER-001 TG); prototypes are used with known potable test water only", PLAUSIBLE)
+c.order_of_magnitude("S30", "Full, the C1 system weighs about 50 kg (raw 17 L and clean 20 L of water, buckets, stand, module)",
+        "Mathematics", "Orders of magnitude", claimed=50.0, estimate=r["mass_full_kg"], unit="kg",
+        law="Two buckets of water (17 + 20 kg), buckets 2.4 kg, stand 9 kg (timber 500 kg/m3), module and hoses 1 kg")
+# ---- option C2: ceramic candles -----------------------------------------------------------------------------
+c2 = r["c2"]
+c.cited("S31", f"C2: four ceramic candles under about 0.3 m of water give about {c2['q_full_lph']:.0f} L/h full, so the 45 L day takes about {c2['hours_per_day']:.0f} h of filtering",
+        "Physics", "Fluid mechanics", "British Berkefeld gravity data: two candles 2 L/h in the 12 L system (about 1 L/h per candle); flow falls as the upper chamber drains (mean 60 %, assumed)",
+        "Physics holds; 19 h is a best case for new candles; the option filters most of the day and night and misses the 'few hours' target (scored in HWC-OPT-001)", WITHIN)
+c.cited("S32", "C2: silver-impregnated ceramic candles reduce bacteria (4 log listed) and protozoa by size exclusion; any silver claim needs biocide registration and silver leaching data",
+        "Chemistry", "Toxicology", "Engineering for Change listing (4 log bacteria; virus and cyst data unknown); WHO gives no health-based silver value and notes up to 0.1 mg/L is tolerated; HWP-REG-001 W9",
+        "No silver or antimicrobial claim; plain ceramic is an option; silver in water to measure (TG)", PLAUSIBLE)
+c.cited("S33", "C2: ceramic is brittle and cracks from a drop or from freezing without any visible change in flow",
+        "Physics", "Strength of materials", "Fired ceramic has low fracture toughness; a hairline crack opens a path far larger than the pores",
+        "Inspect candles at each cleaning; retire after a drop; no freeze claim", WITHIN)
+# ---- option C3: biosand -------------------------------------------------------------------------------------
+c3 = r["c3"]
+c.cited("S34", f"C3: a plastic biosand filter treats 18 L batches at up to 0.4 L/min and needs a pause of at least 1 h between batches, so the 45 L day takes {c3['batches_per_day']:.1f} batches",
+        "Physics", "Fluid mechanics", f"CAWST 2009 fact sheet: maximum 0.4 L/min, loading rate below 600 L/(h m2) ({c3['loading_lph_m2_at_max']:.0f} here), 12 to 18 L per batch, pause 1 to 48 h",
+        "Physics holds; the day's water is filtered in three sessions spread through the day", WITHIN)
+c.cited("S35", "C3: biosand reduces bacteria less than a membrane (up to 96.5 % in the lab, 87.9 to 98.5 % in the field, about 1 to 1.8 log) and protozoa more than 99.9 % in the lab, after a biolayer ripens for up to 30 days",
+        "Biology", "Microbiology", "CAWST 2009 fact sheet; removal is low and silent while the biolayer ripens and after disturbance",
+        "Holds as a principle; below the WHO two-star 2 log bacteria target in all cited data; chlorine must go after the filter, never before it, or it harms the biolayer", WITHIN)
+c.order_of_magnitude("S36", f"C3: the filter holds about {c3['media_kg']:.0f} kg of dry sand and gravel (about 170 kg in operation with pore and standing water), so it is filled in place and never moved",
+        "Mathematics", "Orders of magnitude", claimed=float(c3["media_kg"]), estimate=c3["media_kg"], unit="kg",
+        law="Bed volume (392 mm bore, 0.64 m of media) x 1,600 kg/m3 bulk density (assumed)")
+state = c.write()
+print("stem_check:", state)

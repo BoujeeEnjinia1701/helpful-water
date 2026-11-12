@@ -1,0 +1,60 @@
+# Solution metadata (STANDARDS sections 19 and 25). Card metadata consumed by https://designmolecule.com
+name: "Helpful Water C: household gravity filter"
+slug: helpful-water-c-gravity
+repo: BoujeeEnjinia1701/helpful-water   # program repo; this solution lives in solutions/C-gravity
+doc_prefix: HWC
+partner: Helpful Engineering
+brand_line: "Design Molecule Labs with Helpful Engineering"
+claims_rule: water
+archive: false
+program_repo: helpful-water
+solution: C
+area: Food and water security
+trl: 3                   # TRL 3 on paper, 2026-11-11 (kit 1.9.1-he); no prototype exists
+trl_target: 3
+stage: P3                # pipeline stage, STANDARDS section 19
+stem_check: open         # HWC-STM-001: no Fails row; 11 plausible rows wait on supplier data and TRL 4 tests
+concept_options: [C1, C2, C3]   # HWC-OPT-001
+concept_chosen: "proposed: C1, awaiting Amish"   # HWC-DEC-001 D1; C1 carried to the drawings, BOM and build plan
+design_state: constructable   # STANDARDS section 18; HWC-DDR-002
+pitch: >-
+  A two-bucket household gravity filter on a timber stand, designed to reduce bacteria and protozoa in a day's drinking and cooking water for five people (45 L) in a few hours: cloth prefilter and settling in the raw bucket, a bought 0.1 um hollow-fibre module, and a closed clean bucket with a tap; not a virus barrier, so the raw water is dosed with chlorine (solution D) first where viruses are a risk.
+problem: >-
+  A straw protects only the person sipping; households need treated water for cooking, stored supplies and infants, kept closed against recontamination, from local containers, without power, and usable with muddy river water after settling.
+budget_usd: 60           # value-engineering target for prototype parts (STANDARDS section 18); estimated cost USD 86.40 (HWC-DEC-001)
+difficulty: 2            # 1 easiest, 5 hardest
+hero_image: media/hero.png
+trl_evidence:
+  - docs/01-problem.md
+  - docs/01b-stem-check.md
+  - docs/02-concept.md
+  - docs/02a-concept-options.md
+  - docs/03a-user-requirements.md
+  - docs/03-requirements.md
+  - docs/03b-traceability.md
+  - docs/04-calcs/01-sizing.md
+  - docs/04-calcs/sizing.py
+  - docs/04-calcs/stem_check.py
+  - docs/decisions/0001-concept-selection.md
+  - docs/decisions/0002-design-for-construction.md
+  - docs/decisions/0003-stem-fixes.md
+  - cad/src/model.py
+  - cad/fidelity.json
+  - cad/step/C1-assembly.step
+  - cad/drawings/HWC-DWG-001.svg
+  - cad/drawings/HWC-DWG-001.pdf
+  - cad/drawings/HWC-DWG-002.pdf
+  - bom/bom.csv
+  - docs/05-build-plan.md
+  - docs/05-build-plan/overview.png
+  - docs/06-design-decisions.md
+  - docs/07-regulatory.md
+  - docs/08-feasibility.md
+  - docs/09-risk.md
+  - docs/10-market.md
+  - docs/11-plan.md
+licenses:
+  hardware: CERN-OHL-P-2.0
+  software: Apache-2.0
+  documentation: CC-BY-4.0
+tags: [water-security, point-of-use, household-filter, gravity-filter, hollow-fibre, safe-storage, open-hardware, helpful-engineering, cern-ohl-p]

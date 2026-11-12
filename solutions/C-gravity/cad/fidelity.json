@@ -1,0 +1,54 @@
+{
+ "level": "D3",
+ "stage": "P3",
+ "hash": "00fbad00b0db5fdf",
+ "options": {
+  "C1": {
+   "title": "Two-bucket hollow-fibre filter",
+   "parts": 86,
+   "made_or_bought": 51,
+   "fasteners": 35,
+   "welds": 0,
+   "bare": [
+    "Label: settle, dose (D), wait 30 min, open valve; no virus claim",
+    "Label: treated water, refill line, weekly chlorine rinse"
+   ],
+   "bare_share": 0.039,
+   "interference": [],
+   "mass_kg": 15.3,
+   "step_files": 51
+  },
+  "C2": {
+   "title": "Ceramic candle filter",
+   "parts": 29,
+   "made_or_bought": 25,
+   "fasteners": 4,
+   "welds": 0,
+   "bare": [
+    "Label: treated water, refill line, weekly chlorine rinse"
+   ],
+   "bare_share": 0.04,
+   "interference": [],
+   "mass_kg": 3.8,
+   "step_files": 0
+  },
+  "C3": {
+   "title": "Plastic biosand filter",
+   "parts": 26,
+   "made_or_bought": 24,
+   "fasteners": 2,
+   "welds": 0,
+   "bare": [
+    "Label: treated water, refill line, weekly chlorine rinse"
+   ],
+   "bare_share": 0.042,
+   "interference": [],
+   "mass_kg": 135.3,
+   "step_files": 0
+  }
+ },
+ "failures": [],
+ "warnings": [],
+ "passed": true,
+ "seconds": 25.8
+}

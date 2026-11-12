@@ -1,0 +1,55 @@
+version = 1
+SPDX-PackageName = "helpful-water"
+SPDX-PackageSupplier = "Amish Chadha <amish@designmolecule.com>"
+SPDX-PackageDownloadLocation = "https://github.com/BoujeeEnjinia1701/helpful-water"
+
+# Licensing follows the Helpful Engineering licensing guide (https://helpfulengineering.org/licensing-guide/).
+# Documentation, guides, renders and pictures: CC-BY-4.0
+[[annotations]]
+path = "**"
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Amish Chadha <amish@designmolecule.com> and Helpful Water contributors (Design Molecule Labs with Helpful Engineering)"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Software not needed for the hardware to work: sizing and STEM scripts, kit tools, viewers, workflows: Apache-2.0
+[[annotations]]
+path = ["**/*.py", "**/*.sh", "**/*.js", "**/*.html", "**/*.j2", "**/*.css", ".github/workflows/**", "**/.claude/**", "**/requirements.txt"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Amish Chadha <amish@designmolecule.com> and Helpful Water contributors (Design Molecule Labs with Helpful Engineering)"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Hardware: CAD sources and exports, drawings, BOM, build plan pictures and everything needed to make or test it: CERN-OHL-P-2.0
+[[annotations]]
+path = ["**/cad/**", "**/bom/**", "**/docs/05-build-plan/**", "**/firmware/**"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Amish Chadha <amish@designmolecule.com> and Helpful Water contributors (Design Molecule Labs with Helpful Engineering)"
+SPDX-License-Identifier = "CERN-OHL-P-2.0"
+
+# Licence text: CERN-OHL-P-2.0
+[[annotations]]
+path = ["LICENSE-HARDWARE.txt", "**/LICENSE-HARDWARE.txt"]
+precedence = "override"
+SPDX-FileCopyrightText = "CERN"
+SPDX-License-Identifier = "CERN-OHL-P-2.0"
+
+# Licence text: Apache-2.0
+[[annotations]]
+path = ["LICENSE-SOFTWARE.txt", "**/LICENSE-SOFTWARE.txt"]
+precedence = "override"
+SPDX-FileCopyrightText = "The Apache Software Foundation"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Licence text: CC-BY-4.0
+[[annotations]]
+path = ["LICENSE-DOCUMENTATION.txt", "**/LICENSE-DOCUMENTATION.txt"]
+precedence = "override"
+SPDX-FileCopyrightText = "Creative Commons"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+
+# Bundled IBM Plex fonts
+[[annotations]]
+path = "**/.kit/fonts/**"
+precedence = "override"
+SPDX-FileCopyrightText = "2017 IBM Corp."
+SPDX-License-Identifier = "OFL-1.1"

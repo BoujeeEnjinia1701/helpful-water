@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use or build on this design, please cite it as below."
+type: software
+title: "Helpful Water"
+abstract: "Open, unpowered point-of-use water treatment, from a personal straw to a household gravity filter, with a chlorine add-on for viruses. Design Molecule Labs with Helpful Engineering."
+authors:
+  - given-names: Amish
+    family-names: Chadha
+    affiliation: Design Molecule
+    orcid: "https://orcid.org/0009-0000-8079-7141"
+  - given-names: Ali
+    family-names: Raza
+  - given-names: Suraksha
+    family-names: Bhat
+  - given-names: Lillian
+    family-names: Fernandes
+  - given-names: Raksha
+    family-names: Thammaiah
+  - given-names: James
+    family-names: Butler
+repository-code: "https://github.com/BoujeeEnjinia1701/helpful-water"
+url: "https://helpfulengineering.org"
+license: CERN-OHL-P-2.0
+keywords:
+  - open-hardware
+  - water-security
+  - point-of-use-water-treatment
+  - helpful-engineering

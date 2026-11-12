@@ -1,0 +1,29 @@
+# Program metadata (STANDARDS section 25.4). Card metadata consumed by https://designmolecule.com
+name: Helpful Water
+slug: helpful-water
+repo: BoujeeEnjinia1701/helpful-water   # private until Amish decides
+program: true
+partner: Helpful Engineering
+brand_line: "Design Molecule Labs with Helpful Engineering"
+claims_rule: water
+archive: false           # no Zenodo, DOI or Software Heritage (Amish, 2026-11-11)
+area: Food and water security
+trl: 3                   # program target; each solution carries its own TRL
+trl_target: 3
+stage: P3
+pitch: >-
+  Open, unpowered point-of-use water treatment, from a personal straw to a household gravity filter, with a chlorine add-on for viruses; designed with Helpful Engineering.
+problem: >-
+  Hundreds of millions of people drink unsafe water, and existing options are too expensive, too complex or not made for their setting.
+code: HWP
+solutions:
+  - {code: A, doc_prefix: HWA, folder: A-straw, name: "Helpful Water A: filter straw"}
+  - {code: B, doc_prefix: HWB, folder: B-bottle-cartridge, name: "Helpful Water B: bottle cartridge"}
+  - {code: C, doc_prefix: HWC, folder: C-gravity, name: "Helpful Water C: household gravity filter"}
+  - {code: D, doc_prefix: HWD, folder: D-virus-add-on, name: "Helpful Water D: chlorine add-on for viruses"}
+licenses:
+  hardware: CERN-OHL-P-2.0
+  software: Apache-2.0
+  documentation: CC-BY-4.0
+contributors: [Amish Chadha, Ali Raza, Suraksha Bhat, Lillian Fernandes, Raksha Thammaiah, James Butler]
+tags: [water-security, open-hardware, helpful-engineering, cern-ohl-p]

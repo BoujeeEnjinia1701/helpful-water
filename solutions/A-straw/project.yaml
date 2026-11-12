@@ -1,0 +1,58 @@
+# Solution metadata (STANDARDS sections 19 and 25). Card metadata consumed by https://designmolecule.com
+name: "Helpful Water A: filter straw"
+slug: helpful-water-a-straw
+repo: BoujeeEnjinia1701/helpful-water   # program repo; this solution lives in solutions/A-straw
+doc_prefix: HWA
+partner: Helpful Engineering
+brand_line: "Design Molecule Labs with Helpful Engineering"
+claims_rule: water
+archive: false
+program_repo: helpful-water
+solution: A
+area: Food and water security
+trl: 3                   # TRL 3 on paper, 2026-11-11 (HWA-CAL-001, HWA-BLD-001); see docs/REVIEW.md
+trl_target: 3
+stage: P3                # pipeline stage, STANDARDS section 19
+stem_check: open         # HWA-STM-001 v0.2: no Fails row on A1; S2, S3, S5 (flow target) await Amish; independent review done 2026-11-11 (13 hold, 10 weak, 4 refuted; fixes F6 to F11)
+concept_options: [A1, A2, A3]   # HWA-OPT-001; A2 and A3 dropped at the STEM check
+concept_chosen: "proposed: A1, awaiting Amish"   # HWA-DEC-001 D1, HWA-DDR-001
+design_state: constructable   # STANDARDS section 18; made constructable 2026-11-11 (HWA-DDR-002)
+pitch: >-
+  An open, unpowered personal filter straw: a rinseable steel mesh, a bought hollow-fibre membrane and a small carbon bed in a 205 mm by 26 mm body, with a capped backflush socket that cleans the fibres without passing the carbon. Designed to reduce bacteria and protozoa in clear freshwater; it does not remove viruses.
+problem: >-
+  People who drink from streams, lakes, stored or distrusted water need a personal barrier against bacteria and protozoa that works at a child's suction, can be cleaned in the field and never fails silently, at a humanitarian cost per litre.
+budget_usd: 25           # value-engineering target for prototype parts (STANDARDS section 18); program target at mass production about USD 1 to 5 a unit (HWP-PLN-001)
+difficulty: 3            # 1 easiest, 5 hardest
+hero_image: media/hero.png
+trl_evidence:
+  - docs/01-problem.md
+  - docs/01b-stem-check.md
+  - docs/02-concept.md
+  - docs/02a-concept-options.md
+  - docs/03a-user-requirements.md
+  - docs/03-requirements.md
+  - docs/03b-traceability.md
+  - docs/04-calcs/01-sizing.md
+  - docs/04-calcs/sizing.py
+  - docs/04-calcs/stem_check.py
+  - docs/decisions/0001-concept-selection.md
+  - docs/decisions/0002-design-for-construction.md
+  - cad/src/model.py
+  - cad/fidelity.json
+  - cad/step/A1-assembly.step
+  - cad/drawings/HWA-DWG-001.svg
+  - cad/drawings/HWA-DWG-001.pdf
+  - bom/bom.csv
+  - docs/05-build-plan.md
+  - docs/05-build-plan/overview.png
+  - docs/06-design-decisions.md
+  - docs/07-regulatory.md
+  - docs/08-feasibility.md
+  - docs/09-risk.md
+  - docs/10-market.md
+  - docs/11-plan.md
+licenses:
+  hardware: CERN-OHL-P-2.0
+  software: Apache-2.0
+  documentation: CC-BY-4.0
+tags: [water-security, point-of-use, hollow-fibre, filter-straw, open-hardware, helpful-engineering, cern-ohl-p]
