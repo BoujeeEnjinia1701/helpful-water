@@ -79,7 +79,7 @@ c.cited("S17", "Turbid source water (SC3, 10 to 100 NTU) needs more backflushes,
         "Volume between backflushes at 1, 10, 50 and 100 NTU to measure (HWP-VER-001 TE); settle overnight above 50 NTU", PLAUSIBLE)
 # ---- fixes under the standing instruction ---------------------------------------------------------------------
 st = r["stability"]
-c.claim("S18", f"The loaded stand needs {st['feet_560']['tip_deg']:.1f} deg of tilt and {st['feet_560']['push_n']:.0f} N at 1 m to tip (the briefed 420 mm frame gave {st['frame_420']['tip_deg']:.1f} deg and failed); a child's pull can exceed 78 N, so a wall strap is proposed (HWC-DEC-001 D4)",
+c.claim("S18", f"The loaded stand needs {st['feet_560']['tip_deg']:.1f} deg of tilt and {st['feet_560']['push_n']:.0f} N at 1 m to tip (the briefed 420 mm frame gave {st['frame_420']['tip_deg']:.1f} deg and failed); a child's pull can exceed 78 N, so a wall strap is fitted (HWC-DEC-001 D4)",
         "Physics", "Mechanics and statics", "Tip angle atan(half base / centre of gravity height), raw bucket full, clean bucket empty; criterion 15 deg (assumed, as solution B)",
         st["feet_560"]["tip_deg"], 15.0, "deg", rule="above", closed_by="HWC-DEC-001 F1")
 c.cited("S19", "The module runs full: shell air would block fibre area, so the module stands upright with its raw inlet on top and a bleed screw at the top of the shell, opened at first fill until water shows",

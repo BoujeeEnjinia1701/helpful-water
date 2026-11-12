@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-MKT-001
-title: "Helpful Water D: chlorine add-on for viruses market and viability"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on market and viability"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Market and viability
 version: "0.1"
 status: Draft
@@ -15,7 +15,7 @@ revisions:
     change: First market and viability note for D, citing HWP-MKT-001, with the D1 BOM cost and cost per litre over life
 ---
 
-# Helpful Water D: chlorine add-on for viruses market and viability
+# Helpful Water D: chlorine co-treatment add-on market and viability
 
 D does not compete with chlorine tablets; it makes the tablets NGOs already buy easier to use correctly with the A to C filters. Its value is in fewer dose and timing errors, not in cheaper chlorine, so it must stay cheap beside the tablets: an estimated USD 1.40 per cap at scale, against USD 0.0006 per litre of chlorine for a household dosing 20 L buckets. The market context, buyers and benchmarks of the program are in HWP-MKT-001 and are not repeated here. Prices checked 2026-11-11.
 

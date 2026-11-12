@@ -4,7 +4,7 @@
 
 ![TRL 3](https://img.shields.io/badge/TRL-3%20of%209-0F766E) ![Hardware: CERN-OHL-P-2.0](https://img.shields.io/badge/hardware-CERN--OHL--P--2.0-111827) ![Software: Apache-2.0](https://img.shields.io/badge/software-Apache--2.0-111827) ![Docs: CC-BY-4.0](https://img.shields.io/badge/docs-CC--BY--4.0-111827) [![REUSE compliant](https://github.com/BoujeeEnjinia1701/helpful-water/actions/workflows/reuse.yml/badge.svg)](https://github.com/BoujeeEnjinia1701/helpful-water/actions/workflows/reuse.yml)
 
-**Design Molecule Labs with Helpful Engineering** · **Area:** Food and water security · **TRL:** 3 of 9 (proof of concept on paper; constructable designs) · **Solutions:** A filter straw, B bottle cartridge, C household gravity filter, D chlorine add-on for viruses
+**Design Molecule Labs with Helpful Engineering** · **Area:** Food and water security · **TRL:** 3 of 9 (proof of concept on paper; constructable designs) · **Solutions:** A filter straw, B bottle cartridge, C household gravity filter, D chlorine co-treatment add-on
 
 Open, unpowered point-of-use water treatment, from a personal straw to a household gravity filter, with a chlorine add-on that pairs with any of them where viruses are a risk.
 
@@ -50,12 +50,12 @@ Hundreds of millions of people rely on unsafe drinking water and get preventable
 
 ## Concept and solutions
 
-| Solution | What it is | Recommended option | STEM check | BOM against target |
+| Solution | What it is | Chosen option | STEM check | BOM against target |
 | --- | --- | --- | --- | --- |
-| [A filter straw](solutions/A-straw) | 205 x 26 mm straw: rinseable steel mesh, bought hollow-fibre module, small carbon bed, capped backflush socket that bypasses the carbon | A1 hollow-fibre straw (164 of 215); proposed, awaiting Amish | Open: flow target and membrane grade await Amish | USD 17.46 against USD 25 |
-| [B bottle cartridge](solutions/B-bottle-cartridge) | Screw-on cartridge for a 28 mm PET bottle: squeeze through mesh, carbon and a hollow-fibre module; syringe backflush | B1 squeeze (246 of 310) and B2 gravity drip (222) are within 10 %, so both go to Amish | Open: no fail; plausible rows wait on supplier data | USD 18.35 against USD 20 |
-| [C household gravity filter](solutions/C-gravity) | Two buckets on a timber stand with a bought 0.1 um hollow-fibre module, settling and cloth prefilter; 45 L a day for five people in a few hours | C1 two-bucket hollow-fibre (286 of 345); proposed, awaiting Amish | Open: no fail; plausible rows wait on supplier data | USD 86.40 against USD 60 (over) |
-| [D chlorine add-on](solutions/D-virus-add-on) | Tool-free NaDCC dose cap for the 28 mm neck, with keyed wells and a ball timer for the contact time; a proposed port for C's bucket | D1 tablet dose cap (174 of 215); proposed, awaiting Amish | Open: two details await Amish | USD 9.15 against USD 10 |
+| [A filter straw](solutions/A-straw) | 205 x 26 mm straw: rinseable steel mesh, bought hollow-fibre module, small carbon bed, capped backflush socket that bypasses the carbon | A1 hollow-fibre straw (164 of 215); chosen by Amish on 2026-11-11 | No fail; plausible rows wait on TRL 4 evidence | USD 17.46 against USD 25 |
+| [B bottle cartridge](solutions/B-bottle-cartridge) | Screw-on cartridge for a 28 mm PET bottle: squeeze through mesh, carbon and a hollow-fibre module; syringe backflush | B1 squeeze cartridge (246 of 310; B2 222, within 10 %); chosen by Amish on 2026-11-11 | No fail; plausible rows wait on supplier data | USD 18.35 against USD 20 |
+| [C household gravity filter](solutions/C-gravity) | Two buckets on a timber stand with a bought 0.1 um hollow-fibre module, settling and cloth prefilter; 45 L a day for five people in a few hours | C1 two-bucket hollow-fibre (286 of 345); chosen by Amish on 2026-11-11 | No fail; plausible rows wait on supplier data | USD 86.40 against USD 60 (over) |
+| [D chlorine add-on](solutions/D-virus-add-on) | Tool-free NaDCC dose cap for the 28 mm neck, with keyed wells and a ball timer for the contact time; a 28 mm port in C's bucket lid | D1 tablet dose cap (174 of 215); chosen by Amish on 2026-11-11 | No fail; plausible rows wait on TRL 4 evidence | USD 9.15 against USD 10 |
 
 Every solution was taken through the kit pipeline to a constructable design on paper: STEM check with the water checks of the Helpful Engineering profile and an independent reviewer, two or three concept options each modelled to CAD detail level D3, user and product requirements with a generated traceability matrix, calculations, a priced BOM, drawings, an illustrated prototype build plan, a design decisions register, regulatory, feasibility, risk (with a design FMEA), market and plan documents.
 
@@ -63,7 +63,7 @@ Every solution was taken through the kit pipeline to a constructable design on p
 
 Each solution's claims were checked against known physics, chemistry and biology with numbers, including membrane flux against the suction, squeeze or gravity head available, pressure drop per stage, pore size against organism size, carbon contact time, chlorine dose and contact time, integrity and silent failure, biofilm, leaching, freezing and the effort a child or elderly user can give. An independent reviewer then tried to refute every verdict, and confirmed failures were fixed under Amish's standing instruction. The program-level findings:
 
-- The Rev A straw's 40 to 80 fibres cannot give 200 mL/min at 10 kPa; the bundle now fills the bore (about 220 fibres), but 200 mL/min at 10 kPa is still not met on paper in the 205 mm body (110 to 179 mL/min). A 245 mm body with the 0.2 um grade reaches about 213 mL/min; the flow target and membrane grade are decisions for Amish (A).
+- The Rev A straw's 40 to 80 fibres cannot give 200 mL/min at 10 kPa; the bundle now fills the bore (about 220 fibres), but 200 mL/min at 10 kPa is still not met on paper in the 205 mm body (110 to 179 mL/min). Amish set the A flow target to 150 mL/min at 10 kPa (met on paper with the 0.2 um grade) and a laboratory selection rule for the grade on 2026-11-11; a 245 mm body (about 213 mL/min) is held for TRL 4.
 - Copper and charcoal in a straw gives seconds of contact where copper needs hours, so option A3 is dropped (A).
 - Carbon downstream of a membrane in a bottle grows bacteria on the clean side, so B's carbon moved upstream (B).
 - Chlorine must be dosed and left for its full contact time before any carbon, which strips it in seconds; filtered water then carries no residual and should not be stored long (A, B, D).

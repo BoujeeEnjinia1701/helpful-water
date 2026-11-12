@@ -17,7 +17,7 @@ revisions:
 
 # Helpful Water C: concept selection
 
-**Status: Proposed, awaiting Amish.** C1 (two-bucket hollow-fibre filter) scored 286 of 345 in HWC-OPT-001, C2 (ceramic candles) 234 and C3 (plastic biosand) 227. C1 leads the runner-up by 22 %, outside the 10 % band of STANDARDS section 21, so the recommendation is C1.
+**Status: Decided by Amish on 2026-11-11 (recommendation adopted).** C1 (two-bucket hollow-fibre filter) scored 286 of 345 in HWC-OPT-001, C2 (ceramic candles) 234 and C3 (plastic biosand) 227. C1 leads the runner-up by 22 %, outside the 10 % band of STANDARDS section 21, so the recommendation is C1.
 
 ## Context
 

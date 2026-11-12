@@ -17,7 +17,7 @@ revisions:
 
 # Helpful Water C: household gravity filter design precis
 
-C1 is a two-bucket gravity filter on a timber stand that is designed to reduce bacteria and protozoa in a household's drinking and cooking water: about 45 L a day for five people in 1.6 to 2.8 hours of filtering, kept in a closed bucket with a tap. It does not remove viruses; where viral disease is a risk the raw water is dosed with chlorine (solution D) first, and the membrane then removes the *Cryptosporidium* that chlorine does not inactivate. The concept choice is proposed, awaiting Amish (HWC-DEC-001 D1); this precis describes C1 because it is carried to the drawings, BOM and build plan.
+C1 is a two-bucket gravity filter on a timber stand that is designed to reduce bacteria and protozoa in a household's drinking and cooking water: about 45 L a day for five people in 1.6 to 2.8 hours of filtering, kept in a closed bucket with a tap. It does not remove viruses; where viral disease is a risk the raw water is dosed with chlorine (solution D) first, and the membrane then removes the *Cryptosporidium* that chlorine does not inactivate. The concept choice was made by Amish on 2026-11-11 (HWC-DEC-001 D1); this precis describes C1 because it is carried to the drawings, BOM and build plan.
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 

@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-DDR-004
 title: "Helpful Water D: fixes after the independent STEM review"
-project: "Helpful Water D: chlorine add-on for viruses"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Design decision record
 version: "0.1"
 status: Draft
@@ -47,6 +47,6 @@ Table 1. Fixes.
 
 - BOM: no cost change (USD 9.15); the fluid, plug, label and pictogram specifications changed.
 - CAD: only the insert O-ring groove root changed (17.8 to 17.9 mm) and the D2 tip name; `cad/fidelity.json` passes; drawings HWD-DWG-001, 002, 101 to 103 and the concept media were regenerated.
-- Open: the timer capsule's expansion allowance (HWD-DEC-001 C5), and the field chlorine check (D7, awaiting Amish).
+- Open: the timer capsule's expansion allowance (HWD-DEC-001 C5), a supplier fact to confirm; the field chlorine check was decided by Amish on 2026-11-11 (D7: test strips in the household kit).
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

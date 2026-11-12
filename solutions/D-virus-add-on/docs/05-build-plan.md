@@ -1,9 +1,9 @@
 ---
 doc_id: HWD-BLD-001
-title: "Helpful Water D: chlorine add-on for viruses prototype build plan"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on prototype build plan"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Build plan
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,11 +17,16 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: Timer check at 45 minutes and expansion note (F11, C5); groove root 17.9 mm with tolerances (F10); plug not PC (F12)
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
-# Helpful Water D: chlorine add-on for viruses prototype build plan
+# Helpful Water D: chlorine co-treatment add-on prototype build plan
 
-**Plan, not yet built.** This plan tells a capable maker how to build the first proof-of-concept D1 dose cap, part by part, and how to check it with known potable test water only. Building and testing to it is TRL 4 work and has not started. Open decisions and items to confirm are kept in the design decisions register (HWD-DEC-001), not here.
+**Plan, not yet built.** This plan tells a capable maker how to build the first proof-of-concept D1 dose cap, part by part, and how to check it with known potable test water only. Building and testing to it is TRL 4 work and has not started. Decisions and items to confirm are kept in the design decisions register (HWD-DEC-001), not here.
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 

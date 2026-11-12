@@ -34,25 +34,26 @@ c.cited("S1", f"Rev A's 40 to 80 fibres ({R['A_revA_min']:.3f} to {R['A_revA_max
         f"80 fibres x 110 mm: {R['flow_revA80']:.0f} mL/min (0.1 um) to {R['flow_revA80_02']:.0f} mL/min (0.2 um); 40 x 90 mm: "
         f"{R['flow_revA40']:.0f} mL/min. Fixed by a full-bore bundle ({R['A_mem']:.3f} m2, packing {R['packing']:.0%}, no central tube); the "
         "fix is necessary, not sufficient: the flow target then rests on the grade (S2, S3)", WITHIN, closed_by="HWA-DEC-001 F2; " + CAL + " section 4")
-c.cited("S2", "Full-bore bundle with a 0.2 um MF fibre gives 200 mL/min at 10 kPa, clean water, 20 C, straw upright",
+c.cited("S2", "Full-bore bundle with a 0.2 um MF fibre gives at least the 150 mL/min of PR-002 (HWA-DEC-001 D3) at 10 kPa, clean water, 20 C, straw upright",
         "Physics", "Fluid mechanics", "Stage sum: lift, intake, membrane, lumen and potting (Hagen-Poiseuille), grids, carbon (Ergun), pad (Darcy), mouth",
         f"{F2['revA']:.0f} mL/min at 10 kPa; 200 mL/min needs {R['S200']['MF 0.2 um']:.1f} kPa, or Lp {R['LP_needed_200']['upright 155 mm lift']:,.0f} "
         f"L/(m2 h bar) at 20 C, above the grade's listed minimum (2,930). Dipped to the dip line and primed: {DP['MF 0.2 um']['revA']:.0f}; "
-        f"245 mm body: {R['flow_long']['MF 0.2 um']['revA']:.0f}. Uncertainties (pad, carbon, area basis) run mostly downward ({REV})",
-        FIX, closed_by="Proposed, awaiting Amish (HWA-DEC-001 D2, D3)")
-c.cited("S3", "With a 0.1 um MF fibre the straw meets the Rev A target of 200 mL/min at 10 kPa",
+        f"245 mm body: {R['flow_long']['MF 0.2 um']['revA']:.0f}. Against the decided 150 mL/min upper-bound target the 0.2 um grade has about 19 % margin; "
+        f"uncertainties (pad, carbon, area basis) run mostly downward ({REV}), so TC confirms it",
+        WITHIN, closed_by="Fix: target set to 150 mL/min, HWA-DEC-001 D3 (Amish, 2026-11-11); test TC at TRL 4")
+c.cited("S3", "The 0.1 um MF fibre gives less than the 150 mL/min target and is used only if the 0.2 um grade fails the retention criteria of HWA-DEC-001 D2",
         "Physics", "Fluid mechanics", "Same stage sum", f"{F1['revA']:.0f} mL/min at 10 kPa; 200 mL/min needs {R['S200']['MF 0.1 um']:.1f} kPa. "
-        "Fix options: 0.2 um grade, a 245 mm body, or a lower target; the grade is a safety trade-off", FIX,
-        closed_by="Proposed, awaiting Amish (HWA-DEC-001 D2, D3)")
+        "The shortfall is accepted only as the safety trade-off D2 defines (thin bacteria); the 245 mm body is the TRL 4 revision if trials need it", WITHIN,
+        closed_by="Fix: grade selection rule HWA-DEC-001 D2 and target D3 (Amish, 2026-11-11)")
 c.cited("S4", "A true ultrafiltration fibre (100 kDa) cannot give usable flow at suction in this envelope, so the membrane must be a microfiltration grade",
         "Physics", "Fluid mechanics", "SepraPor UF 100 kDa 215 to 550 L/(m2 h bar) at 25 C",
         f"{F['UF 100 kDa (low)']['revA']:.0f} to {F['UF 100 kDa (high)']['revA']:.0f} mL/min at 10 kPa. Fixed: PR-004 floor 1,800 L/(m2 h bar) "
         f"at 25 C (1,600 at 20 C), the floor for usable flow ({F1['revA']:.0f} mL/min); PR-002 itself needs "
         f"{R['LP_needed_200']['upright 155 mm lift']:,.0f} at 20 C, which no listed grade guarantees (S2)", WITHIN, closed_by="HWA-DEC-001 F3")
-c.cited("S5", "At a comfortable 10 kPa sip the straw reaches the 400 mL/min below which straw users report dissatisfaction",
+c.cited("S5", "The 400 mL/min that straw users want is not reachable at a comfortable 10 kPa sip, so it is not a requirement; PR-002 states 150 mL/min as an upper bound",
         "Physics", "Fluid mechanics", "Stage sum; 400 mL/min threshold from the concept validation questions",
         f"{F1['revA']:.0f} to {F2['revA']:.0f} mL/min, under half; 400 mL/min needs {R['S400']['MF 0.2 um']:.0f} to {R['S400']['MF 0.1 um']:.0f} kPa. "
-        "Not reachable in this envelope; carried as a known shortfall", FIX, closed_by="Proposed, awaiting Amish (HWA-DEC-001 D3)")
+        "Not reachable in this envelope; stated to users as a known limit", WITHIN, closed_by="Fix: HWA-DEC-001 D3 (Amish, 2026-11-11)")
 c.cited("S6", f"A child at 5 kPa draws {F1['child']:.0f} to {F2['child']:.0f} mL/min and an elderly user at 7 kPa {F1['elderly']:.0f} to "
         f"{F2['elderly']:.0f} mL/min; 1.5 L takes a child {R['minutes_1p5L']['MF 0.2 um']['child']:.0f} to {R['minutes_1p5L']['MF 0.1 um']['child']:.0f} min of sipping",
         "Biology", "Human physiology and biomechanics", "Persona suction assumed 5 and 7 kPa (STANDARDS 25.6 range 5 to 15 kPa); sustained sip suction "
@@ -139,7 +140,7 @@ c.cited("S19", f"A 20 mL syringe at 50 kPa backflushes at about {bf['MF 0.1 um']
 c.cited("S30", "A firm push on the syringe stays within the membrane's reverse-pressure rating",
         "Physics", "Fluid mechanics", "Pressure = force / plunger area; SepraPor lists a maximum TMP of 1.0 bar (0.2 um) and 1.4 bar (0.1 um) and gives no "
         "backflush rating", f"60 N on a 20 mm plunger gives {R['thumb_overpressure_kPa']:.0f} kPa static, about twice the 0.2 um rating; the module's reverse "
-        "rating is to confirm (C2) and a pressure limit is proposed (D11)", PLAUSIBLE, closed_by="")
+        "rating is to confirm (C2) and a pressure limit is set by D11", PLAUSIBLE, closed_by="")
 # --- Integrity and silent failure -------------------------------------------------------------------------------
 c.cited("S20", "A plunger-hold air check through the backflush socket shows a broken fibre or a failed collar seal (gross defects only)",
         "Physics", "Fluid mechanics", "Young-Laplace: a wetted 0.2 um pore holds air to hundreds of kPa; an open 0.5 mm lumen passes air above 0.6 kPa; "

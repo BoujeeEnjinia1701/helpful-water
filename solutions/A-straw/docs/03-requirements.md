@@ -3,7 +3,7 @@ doc_id: HWA-PRS-001
 title: "Helpful Water A: filter straw product requirements and specifications"
 project: "Helpful Water A: filter straw"
 doc_type: Product requirements and specifications
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,6 +17,11 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "After the independent STEM review: flows at 20 C; PR-002 and PR-003 not met on paper; PR-001 absolute rating and B. diminuta challenge; PR-004 note; PR-012 plunger-hold check; PR-027 dry mass"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: PR-002 target set to 150 mL/min at 10 kPa as an upper bound (HWA-DEC-001 D3, Amish 2026-11-11)
+
 ---
 
 # Helpful Water A: filter straw product requirements and specifications
@@ -30,7 +35,7 @@ Table 1. Product requirements and specifications.
 | ID | Traces to | Category | Title | Requirement | Target | Tolerance | Units | Verification | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | PR-001 | UR-001 | Performance | Bacteria reduction | The membrane module shall carry an absolute rating validated by a *Brevundimonas diminuta* retention challenge and a supplier challenge report, and reach the target log reduction of a bacterial surrogate at the worst-case flow and temperature, at the start and end of life; thin bacteria such as Leptospira are excluded unless tested | 6 | min | log10 | Test, HWP-VER-001 TA and TB, TRL 4 | To verify at TRL 4 |
-| PR-002 | UR-004 | Performance | Flow at 10 kPa | The assembled straw shall deliver the target flow of clean water at 20 C with 10 kPa of suction, the straw upright (400 mL/min is not reachable: 21 to 33 kPa) | 200 | min | mL/min | Analysis HWA-CAL-001 section 4, TRL 3; test TC, TRL 4 | Not met on paper (110 with 0.1 um, 179 with 0.2 um; D2, D3) |
+| PR-002 | UR-004 | Performance | Flow at 10 kPa | The assembled straw shall deliver the target flow of clean water at 20 C with 10 kPa of suction, the straw upright and primed, stated as an upper bound (400 mL/min is not reachable: 21 to 33 kPa; HWA-DEC-001 D3) | 150 | min | mL/min | Analysis HWA-CAL-001 section 4, TRL 3; test TC, TRL 4 | Met on paper with the 0.2 um grade (179); not met with the 0.1 um grade (110), which is used only under HWA-DEC-001 D2 |
 | PR-003 | UR-004 | Performance | Flow for a child | The straw shall deliver the target flow at 5 kPa of suction, upright | 80 | min | mL/min | Analysis HWA-CAL-001 section 4; test TC and TH with known potable test water, TRL 4 | Not met on paper (45 to 74) |
 | PR-004 | UR-004 | Materials | Membrane permeability | The membrane shall have a clean-water permeability, normalised to 25 C as the datasheets state it, of at least the target, the floor for usable flow (1,600 at 20 C; HWA-DEC-001 F3); PR-002 needs about 3,420 at 20 C | 1800 | min | L/(m2 h bar) | Inspection of the supplier certificate, TA, TRL 4 | Met by design (specification) |
 | PR-005 | UR-004 | Physical architecture | Membrane area | The module shall have at least the target outer membrane area in the 22 mm bore (HWA-DEC-001 F2) | 0.050 | min | m2 | Analysis HWA-CAL-001 section 2 (0.056) | Met on paper |

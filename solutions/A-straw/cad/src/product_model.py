@@ -1,4 +1,4 @@
-"""Helpful Water A filter straw: product appearance model (kit 1.9), TRL 3, option A1 (recommended; awaiting Amish).
+"""Helpful Water A filter straw: product appearance model (kit 1.9), TRL 3, option A1 (chosen by Amish on 2026-11-11).
 
 Built from components("A1") in cad/src/model.py with every part used as it is, so every main dimension comes from
 the model. Only scale context is added: the adult hand from .kit/context_parts.py that model.py already places, and a

@@ -3,7 +3,7 @@ doc_id: HWB-OPT-001
 title: "Helpful Water B: bottle cartridge concept options"
 project: "Helpful Water B: bottle cartridge"
 doc_type: Concept options
-version: "0.2"
+version: "0.4"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,15 +17,24 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Weak-child flow at the girls' grip boundary (160 mL/min) after the independent STEM review"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+  - version: "0.4"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water B: bottle cartridge concept options
 
-Result: B1, the squeeze cartridge, scores 246 of 310 and B2, the gravity drip stand, 222; B2 is 9.8 % below B1, inside the 10 % band, so **both go to Amish without a pick** (Proposed, awaiting Amish; HWB-DEC-001 D1, HWB-DDR-001). B3, the press cup, scores 209 and is not recommended. B1 is carried to the drawings, BOM and build plan because it is the briefed baseline and the B2 cartridge is the same stack turned over with a longer module, so the TRL 3 documents cover most of B2 as well. The best idea of the runner-up, B2's no-squeeze gravity mode, can be grafted onto B1 as an optional stand. All three are modelled at detail level D3 in `cad/src/model.py`. Method: STANDARDS section 21.
+Result: B1, the squeeze cartridge, scores 246 of 310 and B2, the gravity drip stand, 222; B2 is 9.8 % below B1, inside the 10 % band, so both went to Amish, who chose **B1** on 2026-11-11 (HWB-DEC-001 D1, HWB-DDR-001). B3, the press cup, scores 209 and is not carried. B1 is carried to the drawings, BOM and build plan because it is the briefed baseline and the B2 cartridge is the same stack turned over with a longer module, so the TRL 3 documents cover most of B2 as well. The best idea of the runner-up, B2's no-squeeze gravity mode, can be grafted onto B1 as an optional stand. All three are modelled at detail level D3 in `cad/src/model.py`. Method: STANDARDS section 21.
 
 ![Concept options side by side at one scale](../media/options.png)
 
-The options picture is a Blender Cycles render; the scenes are exported to the render queue (`python .kit/options.py --export`) and wait for Amish's Mac, so `media/options.png` does not exist yet (HWB REVIEW).
+The options picture is a Blender Cycles render; the scenes are exported to the render queue (`python .kit/options.py --export`) rendered on Amish's Mac and composed into `media/options.png`.
 
 ## The options
 
@@ -93,7 +102,7 @@ Table 2. Weighted scoring (weights: High UR 3, Medium 2, Low 1; scores 1 to 5).
 
 ## Recommendation
 
-B1 and B2 are within 10 % (9.8 %), so the choice goes to Amish without a pick. The arguments: B1 is cheaper, pocketable, simplest to check and fits the shortlist pitch; B2 removes the squeeze, which matters for elderly and low-dexterity users and for household volumes, and fills cups without a shared mouthpiece. A combined path is worth considering: B1 as the product, with B2's stand as an optional accessory that takes the same cartridge (with the standard module, at about 10 minutes per litre clean) for households. Recorded as Proposed, awaiting Amish (HWB-DEC-001 D1, HWB-DDR-001). B3 is not recommended because it gives up the bottle and adds a bypass route.
+B1 and B2 are within 10 % (9.8 %), so the choice went to Amish; he chose B1 on 2026-11-11. The arguments: B1 is cheaper, pocketable, simplest to check and fits the shortlist pitch; B2 removes the squeeze, which matters for elderly and low-dexterity users and for household volumes, and fills cups without a shared mouthpiece. A combined path is worth considering: B1 as the product, with B2's stand as an optional accessory that takes the same cartridge (with the standard module, at about 10 minutes per litre clean) for households. B2's stand is recorded as a possible later accessory, outside the current scope (HWB-DEC-001 D1). B3 is not carried because it gives up the bottle and adds a bypass route.
 
 ## Patent comparison: claim 1 of US 8,852,439 B2 (HWP-FTO-001)
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HWD-CAL-001 sizing calculations for Helpful Water D (chlorine add-on for viruses). Run from the solution folder:
+"""HWD-CAL-001 sizing calculations for Helpful Water D (chlorine co-treatment add-on). Run from the solution folder:
 
     python docs/04-calcs/sizing.py
 

@@ -1,7 +1,7 @@
 {
  "level": "D3",
  "stage": "P3",
- "hash": "db449d6529739bc0",
+ "hash": "c6a2380b09c92f39",
  "options": {
   "B1": {
    "title": "Squeeze cartridge",
@@ -43,5 +43,5 @@
  "failures": [],
  "warnings": [],
  "passed": true,
- "seconds": 48.6
+ "seconds": 36.1
 }

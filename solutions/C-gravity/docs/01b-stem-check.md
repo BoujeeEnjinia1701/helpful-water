@@ -3,7 +3,7 @@ doc_id: HWC-STM-001
 title: "Helpful Water C: household gravity filter STEM check"
 project: "Helpful Water C: household gravity filter"
 doc_type: STEM check
-version: "0.1"
+version: "0.2"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -13,6 +13,11 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "First STEM check, run before design (kit 1.9.1-he, STANDARDS sections 20 and 25.6); four detail failures fixed under the standing instruction of 2026-10-23 (HWC-DEC-001 F1 to F4); independent review recorded; rerun on the TRL 3 model"
+  - version: "0.2"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water C: household gravity filter STEM check
@@ -45,7 +50,7 @@ Table 1. Claims, governing science and verdicts (generated from `docs/04-calcs/s
 | S15 | Settling for 1 h (1.5 h below 10 degC) drops silt of 10 um and larger below the outlet: 0.74 h needed at 20 degC and 1.13 h at 5 degC for the 241 mm column | Physics | Fluid mechanics | Stokes settling v = g d2 (rho_p - rho) / 18 mu, quartz 2,650 kg/m3, mu 1.0 (20 degC) and 1.52 mPa s (5 degC); clay (2 um, 13 mm/h) and colloids do not settle; pouring and draw-off can resuspend fines | 1.13 h at 5 degC <= 1.5 h at 5 degC | Within known science | HWC-CAL-001 |
 | S16 | Cotton cloth folded to eight layers in the fill ring removes coarse particles and plankton-attached organisms before the bucket | Biology | Microbiology | Colwell et al. 2003 (PNAS): worn, laundered sari cloth folded four to eight times has an effective pore of about 20 um; 48 % fewer cholera cases in 65 villages | A prefilter only; no pathogen claim rests on it; the cloth is specified as worn, soft and tightly woven, and its retention is measured at TRL 4 (TD) | Within known science | HWC-CAL-001 |
 | S17 | Turbid source water (SC3, 10 to 100 NTU) needs more backflushes, not a different design | Engineering and technology | Standards practice | Commercial 0.1 um bucket kit: backflush about every 3,800 L of clear water and every 40 L or less of very turbid water (CAWST) | Volume between backflushes at 1, 10, 50 and 100 NTU to measure (HWP-VER-001 TE); settle overnight above 50 NTU | Plausible, to confirm at TRL 3 | Open |
-| S18 | The loaded stand needs 18.7 deg of tilt and 78 N at 1 m to tip (the briefed 420 mm frame gave 14.2 deg and failed); a child's pull can exceed 78 N, so a wall strap is proposed (HWC-DEC-001 D4) | Physics | Mechanics and statics | Tip angle atan(half base / centre of gravity height), raw bucket full, clean bucket empty; criterion 15 deg (assumed, as solution B) | 18.7 deg >= 15 deg | Within known science | HWC-DEC-001 F1 |
+| S18 | The loaded stand needs 18.7 deg of tilt and 78 N at 1 m to tip (the briefed 420 mm frame gave 14.2 deg and failed); a child's pull can exceed 78 N, so a wall strap is fitted (HWC-DEC-001 D4) | Physics | Mechanics and statics | Tip angle atan(half base / centre of gravity height), raw bucket full, clean bucket empty; criterion 15 deg (assumed, as solution B) | 18.7 deg >= 15 deg | Within known science | HWC-DEC-001 F1 |
 | S19 | The module runs full: shell air would block fibre area, so the module stands upright with its raw inlet on top and a bleed screw at the top of the shell, opened at first fill until water shows | Physics | Fluid mechanics | A wetted membrane holds air below its bubble point (hundreds of kPa for real 0.1 um fibres), so trapped shell air cannot pass the fibres; downflow in the hose (about 0.12 m/s) roughly cancels bubble rise, so venting through the inlet alone is not reliable | Failed as briefed (orientation free; air pockets over the U-bends), fixed by the upright mounting and a bleed screw on the top cap (supplier request); repeat the bleed after a dry spell | Within known science | HWC-DEC-001 F2 |
 | S20 | Even a raw bucket filled to the brim (19.4 L above the settling zone) fits in the clean bucket when the user starts below the 2.5 L refill line | Mathematics | Orders of magnitude | Volume balance; as briefed, two 20 L containers overflow when the clean one is not empty, and a 5 L line still overflowed if the user overfilled past the 17 L mark; fixed with a 2.5 L refill line just above the tap | in 19.56 L, out 19.4 L | Within known science | HWC-DEC-001 F3 |
 | S21 | Chlorine is added after settling, through the lid port, and the raw valve stays shut for 30 minutes | Chemistry | Physical chemistry | Turbidity shields organisms and adds chlorine demand (WHO, CDC: double dose for turbid water); an open valve during contact sends water to the filter before its 30 minutes | Failed as briefed (no hold point), fixed: a dosing port in the raw lid for D and a valve tag 'shut for 30 minutes after dosing'; mixing and dose belong to D | Within known science | HWC-DEC-001 F4 |
@@ -111,7 +116,7 @@ Table 3. Independent review findings and changes.
 | S4 | Weakened: the margin is 18 % at the lowest head; cold water raises losses | Stated in the row; losses and flux scale together with viscosity, so the share holds |
 | S5, S6 | Weakened: spurious precision; 30 L/h is 40 % below the commercial kit | Reworded: 33 L/h gross, 30 L/h net; "same order and conservative" |
 | S11, S12 | Holds, with C defined as the residual at the end of contact, the 0.5 degC CT of 12, and the 1.875 mg/L dose | Rows reworded; mixing and the residual belong to D |
-| S18 | Weakened: a child's pull can exceed 78 N; criterion assumed | Wall strap proposed (HWC-DEC-001 D4); safety section tells users to strap the stand where children play |
+| S18 | Weakened: a child's pull can exceed 78 N; criterion assumed | Wall strap fitted (HWC-DEC-001 D4, Amish 2026-11-11); safety section tells users to strap the stand where children play |
 | S25 | Weakened: "main cause" rests on one internal source; the air test should not clear a frozen module | Reworded; a frozen module is retired, not tested and reused |
 | S35 | Weakened: every cited bacteria figure is below 2 log | Reworded: "below the WHO two-star target in all cited data" |
 | S36 | Claim and check disagreed; operating mass is about 170 kg | Made consistent; wet mass stated |

@@ -3,7 +3,7 @@
 Run from the solution folder:  python .kit/cad_check.py --export
 Every main dimension is in PARAMS; docs/04-calcs/sizing.py (HWB-CAL-001) and docs/04-calcs/stem_check.py read it.
 
-Options (HWB-OPT-001; the choice is proposed, awaiting Amish):
+Options (HWB-OPT-001; chosen by Amish on 2026-11-11):
   B1  Squeeze cartridge: screws onto a 28 mm PCO 1881 PET bottle neck; squeezing the bottle drives water through a
       316L mesh, a replaceable coconut-carbon capsule and a bought, pre-potted hollow-fibre module (outside-in, looped
       fibres potted at the clean outlet end) to a push-pull drink valve. A duckbill valve lets air back into the
@@ -42,7 +42,7 @@ PRINCIPLES = {
     "B3": "A rigid cup and a press tube with the cartridge in its foot; arm or body weight on the lid drives water up "
           "through the cartridge into the press tube (about 30 to 50 kPa). No bottle.",
 }
-CHOSEN = "B1"   # carried to the drawing, BOM and build plan; the concept choice itself is proposed, awaiting Amish
+CHOSEN = "B1"   # carried to the drawing, BOM and build plan; the concept choice was made by Amish on 2026-11-11
 OPTION_VIEWS = {"B1": dict(el=18, az=-55, scale="hand", keep_context=True),
                 "B2": dict(el=18, az=-55, scale="none", keep_context=True, ground_z=0),
                 "B3": dict(el=18, az=-55, scale="none", keep_context=True, ground_z=0)}

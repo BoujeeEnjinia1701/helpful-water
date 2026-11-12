@@ -1,16 +1,16 @@
 # Helpful Water A: filter straw
 
-![Helpful Water A: filter straw, held in a hand (concept render)](media/hero.png)
+![Helpful Water A1 filter straw held in a hand, photoreal render](media/render-hero.png)
+
+CONCEPT, NOT FOR FABRICATION. [Studio view](media/render-studio.png) · [Exploded render](media/render-exploded.png) · [Concept render](media/hero.png)
 
 ![TRL 3](https://img.shields.io/badge/TRL-3%20of%209-0F766E) ![Hardware: CERN-OHL-P-2.0](https://img.shields.io/badge/hardware-CERN--OHL--P--2.0-111827) ![Software: Apache-2.0](https://img.shields.io/badge/software-Apache--2.0-111827) ![Docs: CC-BY-4.0](https://img.shields.io/badge/docs-CC--BY--4.0-111827)
 
 **Area:** Food and water security · **TRL:** 3 of 9 (proof of concept on paper; stage P3) · **Value-engineering target:** USD 25 prototype parts (estimate USD 17.46) · **Difficulty:** 3 of 5 · **Program:** [Helpful Water](../../README.md), solution A
 
-An open, unpowered personal filter straw: a rinseable steel mesh, a bought hollow-fibre membrane and a small carbon bed in a body 205 mm long and 26 mm across, with a capped backflush socket that cleans the fibres without passing the carbon. Designed to reduce bacteria and protozoa in clear freshwater. **It does not remove viruses.** The concept choice (option A1) is proposed and awaiting Amish.
+An open, unpowered personal filter straw: a rinseable steel mesh, a bought hollow-fibre membrane and a small carbon bed in a body 205 mm long and 26 mm across, with a capped backflush socket that cleans the fibres without passing the carbon. Designed to reduce bacteria and protozoa in clear freshwater. **It does not remove viruses.** Amish chose option A1 on 2026-11-11.
 
 [Hero (concept render)](media/hero.png) · [Cutaway](media/cutaway.png) · [Exploded view](media/exploded.png) · [Water path](media/flow.png) · [Interactive 3D model](media/viewer.html) · [Concept blueprint (PDF)](media/concept-blueprint.pdf) · [General arrangement HWA-DWG-001 (PDF)](cad/drawings/HWA-DWG-001.pdf) · [Half section HWA-DWG-002 (PDF)](cad/drawings/HWA-DWG-002.pdf) · [Sizing note HWA-CAL-001](docs/04-calcs/01-sizing.md) · [STEM check](docs/01b-stem-check.md) · [Prototype build plan](docs/05-build-plan.md) · [Decisions](docs/06-design-decisions.md) · [Review](docs/REVIEW.md)
-
-The photoreal product render (`media/render-hero.png`) and the options picture need Blender and are waiting to be rendered on Amish's Mac; the hero above is the concept render.
 
 ## Concept rationale
 
@@ -56,17 +56,19 @@ People drinking from streams, lakes, stored or distrusted water need a personal 
 
 ![Cutaway: mesh, fibre bundle, collar O-rings, clean header and socket, carbon, mouthpiece](media/cutaway.png)
 
-Water enters the intake cap, passes a 250 um 316L mesh, flows round about 220 hollow fibres (0.8 mm outside, 102 mm active) and through their walls from outside to inside; the fibre bores open into a clean header sealed by two O-rings, and from there the water passes 2 g of coconut-shell carbon and a 5 mm mouthpiece bore. To clean it, the user caps the mouthpiece (its plug dead-ends the carbon), pulls the tethered plug from the socket on the header and pushes 20 mL of clean water back through the fibres and out of the intake. The same socket gives a proposed air-hold check: a broken fibre shows as bubbles. Quarter-turn bayonets keep the body at 26 mm. See [HWA-PRC-001](docs/02-concept.md).
+Water enters the intake cap, passes a 250 um 316L mesh, flows round about 220 hollow fibres (0.8 mm outside, 102 mm active) and through their walls from outside to inside; the fibre bores open into a clean header sealed by two O-rings, and from there the water passes 2 g of coconut-shell carbon and a 5 mm mouthpiece bore. To clean it, the user caps the mouthpiece (its plug dead-ends the carbon), pulls the tethered plug from the socket on the header and pushes 20 mL of clean water back through the fibres and out of the intake. The same socket gives an air-hold check (HWA-DEC-001 D4): a broken fibre shows as bubbles. Quarter-turn bayonets keep the body at 26 mm. See [HWA-PRC-001](docs/02-concept.md).
 
 ![Water path and suction used at each stage](media/flow.png)
 
 ## Concept options
 
-Three concepts with different working principles were modelled at detail level D3 and scored ([HWA-OPT-001](docs/02a-concept-options.md)): **A1 hollow-fibre straw with backflush (164 of 215)**, A2 ceramic tube straw that the user scrubs (135; fails on flow, about 10 mL/min) and A3 copper and charcoal straw (125; fails on efficacy: seconds of copper contact where hours are needed). A1 is recommended; the choice is awaiting Amish. A1 is the reverse of the arrangement claimed in US 8,852,439 B2 on a desk reading; an attorney confirms. The options picture is rendered in Blender and is pending (scenes exported).
+Three concepts with different working principles were modelled at detail level D3 and scored ([HWA-OPT-001](docs/02a-concept-options.md)): **A1 hollow-fibre straw with backflush (164 of 215)**, A2 ceramic tube straw that the user scrubs (135; fails on flow, about 10 mL/min) and A3 copper and charcoal straw (125; fails on efficacy: seconds of copper contact where hours are needed). Amish chose A1 on 2026-11-11. A1 is the reverse of the arrangement claimed in US 8,852,439 B2 on a desk reading; an attorney confirms. The options picture is rendered in Blender (`media/options.png`).
+
+![Concept options, rendered from the D3 models with the same scale reference](media/options.png)
 
 ## STEM check
 
-[HWA-STM-001](docs/01b-stem-check.md): option A1 holds within known science once eleven details are fixed under Amish's standing instruction, among them O-rings that fit the bore (AS568-018, reamed glands), a bundle that fills the bore (Rev A's 40 to 80 fibres gave 19 to 78 mL/min at 10 kPa), a high-flux microfiltration membrane with an absolute rating, a backflush route that never passes the carbon, a carbon mass of 2 g, a hydrophilic fines pad and an air check that finds gross defects. It does not reach the Rev A flow target on paper: **110 to 179 mL/min at 10 kPa** with a 0.1 or 0.2 um fibre (clean water, 20 C, shell primed), against 200; **45 to 74 mL/min for a child at 5 kPa** (20 to 33 minutes for 1.5 L); a third less in cold water and less again on turbid water or with air in the shell. The 400 mL/min that straw users like needs 21 to 33 kPa. The membrane grade and the flow target go to Amish (D2, D3). An independent reviewer agent, run as a separate process without the design reasoning, attacked every verdict on 2026-11-11: of 27 rows 13 held, 10 were weak and 4 refuted, and it found 13 missed claims; the findings, the fixes and three new decisions for Amish (D10 to D12) are recorded in the STEM check.
+[HWA-STM-001](docs/01b-stem-check.md): option A1 holds within known science once eleven details are fixed under Amish's standing instruction, among them O-rings that fit the bore (AS568-018, reamed glands), a bundle that fills the bore (Rev A's 40 to 80 fibres gave 19 to 78 mL/min at 10 kPa), a high-flux microfiltration membrane with an absolute rating, a backflush route that never passes the carbon, a carbon mass of 2 g, a hydrophilic fines pad and an air check that finds gross defects. It does not reach the Rev A flow target on paper: **110 to 179 mL/min at 10 kPa** with a 0.1 or 0.2 um fibre (clean water, 20 C, shell primed), against 200; **45 to 74 mL/min for a child at 5 kPa** (20 to 33 minutes for 1.5 L); a third less in cold water and less again on turbid water or with air in the shell. The 400 mL/min that straw users like needs 21 to 33 kPa. Amish set the membrane grade rule and a 150 mL/min flow target on 2026-11-11 (D2, D3). An independent reviewer agent, run as a separate process without the design reasoning, attacked every verdict on 2026-11-11: of 27 rows 13 held, 10 were weak and 4 refuted, and it found 13 missed claims; the findings, the fixes and three new decisions for Amish (D10 to D12) are recorded in the STEM check.
 
 ## Key components
 
@@ -95,7 +97,7 @@ From the program claims register [HWP-CLM-001](../../docs/12-claims.md):
 
 ## Helpful Engineering
 
-This is solution A of Helpful Water, a joint program of Design Molecule Labs and Helpful Engineering that develops four open, unpowered point-of-use solutions (A straw, B bottle cartridge, C household gravity filter, D chlorine add-on for viruses) from one evidence base. Shared documents (problem, source classes, user requirements, claims, regulatory, market, plan, verification plan, patent screen) are in the [program README](../../README.md) and `../../docs/`; this folder cites them by doc_id and adds what is specific to the straw.
+This is solution A of Helpful Water, a joint program of Design Molecule Labs and Helpful Engineering that develops four open, unpowered point-of-use solutions (A straw, B bottle cartridge, C household gravity filter, D chlorine co-treatment add-on) from one evidence base. Shared documents (problem, source classes, user requirements, claims, regulatory, market, plan, verification plan, patent screen) are in the [program README](../../README.md) and `../../docs/`; this folder cites them by doc_id and adds what is specific to the straw.
 
 ## Repository layout
 

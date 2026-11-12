@@ -3,7 +3,7 @@ doc_id: HWB-CAL-001
 title: "Helpful Water B: bottle cartridge sizing calculations"
 project: "Helpful Water B: bottle cartridge"
 doc_type: Calculation note
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,6 +17,11 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Independent STEM review (HWB-STM-001): weak child at the girls' grip boundary (11.8 kg); 10 C flows; lumen hold-up, first flush and wet mass; end wall, potting and thread checks; duckbill and vent tube checks"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water B: bottle cartridge sizing calculations
@@ -115,7 +120,7 @@ Table 4. Results.
 | PR-011 | One seal line: potting and two header O-rings | Met by design |
 | PR-012 | 5.7 mL downstream of the potting; 15.2 mL in the lumens stays wet (first flush) | Met on paper |
 | PR-013 | Material families listable; grades to certify | To verify at TRL 4 |
-| PR-014 | 217 mm long, 46 mm across | Not met (diameter) |
+| PR-014 | 217 mm long, 46 mm across against 250 x 50 (HWB-DEC-001 D4) | Met |
 | PR-015 | USD 18.35 prototype, USD 7.05 at scale, USD 10.8 per user per year | Over target |
 | PR-016 | Capsule opens by hand; refills with 12 x 40 GAC | Met by design |
 | PR-017, PR-018 | Shelf life and drop to test; freeze warning by design | To verify at TRL 4 |

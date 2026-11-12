@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-PRS-001
-title: "Helpful Water D: chlorine add-on for viruses product requirements and specifications"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on product requirements and specifications"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Product requirements
 version: "0.2"
 status: Draft
@@ -19,7 +19,7 @@ revisions:
     change: PR-008 now at least 30 minutes up to 40 C; PR-009 run count one, two, three (F11)
 ---
 
-# Helpful Water D: chlorine add-on for viruses product requirements and specifications
+# Helpful Water D: chlorine co-treatment add-on product requirements and specifications
 
 What the dose cap must do, each requirement traced to a user need in HWD-URS-001 (links in HWD-RTM-001). The requirements describe option D1, the tablet dose cap carried to the drawings, BOM and build plan; the concept choice is Amish's (HWD-DEC-001 D1). Of 24 requirements, 17 are met on paper or by design, 5 are to verify at TRL 4 and 2 are at risk; none is over the value-engineering target. Planned tests cite the HWP-VER-001 families (TA to TJ); none is run at TRL 3. Targets remain proposals for review with a co-design partner.
 

@@ -1,7 +1,7 @@
 {
  "level": "D3",
  "stage": "P3",
- "hash": "91995cc01c61f498",
+ "hash": "3cc982789f36ca22",
  "options": {
   "A1": {
    "title": "Hollow-fibre straw with backflush",
@@ -43,5 +43,5 @@
  "failures": [],
  "warnings": [],
  "passed": true,
- "seconds": 21.3
+ "seconds": 21.5
 }

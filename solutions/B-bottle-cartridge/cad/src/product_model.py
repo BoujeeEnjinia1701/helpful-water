@@ -1,5 +1,5 @@
 """Helpful Water B product appearance model (kit 1.9), TRL 3, carried option B1 (squeeze cartridge; the concept
-choice is proposed, awaiting Amish). Built from components("B1") in cad/src/model.py with every part used as it is,
+choice was made by Amish on 2026-11-11). Built from components("B1") in cad/src/model.py with every part used as it is,
 plus the 1 L PET bottle and a hand from model.py's context parts for scale. APPEARANCE MODEL ONLY: no tolerances, no
 fabrication detail. CONCEPT, NOT FOR FABRICATION. Photoreal renders need Blender (.kit/photoreal.py), which runs on
 Amish's Mac from the scenes written by `python .kit/export_views.py <dir>`.

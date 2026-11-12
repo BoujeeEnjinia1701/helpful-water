@@ -1,4 +1,4 @@
-"""Helpful Water A filter straw: drawing set and STL export for option A1 (recommended; choice awaiting Amish).
+"""Helpful Water A filter straw: drawing set and STL export for option A1 (chosen by Amish on 2026-11-11).
 
 Run from the solution folder:  python cad/src/sheets.py [ga|section|stl]   (no argument: all three)
     cad/drawings/HWA-DWG-001   general arrangement, assembled straw with caps fitted

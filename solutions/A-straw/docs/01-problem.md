@@ -52,7 +52,7 @@ Table 2. Stakeholders specific to solution A (the program list is HWP-PRB-001 Ta
 
 | Stakeholder group | Role or interest | Engagement needed |
 | --- | --- | --- |
-| Helpful Engineering Helpful Water team | Rev A owners; design review of this solution | Review of HWA-DEC-001 open decisions |
+| Helpful Engineering Helpful Water team | Rev A owners; design review of this solution | Review of the HWA-DEC-001 decisions |
 | Hollow-fibre module makers | Pre-potted outside-in modules, permeability and integrity data | Requests for quotation at P3 to P4 (HWA-DEC-001 C1) |
 | Accredited water microbiology laboratory | Challenge testing (HWP-VER-001 TB) | Protocol before TRL 4 |
 | NGO and WASH buyers | Cost per litre, resupply of carbon, claims | Review before any pilot |

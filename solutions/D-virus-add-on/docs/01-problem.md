@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-PRB-001
-title: "Helpful Water D: chlorine add-on for viruses problem statement"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on problem statement"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Problem statement
 version: "0.1"
 status: Draft
@@ -15,7 +15,7 @@ revisions:
     change: First problem statement for solution D, citing HWP-PRB-001
 ---
 
-# Helpful Water D: chlorine add-on for viruses problem statement
+# Helpful Water D: chlorine co-treatment add-on problem statement
 
 The filters of solutions A to C are designed to reduce bacteria and protozoa, not viruses, so wherever viral disease is a risk they need a second barrier, and a chlorine tablet is the cheapest one in the world's humanitarian supply chains. People already have the tablets; what fails in practice is the dose (wrong tablet for the container, guessed amounts, under-dosing to avoid the taste), the wait (water drunk before the contact time is up, or the same 30 minutes used in cold water) and the order (chlorinate first, wait, then filter). Solution D is a small, tool-free add-on that gets those three right with the bottles and buckets the other solutions use. It follows Amish's decision of 2026-11-11, "No virus claim, co-treat": A to C carry no virus claim and D is the co-treatment that pairs with any of them, under the same claims rule (HWP-CLM-001). The program problem is set out in HWP-PRB-001 and is not repeated here.
 

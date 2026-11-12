@@ -21,7 +21,7 @@ revisions:
 
 # Helpful Water B: bottle cartridge project plan
 
-Solution B is at stage P3 and TRL 3 on paper: a constructable B1 design with drawings, a priced BOM and a build plan. The next gate, P4 (prototypes and accredited laboratory testing), stays closed until Amish opens it with Helpful Engineering. Decision requested now: the concept choice between B1 and B2 (HWB-DEC-001 D1) and the other open decisions D2 to D7. Method: STANDARDS sections 19, 23 and 25.7.
+Solution B is at stage P3 and TRL 3 on paper: a constructable B1 design with drawings, a priced BOM and a build plan. The next gate, P4 (prototypes and accredited laboratory testing), stays closed until Amish opens it with Helpful Engineering. Amish chose B1 and settled D2 to D9 on 2026-11-11 (HWB-DEC-001); no decision is open. Method: STANDARDS sections 19, 23 and 25.7.
 
 ## Purpose
 
@@ -33,7 +33,7 @@ From HWP-PLN-001, applied to B: stop or pause if the cartridge cannot show consi
 
 ## Targets and key performance indicators
 
-Table 1. Targets that apply to B (HWP-PLN-001 Table 2; Proposed, awaiting Amish).
+Table 1. Targets that apply to B (HWP-PLN-001 Table 2: set by Amish on 2026-11-11).
 
 | Category | Target | B status on paper |
 | --- | --- | --- |
@@ -53,7 +53,7 @@ Table 2. Workstreams.
 
 | Workstream | Owner (role) | Deliverable | Status |
 | --- | --- | --- | --- |
-| Concept choice | Amish | D1 decision | Awaiting Amish |
+| Concept choice | Amish | D1 decision | Done: B1 (2026-11-11) |
 | Module sourcing | Membrane engineer | Requests for quotation with flux, backwash limit and header drawing (C1 to C3) | Not started (P4) |
 | Neck survey | Field partner | Local bottle finishes (C4, C7) | Not started |
 | Prototype build | Mechanical engineer | Build to HWB-BLD-001 | On hold (P4) |
@@ -84,7 +84,7 @@ Table 4. Stages (P4 to P6 on hold while the stage cap is P3).
 | --- | --- | --- |
 | P0 | Problem, STEM check, options, REG, FEA, PLN | Done on paper |
 | P1 | URS, PRS, RSK, MKT | Done on paper |
-| P2 | CAL, RTM, concept selection record | Done; selection awaiting Amish |
+| P2 | CAL, RTM, concept selection record | Done; B1 chosen by Amish on 2026-11-11 |
 | P3 | Model, STEP, drawings, priced BOM, build plan, DEC, design FMEA | Done on paper, 2026-11-11 |
 | P4 | Prototypes, accredited tests (HWP-VER-001) | On hold (stage cap) |
 | P5 | Field trials with a partner | On hold |
@@ -103,9 +103,9 @@ Table 4. Stages (P4 to P6 on hold while the stage cap is P3).
 
 A field partner for the neck survey and persona trials; introductions to membrane module makers; an accredited laboratory for HWP-VER-001; a volunteer patent attorney.
 
-## Next steps and decision requested
+## Next steps and decisions
 
-Amish: decide D1 (B1, B2 or both), D2 to D5 and D7 to D9 (the independent STEM review, D6, was run on 2026-11-11). Then send the module requests for quotation when P4 opens.
+Amish decided D1 (B1), D2 to D5 and D7 to D9 on 2026-11-11 (the independent STEM review, D6, was run the same day). Next, send the module requests for quotation when P4 opens.
 
 ## References
 

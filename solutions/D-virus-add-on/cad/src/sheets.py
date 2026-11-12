@@ -1,5 +1,5 @@
 """Helpful Water D drawing set and STL export for the carried option D1 (tablet dose cap; the concept choice is
-proposed, awaiting Amish, HWD-DEC-001 D1).
+decided by Amish on 2026-11-11, HWD-DEC-001 D1).
 
 Run from the solution folder:  python cad/src/sheets.py [ga|section|stl]   (no argument: all three, one per process
 on a small machine)

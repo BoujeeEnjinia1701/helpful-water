@@ -50,7 +50,7 @@ Table 2. Stakeholders who are not day-to-day users (program list in HWP-PRB-001 
 
 | Stakeholder group | Role or interest | Engagement needed |
 | --- | --- | --- |
-| Helpful Engineering and Design Molecule Labs | Co-owners of the program | Design review of the B options and the open decisions |
+| Helpful Engineering and Design Molecule Labs | Co-owners of the program | Design review of the B options and decisions |
 | NGO and WASH cluster buyers | Procurement, cost per litre, resupply | Review the carbon consumable and the no-virus pairing |
 | Bottled-water and beverage bottlers (neck finish owners) | The PCO 1881, PCO 1810 and 38 mm finishes on local bottles | Survey of local finishes before the adapter range is fixed |
 | Membrane module makers | Pre-potted modules with data sheets | Request for quotation (HWB-DEC-001 C1 to C3) |

@@ -3,7 +3,7 @@ doc_id: HWA-OPT-001
 title: "Helpful Water A: filter straw concept options"
 project: "Helpful Water A: filter straw"
 doc_type: Concept options
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,15 +17,20 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Figures updated after the independent STEM review (HWA-STM-001 v0.2): permeabilities at 20 C, flows 110 to 179 mL/min at 10 kPa"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water A: filter straw concept options
 
-Recommendation: option A1, the hollow-fibre straw with an isolated backflush socket, scores 164 of 215 against 135 for the ceramic tube straw (A2) and 125 for the copper and charcoal straw (A3), more than 10 % ahead; A2 and A3 also fail the STEM check on their working principle and are dropped. The choice is **Proposed, awaiting Amish** (HWA-DEC-001 D1, HWA-DDR-001). Method: STANDARDS section 21.
+Recommendation: option A1, the hollow-fibre straw with an isolated backflush socket, scores 164 of 215 against 135 for the ceramic tube straw (A2) and 125 for the copper and charcoal straw (A3), more than 10 % ahead; A2 and A3 also fail the STEM check on their working principle and are dropped. The choice is **decided by Amish on 2026-11-11** (HWA-DEC-001 D1, HWA-DDR-001). Method: STANDARDS section 21.
 
 ![Concept options side by side at one scale](../media/options.png)
 
-The options picture is rendered in Blender Cycles from the D3 models in `cad/src/model.py`. Blender is not in this container: the scenes are exported to `/home/claude/hw/renderq/A-straw` for Amish's Mac, and `media/options.png` is composed from them with `python .kit/options.py --compose=<dir>` (see `docs/REVIEW.md`).
+The options picture is rendered in Blender Cycles from the D3 models in `cad/src/model.py`. The scenes are exported with `python .kit/options.py --export`, rendered on Amish's Mac and composed into `media/options.png` with `python .kit/options.py --compose=<dir>`.
 
 ## The options
 
@@ -53,7 +58,7 @@ Table 1. Options compared (HWA-CAL-001, model masses).
 | Pathogen barrier | Size exclusion, 0.1 to 0.2 um fibre | Size exclusion, ceramic | None that works in a sip |
 | Cleaning | Syringe backflush through the header socket | Scrub the tube | Rinse |
 | Parts count (model) | 26 | 25 | 20 |
-| STEM check | No Fails; S3 awaits Amish | Fails (X1, flow) | Fails (X3 to X5, efficacy) |
+| STEM check | No Fails; S2, S3, S5 closed by HWA-DEC-001 D2, D3 | Fails (X1, flow) | Fails (X3 to X5, efficacy) |
 
 ## Patent check against US 8,852,439 B2 (HWP-FTO-001)
 
@@ -86,7 +91,7 @@ Table 2. Weighted scoring (weights: High UR 3, Medium 2, Low 1; scores 1 to 5). 
 
 ## Recommendation
 
-Option A1 is recommended: it is the only option whose working principle holds at suction, and it leads A2 by 21 %. The runner-up's best idea is A2's service rule: clean the barrier without opening the clean side. A1 already does this for backflushing and for rinsing the mesh (the mesh is captive in the dirty-side intake cap); the remaining clean-side opening is the carbon change, and the proposal to make the carbon cartridge and mouthpiece one replaceable top is recorded as HWA-DEC-001 D6. Recorded as **Proposed, awaiting Amish** in HWA-DEC-001 D1 and argued in HWA-DDR-001.
+Option A1 is recommended: it is the only option whose working principle holds at suction, and it leads A2 by 21 %. The runner-up's best idea is A2's service rule: clean the barrier without opening the clean side. A1 already does this for backflushing and for rinsing the mesh (the mesh is captive in the dirty-side intake cap); the remaining clean-side opening is the carbon change, and the proposal to make the carbon cartridge and mouthpiece one replaceable top is recorded as HWA-DEC-001 D6. Recorded as **decided by Amish on 2026-11-11** in HWA-DEC-001 D1 and argued in HWA-DDR-001.
 
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

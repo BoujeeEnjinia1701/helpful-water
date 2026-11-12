@@ -3,7 +3,7 @@ doc_id: HWC-PLN-001
 title: "Helpful Water C: household gravity filter project plan"
 project: "Helpful Water C: household gravity filter"
 doc_type: Project plan
-version: "0.1"
+version: "0.2"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -13,11 +13,16 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "First plan for solution C at P3, carrying the kill criteria and the parts of HWP-PLN-001 that apply"
+  - version: "0.2"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water C: household gravity filter project plan
 
-Purpose: give households a way to treat a day's drinking and cooking water for five people, without power, in a few hours, and keep it closed, as the household member of the Helpful Water family (HWP-PLN-001). Solution C is at TRL 3 and stage P3 (the portfolio cap): a constructable design on paper with a build plan. Decisions requested from Amish now: the concept choice (HWC-DEC-001 D1) and the open decisions D2 to D8. P4 (prototype and accredited testing) stays closed until Amish opens it with Helpful Engineering.
+Purpose: give households a way to treat a day's drinking and cooking water for five people, without power, in a few hours, and keep it closed, as the household member of the Helpful Water family (HWP-PLN-001). Solution C is at TRL 3 and stage P3 (the portfolio cap): a constructable design on paper with a build plan. Amish decided the concept (C1) and D2 to D8 on 2026-11-11 (HWC-DEC-001); no decision is open. P4 (prototype and accredited testing) stays closed until Amish opens it with Helpful Engineering.
 
 > **Release limitation.** No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 
@@ -42,7 +47,7 @@ Table 1. Workstreams.
 
 ## Targets and key performance indicators
 
-Table 2. Targets that apply to C (from HWP-PLN-001 Table 2; Proposed, awaiting Amish).
+Table 2. Targets that apply to C (from HWP-PLN-001 Table 2: set by Amish on 2026-11-11).
 
 | Category | Target for C | Basis |
 | --- | --- | --- |

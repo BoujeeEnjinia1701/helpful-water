@@ -1,5 +1,5 @@
 """Helpful Water C product appearance model (kit 1.9), TRL 3, carried option C1 (two-bucket hollow-fibre filter on a
-timber stand; the concept choice is proposed, awaiting Amish). Built from components("C1") in cad/src/model.py with
+timber stand; the concept choice was made by Amish on 2026-11-11). Built from components("C1") in cad/src/model.py with
 every part used as it is, plus a 1.75 m mannequin standing beside the stand for scale and the cup under the tap.
 APPEARANCE MODEL ONLY: no tolerances, no fabrication detail. CONCEPT, NOT FOR FABRICATION. Photoreal renders need
 Blender (.kit/photoreal.py), which runs on Amish's Mac from the scenes written by `python .kit/export_views.py <dir>`.

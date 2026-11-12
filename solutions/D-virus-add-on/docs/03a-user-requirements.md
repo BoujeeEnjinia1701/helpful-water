@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-URS-001
-title: "Helpful Water D: chlorine add-on for viruses user requirements"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on user requirements"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: User requirements
 version: "0.1"
 status: Draft
@@ -15,7 +15,7 @@ revisions:
     change: The HWP-URS-001 rows that apply to D with the same IDs, plus four D-specific needs (UR-101 to UR-104)
 ---
 
-# Helpful Water D: chlorine add-on for viruses user requirements
+# Helpful Water D: chlorine co-treatment add-on user requirements
 
 What the people who use solution D need, written from their side. Rows UR-003 to UR-022 repeat the shared user requirements of HWP-URS-001 that list D, with the same IDs and priorities; UR-101 to UR-104 are specific to a chlorine co-treatment and come from the users in HWD-PRB-001 Table 1. Rows of HWP-URS-001 that do not list D (bacteria and protozoa reduction, flow, daily upkeep, bypass, hygienic storage, portability, household volume, drops and freezing, prefilter and shared use) belong to the filters A to C. Method: STANDARDS section 22.
 

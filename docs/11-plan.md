@@ -17,7 +17,7 @@ revisions:
 
 # Helpful Water program plan
 
-Purpose: deliver clean, reliable and simple access to water for people without safe drinking water (Helpful Water update, 2026-02-26), through four open point-of-use solutions taken to a constructable design on paper (TRL 3, stage P3, the portfolio cap). The next gate, P4 (functional prototypes and accredited laboratory testing), stays closed until Amish opens it with Helpful Engineering. Decisions requested now: the concept choice and open decisions in each solution's register.
+Purpose: deliver clean, reliable and simple access to water for people without safe drinking water (Helpful Water update, 2026-02-26), through four open point-of-use solutions taken to a constructable design on paper (TRL 3, stage P3, the portfolio cap). The next gate, P4 (functional prototypes and accredited laboratory testing), stays closed until Amish opens it with Helpful Engineering. Amish settled the concept choice and every open decision in each solution's register on 2026-11-11.
 
 ## Workstreams
 
@@ -40,7 +40,7 @@ From the Helpful Water update (2026-02-26), applied to each solution: stop or pa
 
 ## Targets and key performance indicators
 
-Table 2. Service-level targets (proposed in the viability shortlist for the copper straw and the bottle cartridge, carried here as program targets; Proposed, awaiting Amish).
+Table 2. Service-level targets (proposed in the viability shortlist for the copper straw and the bottle cartridge, carried here as program targets; adopted by Amish on 2026-11-11).
 
 | Category | Target | Basis |
 | --- | --- | --- |

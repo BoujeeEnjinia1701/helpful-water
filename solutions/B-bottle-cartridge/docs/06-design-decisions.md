@@ -3,7 +3,7 @@ doc_id: HWB-DEC-001
 title: "Helpful Water B: bottle cartridge design decisions register"
 project: "Helpful Water B: bottle cartridge"
 doc_type: Design decisions register
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,24 +17,29 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Independent STEM review run (HWB-STM-001): D6 closed; F5 to F9 decided under the standing instruction; D8 and D9 proposed; C1, C2 and C7 extended"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: All pending decisions settled on their recommendations by Amish (instruction of 2026-11-11); no decision open
+
 ---
 
 # Helpful Water B: bottle cartridge design decisions register
 
-Every design decision still to be made, and every decision made, in one place. Each is argued in its decision record under `docs/decisions/`; this register is the index Amish works from. Four fixes found by the STEM check and five found by the independent review of 2026-11-11 are made under Amish's standing instruction of 2026-10-23 (F1 to F9, HWB-DDR-003). Everything else is Proposed, awaiting Amish.
+Every design decision for this solution, in one place. Each is argued in its decision record under `docs/decisions/`. On 2026-11-11 Amish instructed that every pending decision be settled on its recommendation; the decisions below are recorded as his, and no decision is open. The STEM fixes were made under his standing instruction of 2026-10-23. Items under "To confirm when parts are bought" are supplier facts to collect, not decisions.
 
-## Open decisions
+## Decisions taken on 2026-11-11
 
-| # | Decision needed | Options | Recommendation | Affects in the build | Source |
+| # | Decision needed | Options | Decision (Amish, 2026-11-11) | Affects in the build | Source |
 | --- | --- | --- | --- | --- | --- |
-| D1 | Concept: B1 squeeze cartridge or B2 gravity drip stand (within 10 %, 246 against 222) | B1; B2; B1 with B2's stand as an accessory | No pick (within 10 %). Proposed, awaiting Amish; the combined path is noted as worth considering | The drawings, BOM and plan describe B1; B2 needs its own stand parts and plan | HWB-OPT-001, HWB-DDR-001 |
-| D2 | Neck finish the prototype is drawn to | PCO 1881 (collar also fits 1810); PCO 1810 | PCO 1881, the lighter finish now common on water bottles. Proposed, awaiting Amish | Collar thread | HWB-CAL-001 section 2 |
-| D3 | 38 mm wide-mouth adapter in the first prototype | Draw it now; after the neck survey | After the neck survey, once the local 38 mm finish is known. Proposed, awaiting Amish | One more printed part | HWB-STM-001 S25 |
-| D4 | Size target for B (UR-012 gives 30 mm across for personal devices) | Keep 30 mm (not met); set 50 mm for bottle-mounted devices | Set a B-specific 50 mm, since the bottle is 80 mm across anyway. Proposed, awaiting Amish | None | HWB-PRS-001 PR-014 |
-| D5 | Freedom-to-operate search for squeeze and bottle filters | Search now; at P4 | Desk search of squeeze-filter patents before P4 opens, attorney opinion before distribution. Proposed, awaiting Amish | None | HWB-OPT-001, HWP-FTO-001 |
-| D8 | Housing end wall at a blocked backflush (PR-028) | (a) Keep 4 mm and rely on the procedure (collar end open, shell near 0 kPa; factor 9 at a full squeeze); (b) thicken the end wall to 6.5 mm (factor 5 even if the collar end were blocked; housing 2.5 mm longer, about 3 g more, drawings and build media to regenerate); (c) restate PR-028 at the shell pressure the procedure allows | (b) at the next geometry revision, since a user who backflushes on a full bottle can block the collar end; until then (a). Proposed, awaiting Amish | Housing, HWB-DWG-001 and -002, build plan media | HWB-STM-001 S16, HWB-CAL-001 section 6 |
-| D9 | Water temperature for the flow requirements (PR-004 to PR-006, PR-025) | Keep 20 C; rate at 10 C (PR-004 360 and PR-005 123 mL/min, both not met on paper) | Keep 20 C for the paper design, state the 10 C figures beside it, and set the rating once source temperatures from the co-design partners are known. Proposed, awaiting Amish | Possibly membrane area (longer legs) | HWB-STM-001 S31 |
-| D7 | Design life used for the cost per user per year | 9 months (USD 10.8); 12 months (USD 8.5) | Report both until fouling tests set the module life. Proposed, awaiting Amish | None | HWB-CAL-001 section 7 |
+| D1 | Concept: B1 squeeze cartridge or B2 gravity drip stand (within 10 %, 246 against 222) | B1; B2; B1 with B2's stand as an accessory | B1 squeeze cartridge (246, the higher score, already carried to the drawings, BOM and build plan). B2's drip stand is recorded as a possible later accessory, outside the current scope. Decided by Amish, 2026-11-11 (recommendation adopted). | The drawings, BOM and plan describe B1; B2 needs its own stand parts and plan | HWB-OPT-001, HWB-DDR-001 |
+| D2 | Neck finish the prototype is drawn to | PCO 1881 (collar also fits 1810); PCO 1810 | PCO 1881. Decided by Amish, 2026-11-11 (recommendation adopted). | Collar thread | HWB-CAL-001 section 2 |
+| D3 | 38 mm wide-mouth adapter in the first prototype | Draw it now; after the neck survey | No adapter in the first prototype; a 38 mm adapter is added after the neck survey only if the local 38 mm finish is common. Decided by Amish, 2026-11-11 (recommendation adopted). | One more printed part | HWB-STM-001 S25 |
+| D4 | Size target for B (UR-012 gives 30 mm across for personal devices) | Keep 30 mm (not met); set 50 mm for bottle-mounted devices | A B-specific size target of 250 mm long and 50 mm across, since the bottle is 80 mm across; PR-014 is met (46 mm). Decided by Amish, 2026-11-11 (recommendation adopted). | None | HWB-PRS-001 PR-014 |
+| D5 | Freedom-to-operate search for squeeze and bottle filters | Search now; at P4 | Desk search of squeeze-filter patents before P4 opens; patent attorney opinion before any distribution. Decided by Amish, 2026-11-11 (recommendation adopted). | None | HWB-OPT-001, HWP-FTO-001 |
+| D8 | Housing end wall at a blocked backflush (PR-028) | (a) Keep 4 mm and rely on the procedure (collar end open, shell near 0 kPa; factor 9 at a full squeeze); (b) thicken the end wall to 6.5 mm (factor 5 even if the collar end were blocked; housing 2.5 mm longer, about 3 g more, drawings and build media to regenerate); (c) restate PR-028 at the shell pressure the procedure allows | (a) until the next geometry revision, then (b). Decided by Amish, 2026-11-11 (recommendation adopted). | Housing, HWB-DWG-001 and -002, build plan media | HWB-STM-001 S16, HWB-CAL-001 section 6 |
+| D9 | Water temperature for the flow requirements (PR-004 to PR-006, PR-025) | Keep 20 C; rate at 10 C (PR-004 360 and PR-005 123 mL/min, both not met on paper) | 20 C for the paper design, with the 10 C figures stated beside it; the rating temperature is reset once the co-design partners give source temperatures. Decided by Amish, 2026-11-11 (recommendation adopted). | Possibly membrane area (longer legs) | HWB-STM-001 S31 |
+| D7 | Design life used for the cost per user per year | 9 months (USD 10.8); 12 months (USD 8.5) | Report both design lives until the fouling tests set the module life. Decided by Amish, 2026-11-11 (recommendation adopted). | None | HWB-CAL-001 section 7 |
 
 ## To confirm when parts are bought
 
@@ -69,5 +74,13 @@ Value-engineering target: USD 20 for prototype parts (a hypothetical control tar
 | 2026-11-11 | F9: module request names hydrophilic fibres shipped wet, potting rating, packing limit and production integrity test | Under the standing instruction | HWB-DDR-003, bom/bom.csv item 8 |
 | 2026-11-11 | D6 closed: independent STEM review run (separate process, claims, calculations and sources only) | Brief of 2026-11-11 (STANDARDS section 20) | HWB-STM-001 |
 | 2026-11-11 | Design-for-construction changes | STANDARDS section 18 (Amish, 2026-09-30) | HWB-DDR-002 |
+| 2026-11-11 | D1: B1 squeeze cartridge (246, the higher score, already carried to the drawings, BOM and build plan). B2's drip stand is recorded as a possible later accessory, outside the current scope. | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D2: PCO 1881. | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D3: No adapter in the first prototype; a 38 mm adapter is added after the neck survey only if the local 38 mm finish is common. | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D4: A B-specific size target of 250 mm long and 50 mm across, since the bottle is 80 mm across; PR-014 is met (46 mm). | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D5: Desk search of squeeze-filter patents before P4 opens; patent attorney opinion before any distribution. | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D7: Report both design lives until the fouling tests set the module life. | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D8: (a) until the next geometry revision, then (b). | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
+| 2026-11-11 | D9: 20 C for the paper design, with the 10 C figures stated beside it; the rating temperature is reset once the co-design partners give source temperatures. | Amish (recommendation adopted, instruction of 2026-11-11) | This register |
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

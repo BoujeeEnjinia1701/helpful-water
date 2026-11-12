@@ -1,5 +1,5 @@
 """Helpful Water D concept media from the TRL 3 model (option D1, the tablet dose cap carried to the drawing, BOM and
-build plan; the concept choice is proposed, awaiting Amish).
+build plan; the concept choice was made by Amish on 2026-11-11).
 
 Run from the solution folder:  python cad/src/concept_media.py [hero|cutaway|exploded|flow|web|blueprint ...]
 With no argument it draws everything; on a small machine run one picture per process. Geometry comes from
@@ -42,7 +42,7 @@ def parts(context=True, small=True):
 
 
 def hero():
-    return K._render(parts(), MD / "hero.png", title=f"{PROJECT}: chlorine add-on for viruses", size=(7, 8),
+    return K._render(parts(), MD / "hero.png", title=f"{PROJECT}: chlorine co-treatment add-on", size=(7, 8),
                      note="D1 tablet dose cap on a 1 L PET bottle (28 mm PCO 1881 neck). Seen from the front right and above, "
                           "15 deg elevation. Grey: a hand and the bottle, for scale. Co-treatment: chlorinate, wait, then filter",
                      elev=15, azim=-50)

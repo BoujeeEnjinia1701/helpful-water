@@ -1,4 +1,8 @@
-# Helpful Water D: chlorine add-on for viruses
+# Helpful Water D: chlorine co-treatment add-on
+
+![Helpful Water D1 tablet dose cap on a 1 L PET bottle held in a hand, photoreal render](media/render-hero.png)
+
+CONCEPT, NOT FOR FABRICATION. [Studio view](media/render-studio.png) · [Exploded render](media/render-exploded.png) · [Concept render](media/hero.png)
 
 ![TRL 3](https://img.shields.io/badge/TRL-3%20of%209-0F766E) ![Stage P3](https://img.shields.io/badge/stage-P3%20design%20outputs-0F766E) ![Hardware: CERN-OHL-P-2.0](https://img.shields.io/badge/hardware-CERN--OHL--P--2.0-111827) ![Software: Apache-2.0](https://img.shields.io/badge/software-Apache--2.0-111827) ![Docs: CC-BY-4.0](https://img.shields.io/badge/docs-CC--BY--4.0-111827)
 
@@ -7,10 +11,6 @@
 A tool-free dose cap that holds one chlorine tablet matched to the container and shows the 30 minute wait with a flip-over ball timer, so raw water is chlorinated at the household rate before it goes through a Helpful Water filter (A, B or C). It is the co-treatment that addresses viruses, which the filters do not remove; the filters remain the barrier for *Cryptosporidium*, which chlorine does not inactivate.
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
-
-![Helpful Water D1 tablet dose cap on a 1 L PET bottle, concept render with a hand for scale](media/hero.png)
-
-Figure 1. D1 dose cap on a 1 L PET bottle, with a hand for scale. CONCEPT, NOT FOR FABRICATION. (The photoreal `media/render-hero.png` is rendered in Blender on Amish's Mac.)
 
 [Problem](docs/01-problem.md) · [STEM check](docs/01b-stem-check.md) · [Concept options](docs/02a-concept-options.md) · [Precis](docs/02-concept.md) · [Requirements](docs/03-requirements.md) · [Calculations](docs/04-calcs/01-sizing.md) · [Prototype build plan](docs/05-build-plan.md) · [Decisions](docs/06-design-decisions.md) · [Review](docs/REVIEW.md) · [3D viewer](media/viewer.html)
 
@@ -56,11 +56,13 @@ Figure 2. Dose, wait, then filter (estimates, HWD-CAL-001).
 
 ## Concept options
 
-Three working principles were modelled to detail level D3 and scored (HWD-OPT-001): **D1 tablet dose cap** 174 of 215 (recommended, **Proposed, awaiting Amish**), **D2 metered liquid doser** for 1.25 % hypochlorite 143, and **D3 erosion feeder** in the bucket 85, dropped because its dose grows with standing time. The options picture `media/options.png` is rendered in Blender on Amish's Mac.
+Three working principles were modelled to detail level D3 and scored (HWD-OPT-001): **D1 tablet dose cap** 174 of 215 (**chosen by Amish on 2026-11-11**), **D2 metered liquid doser** for 1.25 % hypochlorite 143, and **D3 erosion feeder** in the bucket 85, dropped because its dose grows with standing time.
+
+![Concept options, rendered from the D3 models with the same scale reference](media/options.png)
 
 ## STEM check
 
-`stem_check: open`. Clear water dosed at 2 mg/L keeps an estimated 1.7 mg/L after 30 minutes, a CT of about 51 mg min/L (US EPA definition) against 8 for 4-log virus inactivation at 5 C (US EPA); no virus credit is taken above 5 NTU. Five details failed as briefed and were fixed under Amish's standing instruction (turbid rule, keyed wells, two-tablet stop, cold-water run count, an O-ring groove), plus a timer margin. An independent reviewer, run as a separate process on 2026-11-11, found 20 rows that hold, 18 weak and 5 refuted of 43; six more fixes followed (a pour-and-stir method for the 20 L bucket, a 1 to 1.5 L bottle range, a 2.0 mm D2 dropper orifice, O-ring tolerances, a 45 minute timer that reads at least 30 minutes up to 40 C, and no polycarbonate in the well). Two findings go to Amish: carbon in A to C removes the residual, so filtered and stored water carries none (S16), and the user has no field check of the residual (S43). See [HWD-STM-001](docs/01b-stem-check.md).
+`stem_check: open`. Clear water dosed at 2 mg/L keeps an estimated 1.7 mg/L after 30 minutes, a CT of about 51 mg min/L (US EPA definition) against 8 for 4-log virus inactivation at 5 C (US EPA); no virus credit is taken above 5 NTU. Five details failed as briefed and were fixed under Amish's standing instruction (turbid rule, keyed wells, two-tablet stop, cold-water run count, an O-ring groove), plus a timer margin. An independent reviewer, run as a separate process on 2026-11-11, found 20 rows that hold, 18 weak and 5 refuted of 43; six more fixes followed (a pour-and-stir method for the 20 L bucket, a 1 to 1.5 L bottle range, a 2.0 mm D2 dropper orifice, O-ring tolerances, a 45 minute timer that reads at least 30 minutes up to 40 C, and no polycarbonate in the well). Two findings were settled by Amish on 2026-11-11: C stays carbon-free so its stored water keeps a residual while A and B claim none (S16), and each household kit carries free chlorine test strips (S43). See [HWD-STM-001](docs/01b-stem-check.md).
 
 ## Key components
 

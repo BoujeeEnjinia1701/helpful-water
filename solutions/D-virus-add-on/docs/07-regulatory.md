@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-REG-001
-title: "Helpful Water D: chlorine add-on for viruses regulatory and standards register"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on regulatory and standards register"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Regulatory register
 version: "0.1"
 status: Draft
@@ -15,7 +15,7 @@ revisions:
     change: First register for D, citing HWP-REG-001 and adding the chlorine-specific items
 ---
 
-# Helpful Water D: chlorine add-on for viruses regulatory and standards register
+# Helpful Water D: chlorine co-treatment add-on regulatory and standards register
 
 D handles a disinfectant, so on top of the program register (HWP-REG-001) it meets the rules for chlorine products: the dose ceiling and residual guidance of WHO, the treatment-chemical standards for the tablets and liquid it uses, biocide or pesticide registration wherever a disinfection claim is made, dangerous-goods transport and child-resistant packaging. D is designed to use already registered, bought tablets and to make only the HWP-CLM-001 claim. Not legal advice; every "to assess" needs a qualified regulatory adviser before any claim or distribution. Sources checked 2026-11-11.
 

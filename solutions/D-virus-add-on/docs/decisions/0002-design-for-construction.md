@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-DDR-002
 title: "Helpful Water D: design for construction"
-project: "Helpful Water D: chlorine add-on for viruses"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Design decision record
 version: "0.1"
 status: Draft

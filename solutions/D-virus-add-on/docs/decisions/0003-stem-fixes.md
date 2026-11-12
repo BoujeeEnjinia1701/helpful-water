@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-DDR-003
 title: "Helpful Water D: STEM fixes"
-project: "Helpful Water D: chlorine add-on for viruses"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Design decision record
 version: "0.2"
 status: Draft

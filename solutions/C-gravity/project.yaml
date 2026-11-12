@@ -15,7 +15,7 @@ trl_target: 3
 stage: P3                # pipeline stage, STANDARDS section 19
 stem_check: open         # HWC-STM-001: no Fails row; 11 plausible rows wait on supplier data and TRL 4 tests
 concept_options: [C1, C2, C3]   # HWC-OPT-001
-concept_chosen: "proposed: C1, awaiting Amish"   # HWC-DEC-001 D1; C1 carried to the drawings, BOM and build plan
+concept_chosen: "C1"   # decided by Amish on 2026-11-11 (recommendation adopted), HWC-DEC-001 D1
 design_state: constructable   # STANDARDS section 18; HWC-DDR-002
 pitch: >-
   A two-bucket household gravity filter on a timber stand, designed to reduce bacteria and protozoa in a day's drinking and cooking water for five people (45 L) in a few hours: cloth prefilter and settling in the raw bucket, a bought 0.1 um hollow-fibre module, and a closed clean bucket with a tap; not a virus barrier, so the raw water is dosed with chlorine (solution D) first where viruses are a risk.

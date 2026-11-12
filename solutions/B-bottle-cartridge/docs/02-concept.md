@@ -41,7 +41,7 @@ The B1 cartridge screws onto a standard 28 mm PET bottle and, when the bottle is
 
 Collar with a PCO 1881 female thread and the duckbill; housing; carbon capsule and lid; spout, push-pull valve and dust cover with a stainless hinge pin (all polypropylene, printed for the prototype, moulded at scale); bought hollow-fibre module, coconut GAC, 316L mesh, EPDM or silicone O-rings and gaskets, and a 60 mL syringe (`bom/bom.csv`, 18 lines).
 
-## Key design choices (proposed, awaiting Amish unless stated)
+## Key design choices (decided by Amish on 2026-11-11)
 
 - Carbon upstream of the membrane, on the dirty side, so the membrane is the last barrier and backflush never passes the carbon: decided under the standing instruction of 2026-10-23 (F1), because the briefed downstream carbon would grow bacteria on the clean side (HWB-STM-001 S18).
 - A duckbill air valve in the collar: decided under the standing instruction (F2), because a wetted membrane blocks air and a squeezed bottle would otherwise stay crushed (S19).

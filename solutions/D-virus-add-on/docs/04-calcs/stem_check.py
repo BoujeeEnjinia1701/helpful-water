@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HWD-STM-001 STEM check for Helpful Water D (chlorine add-on for viruses). Run from the solution folder after sizing.py:
+"""HWD-STM-001 STEM check for Helpful Water D (chlorine co-treatment add-on). Run from the solution folder after sizing.py:
 
     python docs/04-calcs/sizing.py && python docs/04-calcs/stem_check.py && python docs/04-calcs/stm_table.py
 
@@ -79,10 +79,10 @@ c.cited("S15", "Chlorination is only for water under 50 NTU, and settled water d
         "Chemistry", "Environmental and atmospheric chemistry", "IFRC tablet-choice note: 0 to 5 NTU low, 5 to 50 NTU high, above 50 NTU do not chlorinate; particles shield microbes and add demand",
         "Pictogram: cloudy water, let it settle and pour off, use two tablets; muddy water, do not use D alone (HWP-SRC-001 SC3, SC6); users cannot measure NTU, so the pictogram's see-through test is checked by persona (TH)", WITHIN)
 # ---- interfaces with A to C -----------------------------------------------------------------------------------
-c.cited("S16", "The chlorine residual protects the stored household supply from recontamination after it has been filtered",
+c.cited("S16", "Where the household stores filtered water (solution C), a chlorine residual remains to protect it, because C has no carbon stage; A and B are drunk at once",
         "Chemistry", "Physical chemistry", "CDC SWS: residual above 0.2 mg/L at 24 h is for protection in storage; granular carbon removes free chlorine fast (HWP-CLM-001 sequence: chlorinate, wait, filter, carbon removes taste)",
-        "Fails as a system: wherever A to C put carbon after the wait, the filtered water carries no residual, and the carbon bed itself can grow heterotrophic bacteria with no chlorine to control it. Fix options change C's design and the program sequence, so they go to Amish (HWD-DEC-001 D3)",
-        FIX, closed_by="Proposed, awaiting Amish (HWD-DEC-001 D3)")
+        "Fixed: C is carbon-free (HWC-DEC-001 D3), so the residual reaches C's closed clean bucket; A and B keep their carbon and no residual is claimed for them (on-product wording, HWP-CLM-001). The residual at 24 h in C is confirmed in test TJ at TRL 4",
+        WITHIN, closed_by="Fix: HWD-DEC-001 D3 and HWC-DEC-001 D3 (Amish, 2026-11-11)")
 c.cited("S17", "A few mg/L of free chlorine ahead of the filter does not harm the hollow-fibre modules of A to C",
         "Chemistry", "Materials and polymer chemistry", "PVDF and PES hollow fibres are commonly cleaned with hypochlorite; tolerance is given by makers as a chlorine exposure in mg h/L, commonly 1e5 to 1e6",
         f"Even with the fibres soaked in dosed water all year the exposure is about {r['membrane_exposure_mg_h_l_year']:,.0f} mg h/L; the bought module's limit and flux on chlorinated feed are confirmed with the supplier and over 100 L (HWD-DEC-001 C3)", PLAUSIBLE)
@@ -170,10 +170,10 @@ c.cited("S41", "On C's bucket port the 20 L tablet dissolves and mixes through t
 c.claim("S42", f"The 1 L tablet is used only in bottles of 1 to 1.5 L, so a clear single dose gives at least 1.33 mg/L and a double dose at most 4.0 mg/L",
         "Mathematics", "Units and dimensional analysis", f"Dose = 2 mg / volume: 0.5 L gives {br['0.5']['one']} and {br['0.5']['two']} mg/L (double over 5); 2 L gives {br['2.0']['one']} mg/L; range printed on the blue insert label (F8)",
         br["1.0"]["two"], C["WHO_GV"], "mg/L", rule="below", closed_by="HWD-DEC-001 F8")
-c.cited("S43", "A wrong, missing, weak or undissolved dose is visible to the user before the water is filtered",
+c.cited("S43", "A wrong, missing, weak or undissolved dose is made visible by a free chlorine check after the wait (test strips in the household kit, a comparator for partners)",
         "Engineering and technology", "Sensing resolution", "Free chlorine is invisible; the clear plug shows only that the tablet has gone; DPD test strips or a comparator read 0.2 mg/L and above",
-        "Fails as designed: there is no field check of the residual after the wait. Fix proposed: a pack of free chlorine test strips in each kit and a check after the wait (target at least 0.5 mg/L); it changes the kit and its cost, so it goes to Amish (HWD-DEC-001 D7)",
-        FIX, closed_by="Proposed, awaiting Amish (HWD-DEC-001 D7)")
+        "Fixed: DPD free chlorine strips in each household kit, used after the wait on every new source and every tenth batch (target at least 0.5 mg/L); a comparator for programme staff. The strip cost is to assess",
+        WITHIN, closed_by="Fix: HWD-DEC-001 D7 (Amish, 2026-11-11)")
 c.write()
 
 # ---- dropped option D3: erosion feeder ----------------------------------------------------------------------------

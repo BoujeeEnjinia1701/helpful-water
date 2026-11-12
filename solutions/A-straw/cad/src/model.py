@@ -7,7 +7,7 @@ Axes: Z along the straw from the intake face (z = 0) to the mouthpiece tip (z = 
 backflush port. Envelope from the Rev A component specification (Helpful Engineering, 2026-10-14): 205 mm long,
 26 mm OD, 22 mm bore, 2 mm wall.
 
-Options (HWA-OPT-001; recommendation proposed, awaiting Amish):
+Options (HWA-OPT-001; chosen by Amish on 2026-11-11):
   A1  Hollow-fibre straw (Rev A, made constructable): intake cap with a captive 316L mesh, a bought pre-potted
       outside-in hollow-fibre module sealed by two O-rings, a clean header with a capped backflush socket that
       bypasses the carbon, a removable carbon cartridge and a bayonet mouthpiece.
@@ -42,7 +42,7 @@ PRINCIPLES = {
     "A3": "Water passes rolled copper mesh, then a long charcoal bed. Dropped: seconds of copper contact and charcoal do "
           "not reduce bacteria or protozoa.",
 }
-CHOSEN = "A1"   # carried to the drawing, BOM and build plan; the concept choice is proposed, awaiting Amish (HWA-DEC-001)
+CHOSEN = "A1"   # carried to the drawing, BOM and build plan; the concept choice was made by Amish on 2026-11-11 (HWA-DEC-001)
 _HAND = dict(el=18, az=-58, scale="none", keep_context=True)
 OPTION_VIEWS = {"A1": dict(_HAND), "A2": dict(_HAND), "A3": dict(_HAND)}
 # O-rings are squeezed against their bores by design (24 % squeeze); the squeeze shows as overlap

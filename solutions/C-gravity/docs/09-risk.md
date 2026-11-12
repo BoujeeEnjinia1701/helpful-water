@@ -3,7 +3,7 @@ doc_id: HWC-RSK-001
 title: "Helpful Water C: household gravity filter risk register"
 project: "Helpful Water C: household gravity filter"
 doc_type: Risk register
-version: "0.1"
+version: "0.2"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -13,11 +13,16 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Project risks, preliminary hazard analysis and first-pass design FMEA for C1 at P3"
+  - version: "0.2"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water C: household gravity filter risk register
 
-The largest risks for C are silent failure (a broken fibre or a frozen module that still flows), false reassurance against hazards C does not address (viruses without D, dissolved chemicals), and a tall loaded stand in a home with children. The design answers with an air hold test, a no-virus label and the D interface, and wider feet with a proposed wall strap; the rest waits on accredited tests. Likelihood and impact are scored 1 to 5; the design FMEA uses severity, occurrence and detection 1 to 10 and RPN = S x O x D.
+The largest risks for C are silent failure (a broken fibre or a frozen module that still flows), false reassurance against hazards C does not address (viruses without D, dissolved chemicals), and a tall loaded stand in a home with children. The design answers with an air hold test, a no-virus label and the D interface, and wider feet with a wall strap (HWC-DEC-001 D4); the rest waits on accredited tests. Likelihood and impact are scored 1 to 5; the design FMEA uses severity, occurrence and detection 1 to 10 and RPN = S x O x D.
 
 > **Release limitation.** No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 

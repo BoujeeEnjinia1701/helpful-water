@@ -1,5 +1,9 @@
 # Helpful Water C: household gravity filter
 
+![Helpful Water C1 household gravity filter beside a 1.75 m person, photoreal render](media/render-hero.png)
+
+CONCEPT, NOT FOR FABRICATION. [Studio view](media/render-studio.png) · [Exploded render](media/render-exploded.png) · [Concept render](media/hero.png)
+
 ![TRL 3](https://img.shields.io/badge/TRL-3%20of%209-0F766E) ![Stage P3](https://img.shields.io/badge/stage-P3%20design%20outputs-0F766E) ![Hardware: CERN-OHL-P-2.0](https://img.shields.io/badge/hardware-CERN--OHL--P--2.0-111827) ![Software: Apache-2.0](https://img.shields.io/badge/software-Apache--2.0-111827) ![Docs: CC-BY-4.0](https://img.shields.io/badge/docs-CC--BY--4.0-111827)
 
 **Area:** Food and water security · **TRL:** 3 of 9 (proof of concept on paper) · **Value-engineering target:** USD 60 of prototype parts · **Difficulty:** 2 of 5
@@ -7,10 +11,6 @@
 A two-bucket household gravity filter on a timber stand, designed to reduce bacteria and protozoa in a day's drinking and cooking water for five people (45 L) in a few hours: a cloth prefilter and a settling zone in the raw bucket, a bought 0.1 um hollow-fibre module, and a closed clean bucket with a tap. It is not a virus barrier, so where viruses are a risk the raw water is dosed with chlorine (solution D) first; the membrane then removes the *Cryptosporidium* that chlorine does not.
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
-
-![Helpful Water C1 household gravity filter, concept render with a 1.75 m person for scale](media/hero.png)
-
-The photoreal render (`media/render-hero.png`) and the options picture need Blender and are waiting in the render queue; the picture above is the kit's concept render.
 
 [Interactive 3D model](media/viewer.html) · [Concept blueprint (PDF)](media/concept-blueprint.pdf) · [General arrangement HWC-DWG-001 (PDF)](cad/drawings/HWC-DWG-001.pdf) · [Section HWC-DWG-002 (PDF)](cad/drawings/HWC-DWG-002.pdf) · [Sizing note HWC-CAL-001](docs/04-calcs/01-sizing.md) · [STEM check](docs/01b-stem-check.md) · [Concept options](docs/02a-concept-options.md) · [Prototype build plan](docs/05-build-plan.md) · [Decisions](docs/06-design-decisions.md) · [Review note](docs/REVIEW.md)
 
@@ -59,7 +59,9 @@ The carer pours raw water through a folded cotton cloth into a blue 20 L bucket 
 
 ## Concept options
 
-Three working principles were modelled at detail level D3 and scored ([HWC-OPT-001](docs/02a-concept-options.md)): **C1 two-bucket hollow-fibre filter (286 of 345)**, C2 ceramic candle filter (234) and C3 plastic biosand filter (227). C1 leads by 22 % and is recommended; the choice is proposed, awaiting Amish (HWC-DEC-001 D1). None of the options falls within claim 1 of US 8,852,439 B2, which covers a suction straw (HWC-OPT-001; not legal advice). The options picture (`media/options.png`) waits for its Blender render.
+Three working principles were modelled at detail level D3 and scored ([HWC-OPT-001](docs/02a-concept-options.md)): **C1 two-bucket hollow-fibre filter (286 of 345)**, C2 ceramic candle filter (234) and C3 plastic biosand filter (227). C1 leads by 22 % and was chosen by Amish on 2026-11-11 (HWC-DEC-001 D1). None of the options falls within claim 1 of US 8,852,439 B2, which covers a suction straw (HWC-OPT-001; not legal advice). The options picture (`media/options.png`) is rendered in Blender.
+
+![Concept options, rendered from the D3 models with the same scale reference](media/options.png)
 
 ## STEM check
 

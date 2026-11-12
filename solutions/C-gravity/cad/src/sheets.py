@@ -1,5 +1,5 @@
 """Helpful Water C drawing set and STL export for the carried option C1 (two-bucket hollow-fibre filter; the concept
-choice is proposed, awaiting Amish, HWC-DEC-001 D1).
+choice was made by Amish on 2026-11-11, HWC-DEC-001 D1).
 
 Run from the solution folder:  python cad/src/sheets.py [ga|section|stl]   (no argument: all three; one per process
 on a small machine)

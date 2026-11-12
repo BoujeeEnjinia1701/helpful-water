@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-OPT-001
-title: "Helpful Water D: chlorine add-on for viruses concept options"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on concept options"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Concept options
 version: "0.2"
 status: Draft
@@ -19,9 +19,9 @@ revisions:
     change: Timer and D2 dropper figures updated after the independent review (F9, F11); STEM summary updated
 ---
 
-# Helpful Water D: chlorine add-on for viruses concept options
+# Helpful Water D: chlorine co-treatment add-on concept options
 
-Recommendation: option D1, the tablet dose cap with a ball timer, scores 174 of 215 against 143 for the metered liquid doser (D2) and 85 for the erosion feeder (D3), more than 10 % ahead of D2; D3 also fails the STEM check on its working principle and is dropped. The choice is **Proposed, awaiting Amish** (HWD-DEC-001 D1, HWD-DDR-001). Method: STANDARDS section 21. All three options are modelled to detail level D3 in `cad/src/model.py`; the side-by-side options picture is rendered in Blender on Amish's Mac from the scenes in the render queue (`media/options.png` is not yet made).
+Recommendation: option D1, the tablet dose cap with a ball timer, scores 174 of 215 against 143 for the metered liquid doser (D2) and 85 for the erosion feeder (D3), more than 10 % ahead of D2; D3 also fails the STEM check on its working principle and is dropped. The choice is **decided by Amish on 2026-11-11** (HWD-DEC-001 D1, HWD-DDR-001). Method: STANDARDS section 21. All three options are modelled to detail level D3 in `cad/src/model.py`; the side-by-side options picture is rendered in Blender on Amish's Mac from the scenes in the render queue (`media/options.png` is not yet made).
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 
@@ -86,7 +86,7 @@ D2 is 17.8 % behind D1, outside the 10 % band, so a single recommendation is mad
 
 ## Recommendation
 
-Carry D1, the tablet dose cap with ball timer (**Proposed, awaiting Amish**, HWD-DEC-001 D1). Runner-up's best idea to graft on: D2's metering chamber and dropper are the right tool where a partner already distributes SWS liquid; the shared ball timer can be offered as a stand-alone clip for those households, without the cap.
+Carry D1, the tablet dose cap with ball timer (**decided by Amish on 2026-11-11**, HWD-DEC-001 D1). Runner-up's best idea to graft on: D2's metering chamber and dropper are the right tool where a partner already distributes SWS liquid; the shared ball timer can be offered as a stand-alone clip for those households, without the cap.
 
 ## Patent comparison: claim 1 of US 8,852,439 B2 (HWP-FTO-001)
 

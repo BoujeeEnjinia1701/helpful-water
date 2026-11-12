@@ -3,7 +3,7 @@ doc_id: HWA-CAL-001
 title: "Helpful Water A: filter straw sizing and first-principles checks"
 project: "Helpful Water A: filter straw"
 doc_type: Calculation note
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,6 +17,11 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: After the independent STEM review, permeabilities converted from 25 C to 20 C; potting drop, immersion and priming, fouling, persona minutes, port losses in backflush, air-check plunger mark, overpressure, seal tolerance stack, socket bypass and wet mass added (assumption A13)
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water A: filter straw sizing and first-principles checks
@@ -134,7 +139,7 @@ Table 3. Results by product requirement.
 | PR | What | Result on paper | Status |
 | --- | --- | --- | --- |
 | PR-001 | Bacteria 6 log | Not computable; size exclusion only, absolute rating with a *B. diminuta* challenge required (STM S11) | To verify at TRL 4 (TA, TB) |
-| PR-002 | 200 mL/min at 10 kPa | 110 (0.1 um) to 179 (0.2 um), clean, primed | Not met on paper (D2, D3) |
+| PR-002 | 150 mL/min at 10 kPa, upper bound (HWA-DEC-001 D3) | 110 (0.1 um) to 179 (0.2 um), clean, primed | Met on paper with the 0.2 um grade; not met with 0.1 um (used only under D2) |
 | PR-003 | 80 mL/min at 5 kPa | 45 to 74 | Not met on paper |
 | PR-004 | Permeability at least 1,800 at 25 C | Specified; PR-002 needs 3,420 at 20 C | Met by design |
 | PR-005 | Area at least 0.050 m2 | 0.056 m2 | Met on paper |

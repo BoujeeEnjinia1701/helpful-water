@@ -3,7 +3,7 @@ doc_id: HWB-PRS-001
 title: "Helpful Water B: bottle cartridge product requirements and specifications"
 project: "Helpful Water B: bottle cartridge"
 doc_type: Product requirements
-version: "0.2"
+version: "0.4"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,11 +17,20 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Independent STEM review (HWB-STM-001): weak child at the girls' grip boundary (5.8 kPa, PR-005); PR-012 status names the 15.2 mL lumens that stay wet; PR-028 at risk on the end wall; 10 C flows noted (HWB-DEC-001 D9)"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: PR-014 width target set to 50 mm for bottle-mounted devices (HWB-DEC-001 D4, Amish 2026-11-11)
+  - version: "0.4"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water B: bottle cartridge product requirements and specifications
 
-What the cartridge must do, each requirement traced to a user need in HWB-URS-001 (links in HWB-RTM-001). The requirements describe option B1, the squeeze cartridge carried to the drawings, BOM and build plan; the concept choice between B1 and B2 is Amish's (HWB-DEC-001 D1). Of 29 requirements, 14 are met on paper or by design, 9 are to verify at TRL 4, 4 are at risk, 1 is not met and 1 is over target. **Not met:** PR-014 diameter (46 mm against the 30 mm that UR-012 gives for personal devices; the bottle sets the width in any case, and a B-specific target is proposed, HWB-DEC-001 D4). **At risk:** PR-005 and PR-006 with a fouled module (82 and 141 mL/min), PR-028 if the collar end were blocked during a backflush (end wall factor 2.1, HWB-DEC-001 D8), and PR-029 until the module's backwash limit is known. All flows are rated in 20 C water; at 10 C they are about 23 % lower, so PR-004 (360 mL/min) and PR-005 (123 mL/min for the weak child) would not be met if the rating temperature became 10 C (HWB-DEC-001 D9). **Over target:** PR-015 cost per user per year (USD 10.8 at a 9-month life; USD 8.5 at 12 months). Every flow figure rests on an assumed membrane permeability of 1,000 L/(m2 h bar) that the module maker must confirm (HWB-DEC-001 C1). Verification families TA to TJ are those of HWP-VER-001; nothing is tested at TRL 3. Targets are proposals for review with a co-design partner.
+What the cartridge must do, each requirement traced to a user need in HWB-URS-001 (links in HWB-RTM-001). The requirements describe option B1, the squeeze cartridge carried to the drawings, BOM and build plan; the concept choice between B1 and B2 is Amish's (HWB-DEC-001 D1). Of 29 requirements, 14 are met on paper or by design, 9 are to verify at TRL 4, 4 are at risk, 1 is not met and 1 is over target. **Not met:** PR-014 diameter (46 mm against the 30 mm that UR-012 gives for personal devices; the bottle sets the width in any case, and the B-specific 50 mm target is set, HWB-DEC-001 D4, so PR-014 is met). **At risk:** PR-005 and PR-006 with a fouled module (82 and 141 mL/min), PR-028 if the collar end were blocked during a backflush (end wall factor 2.1, HWB-DEC-001 D8), and PR-029 until the module's backwash limit is known. All flows are rated in 20 C water; at 10 C they are about 23 % lower, so PR-004 (360 mL/min) and PR-005 (123 mL/min for the weak child) would not be met if the rating temperature became 10 C (HWB-DEC-001 D9). **Over target:** PR-015 cost per user per year (USD 10.8 at a 9-month life; USD 8.5 at 12 months). Every flow figure rests on an assumed membrane permeability of 1,000 L/(m2 h bar) that the module maker must confirm (HWB-DEC-001 C1). Verification families TA to TJ are those of HWP-VER-001; nothing is tested at TRL 3. Targets are proposals for review with a co-design partner.
 
 Table 1. Product requirements and specifications.
 
@@ -40,7 +49,7 @@ Table 1. Product requirements and specifications.
 | PR-011 | UR-009 | Safety | One dirty-to-clean seal | The only dirty-to-clean boundary shall be the potting and the two header O-rings; changing the carbon capsule shall not open the clean side | 1 | none | seal line | Inspection of the model (HWB-DWG-002), TRL 3; bypass tests (TF), TRL 4 | Met by design |
 | PR-012 | UR-010 | Safety | Small clean-side hold-up | The clean side downstream of the potting shall hold no more than 10 mL and drain when the cartridge is upended | 10 | max | mL | Analysis (HWB-CAL-001), TRL 3; storage regrowth (TE, TG), TRL 4 | Met on paper (5.7 mL downstream of the potting; the 15.2 mL in the lumens stays wet, so a 50 mL first flush follows storage, HWB-DEC-001 F6); regrowth and grow-through to verify |
 | PR-013 | UR-011 | Materials | Wetted materials | Every wetted part shall be made from a grade certified to NSF/ANSI/CAN 61 (or an equal national scheme), lead-free to NSF/ANSI/CAN 372 | 100 | min | % of wetted parts | Supplier certificates, TRL 4; extractables (TG), TRL 4 | To verify at TRL 4 |
-| PR-014 | UR-012 | Physical architecture | Size | The cartridge shall be no longer than 250 mm and no wider than 30 mm | 250 x 30 | max | mm | Inspection of the model, TRL 3 | Not met (217 mm long, 46 mm across; B-specific target proposed, HWB-DEC-001 D4) |
+| PR-014 | UR-012 | Physical architecture | Size | The cartridge shall be no longer than 250 mm and no wider than 50 mm (B-specific target for a bottle-mounted device; HWB-DEC-001 D4) | 250 x 50 | max | mm | Inspection of the model, TRL 3 | Met (217 mm long, 46 mm across) |
 | PR-015 | UR-014 | Cost | Cost | Prototype parts shall be reported against the USD 20 value-engineering target; at scale the unit shall approach USD 8 and the cost per user per year USD 10 | 10 | max | USD per user per year | Analysis (HWB-CAL-001 section 7, BOM), TRL 3 | Over target (USD 10.8 at 9 months; prototype USD 18.35, scale USD 7.05) |
 | PR-016 | UR-015 | Logistics | Refillable carbon | The carbon capsule shall open by hand and accept any NSF/ANSI/CAN 61 granular carbon of 12 x 40 mesh | 1 | none | capsule | Inspection, TRL 3; refill trial (TH), TRL 4 | Met by design |
 | PR-017 | UR-016 | Environment | Shelf life | The packed cartridge shall keep its integrity and flow after 2 years at 40 C storage | 2 | min | years | Ageing test (TF), TRL 4; module maker's shelf-life data | To verify at TRL 4 |

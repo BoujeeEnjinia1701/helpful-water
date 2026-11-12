@@ -1,7 +1,7 @@
 {
  "level": "D3",
  "stage": "P3",
- "hash": "7a4e73bcbe3dae66",
+ "hash": "8e4060900a8443ad",
  "options": {
   "D1": {
    "title": "Tablet dose cap with ball timer",
@@ -45,5 +45,5 @@
  "failures": [],
  "warnings": [],
  "passed": true,
- "seconds": 28.0
+ "seconds": 16.7
 }

@@ -1,5 +1,5 @@
 """Helpful Water D product appearance model (kit 1.9), TRL 3, carried option D1 (tablet dose cap; the concept
-choice is proposed, awaiting Amish). Built from components("D1") in cad/src/model.py with every part used as it is,
+choice was made by Amish on 2026-11-11). Built from components("D1") in cad/src/model.py with every part used as it is,
 plus the 1 L PET bottle and a hand from model.py's context parts for scale. APPEARANCE MODEL ONLY: no tolerances, no
 fabrication detail. CONCEPT, NOT FOR FABRICATION. Photoreal renders need Blender (.kit/photoreal.py), which runs on
 Amish's Mac from the scenes written by `python .kit/export_views.py <dir>`.
@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 sys.path[:0] = [str(HERE), str(HERE.parents[1] / ".kit")]
 import model as M  # noqa: E402
 
-TITLE = "Helpful Water D: chlorine add-on for viruses"
+TITLE = "Helpful Water D: chlorine co-treatment add-on"
 
 RENDER_VIEWS = [
     {"name": "hero", "groups": ["shell", "internal", "context"], "explode": False, "el": 15, "az": -50, "args": ["--lens=60"],

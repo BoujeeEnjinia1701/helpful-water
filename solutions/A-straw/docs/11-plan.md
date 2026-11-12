@@ -3,7 +3,7 @@ doc_id: HWA-PLN-001
 title: "Helpful Water A: filter straw project plan"
 project: "Helpful Water A: filter straw"
 doc_type: Project plan
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,11 +17,16 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: Independent STEM review marked done; D10 to D12 added
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water A: filter straw project plan
 
-Solution A is at stage P3 and TRL 3 on paper: a constructable design with a build plan. The next gate, P4 (prototype and accredited laboratory testing), stays closed until Amish opens it with Helpful Engineering (HWP-PLN-001). Decisions requested now: the concept (D1), the membrane grade (D2) and the flow target (D3) in HWA-DEC-001. Method: STANDARDS sections 19, 23 and 25.7.
+Solution A is at stage P3 and TRL 3 on paper: a constructable design with a build plan. The next gate, P4 (prototype and accredited laboratory testing), stays closed until Amish opens it with Helpful Engineering (HWP-PLN-001). Amish decided the concept (D1), the membrane grade rule (D2), the flow target (D3) and D4 to D12 on 2026-11-11 (HWA-DEC-001); no decision is open. Method: STANDARDS sections 19, 23 and 25.7.
 
 ## Purpose
 
@@ -77,7 +82,7 @@ Table 3. Stages (P4 to P6 on hold while the stage cap is P3).
 | --- | --- | --- |
 | P0 Proposal | PRB, STM, OPT, REG, FEA, PLN | Done |
 | P1 Definition | URS, PRS, RSK, MKT | Done |
-| P2 Design inputs | CAL, RTM, concept selection DDR | Done; concept choice awaiting Amish |
+| P2 Design inputs | CAL, RTM, concept selection DDR | Done; concept chosen by Amish on 2026-11-11 |
 | P3 Design outputs | Model at D3, STEP, drawings, priced BOM, BLD, DEC, design FMEA | Done on paper (renders in Blender pending) |
 | P4 Verification | Prototypes, TA to TI | On hold (stage cap) |
 | P5 Validation | Partner pilots with independent evaluation | On hold |
@@ -91,11 +96,11 @@ As HWP-PLN-001 Table 7. For the straw: days 0 to 15, Amish's decisions D1 to D3,
 
 A membrane engineer to review HWA-CAL-001 and the module drawing; introductions to straw-core makers and to a water microbiology laboratory; a field partner to answer the carbon resupply question.
 
-## Next steps and decision requested
+## Next steps and decisions
 
-1. Amish decides D1 (concept), D2 (membrane grade) and D3 (flow target), or asks for changes.
-2. Blender renders on Amish's Mac: options picture and product renders (see `docs/REVIEW.md`).
-3. Independent STEM review by a second agent: done 2026-11-11 (HWA-STM-001); Amish also decides D10 to D12 (HWA-DEC-001).
+1. Decided by Amish on 2026-11-11: D1 A1, D2 both grades prototyped and selected on laboratory results, D3 PR-002 at 150 mL/min (HWA-DEC-001).
+2. Blender renders: done (options picture and product renders in `media/`).
+3. Independent STEM review by a second agent: done 2026-11-11 (HWA-STM-001); D10 to D12 decided by Amish on 2026-11-11 (HWA-DEC-001).
 4. P4 stays closed until Amish opens it.
 
 ## References

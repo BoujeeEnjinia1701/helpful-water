@@ -1,9 +1,9 @@
 ---
 doc_id: HWD-PRC-001
-title: "Helpful Water D: chlorine add-on for viruses design precis"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on design precis"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Precis
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,11 +17,16 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: 45 minute timer and run count one, two, three (F11); bottle range (F8) and bucket pour-and-stir steps (F7) after the independent review
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
-# Helpful Water D: chlorine add-on for viruses design precis
+# Helpful Water D: chlorine co-treatment add-on design precis
 
-D1 is a tablet dose cap: a 46 mm cap that screws onto the 28 mm PCO 1881 neck of a PET bottle (the neck the B cartridge fits) or onto a 28 mm port proposed for C's raw-water bucket lid, holds one NaDCC tablet matched to the container in a colour-keyed well, and carries a flip-over ball timer that shows the 30 minute wait. It is designed to dose chlorine at the household rate used by WHO-referenced programmes, about 2 mg/L, to address viruses and bacteria when used with a filter (HWP-CLM-001). The sequence is the program's: chlorinate the raw water, wait the full contact time, then filter with A, B or C, whose membranes are the barrier for *Cryptosporidium* and whose carbon is intended to take away the chlorine taste. This precis describes option D1, which HWD-OPT-001 recommends; the choice is **Proposed, awaiting Amish** (HWD-DEC-001 D1).
+D1 is a tablet dose cap: a 46 mm cap that screws onto the 28 mm PCO 1881 neck of a PET bottle (the neck the B cartridge fits) or onto the 28 mm port in C's raw-water bucket lid (HWD-DEC-001 D4), holds one NaDCC tablet matched to the container in a colour-keyed well, and carries a flip-over ball timer that shows the 30 minute wait. It is designed to dose chlorine at the household rate used by WHO-referenced programmes, about 2 mg/L, to address viruses and bacteria when used with a filter (HWP-CLM-001). The sequence is the program's: chlorinate the raw water, wait the full contact time, then filter with A, B or C, whose membranes are the barrier for *Cryptosporidium* and whose carbon is intended to take away the chlorine taste. This precis describes option D1, which HWD-OPT-001 recommends; the choice is **decided by Amish on 2026-11-11** (HWD-DEC-001 D1).
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 
@@ -41,7 +46,7 @@ Figure 1. D1 dose cap cut through its axis: tablet well and plug (centre), ball 
 
 Cap body with skirt, deck, crown and timer boss; silicone neck liner; keyed well inserts (blue 1 L, orange 20 L) with O-rings; clear well plug with a stop spigot and face O-ring; tether; ball timer (clear tube, two end caps with O-rings, 2 mm stainless ball in sealed silicone fluid, hub with trunnions) behind a clear window held by two screws; scale and pictogram labels. The tablets are standard household NaDCC tablets from humanitarian supply. See `bom/bom.csv` and HWD-DWG-001.
 
-## Key design choices (proposed, awaiting Amish unless stated)
+## Key design choices (decided by Amish on 2026-11-11)
 
 - No virus claim for A to C; D is the co-treatment (Amish, 2026-11-11: "No virus claim, co-treat").
 - Matched whole tablets, never split tablets: one 3.5 mg NaDCC tablet per 1 L, one 67 mg tablet per 20 L, two for settled turbid water (HWD-DDR-001).

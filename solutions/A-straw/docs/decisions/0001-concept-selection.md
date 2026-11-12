@@ -3,7 +3,7 @@ doc_id: HWA-DDR-001
 title: "Helpful Water A: filter straw concept selection"
 project: "Helpful Water A: filter straw"
 doc_type: Design decision record
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,12 +17,17 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Figures updated after the independent STEM review (HWA-STM-001 v0.2): permeabilities at 20 C, flows 110 to 179 mL/min at 10 kPa"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # 0001: Concept selection
 
 - **Date:** 2026-11-11
-- **Status:** proposed, awaiting Amish (HWA-DEC-001 D1)
+- **Status:** decided by Amish on 2026-11-11 (recommendation adopted) (HWA-DEC-001 D1)
 
 ## Context
 
@@ -36,7 +41,7 @@ The solution brief asks for at least two working principles: the Rev A hollow-fi
 
 ## Decision
 
-Proposed: carry A1 to the drawing, BOM and build plan, as this folder already does so that TRL 3 evidence exists for Amish to review. A2 and A3 stay in the model, marked dropped. Not within 10 %, so a single recommendation is made.
+Decided by Amish on 2026-11-11: A1 is carried to the drawing, BOM and build plan. A2 and A3 stay in the model, marked dropped. Not within 10 %, so a single recommendation is made.
 
 ## Consequences
 

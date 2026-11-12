@@ -1,7 +1,7 @@
 {
  "level": "D3",
  "stage": "P3",
- "hash": "00fbad00b0db5fdf",
+ "hash": "655e4dccc179288f",
  "options": {
   "C1": {
    "title": "Two-bucket hollow-fibre filter",
@@ -50,5 +50,5 @@
  "failures": [],
  "warnings": [],
  "passed": true,
- "seconds": 25.8
+ "seconds": 25.3
 }

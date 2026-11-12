@@ -1,5 +1,5 @@
 # Solution metadata (STANDARDS sections 19 and 25). Card metadata consumed by https://designmolecule.com
-name: "Helpful Water D: chlorine add-on for viruses"
+name: "Helpful Water D: chlorine co-treatment add-on"
 slug: helpful-water-d-virus-add-on
 repo: BoujeeEnjinia1701/helpful-water   # program repo; this solution lives in solutions/D-virus-add-on
 doc_prefix: HWD
@@ -13,9 +13,9 @@ area: Food and water security
 trl: 3                   # TRL 3 on paper, 2026-11-11 (kit 1.9.1-he); no prototype exists
 trl_target: 3
 stage: P3                # pipeline stage, STANDARDS section 19
-stem_check: open         # HWD-STM-001 v0.2: independent review run 2026-11-11 (20 holds, 18 weak, 5 refuted; fixes F7 to F12); no Fails row; S16 (D3) and S43 (D7) await Amish; plausible rows wait on TRL 4 tests
+stem_check: open         # HWD-STM-001: no Fails row; S16 and S43 closed by HWD-DEC-001 D3, D7 (Amish, 2026-11-11); 14 plausible rows wait on TRL 4 evidence; independent review done 2026-11-11
 concept_options: [D1, D2, D3]   # HWD-OPT-001; D3 dropped on the STEM check
-concept_chosen: "proposed: D1, awaiting Amish"   # HWD-DEC-001 D1; D1 carried to the CAD drawing, BOM and build plan
+concept_chosen: "D1"   # decided by Amish on 2026-11-11 (recommendation adopted), HWD-DEC-001 D1
 design_state: constructable   # STANDARDS section 18; HWD-DDR-002
 pitch: >-
   A tool-free dose cap for the 28 mm bottle neck (and a proposed port on the household bucket) that holds one NaDCC

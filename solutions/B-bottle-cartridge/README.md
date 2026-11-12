@@ -1,5 +1,9 @@
 # Helpful Water B: bottle cartridge
 
+![Helpful Water B1 squeeze cartridge on a 1 L PET bottle held in a hand, photoreal render](media/render-hero.png)
+
+CONCEPT, NOT FOR FABRICATION. [Studio view](media/render-studio.png) · [Exploded render](media/render-exploded.png) · [Concept render](media/hero.png)
+
 ![TRL 3](https://img.shields.io/badge/TRL-3%20of%209-0F766E) ![Stage P3](https://img.shields.io/badge/stage-P3%20design%20outputs-0F766E) ![Hardware: CERN-OHL-P-2.0](https://img.shields.io/badge/hardware-CERN--OHL--P--2.0-111827) ![Software: Apache-2.0](https://img.shields.io/badge/software-Apache--2.0-111827) ![Docs: CC-BY-4.0](https://img.shields.io/badge/docs-CC--BY--4.0-111827)
 
 **Area:** Food and water security · **TRL:** 3 of 9 (proof of concept on paper) · **Value-engineering target:** USD 20 of prototype parts · **Difficulty:** 2 of 5
@@ -7,10 +11,6 @@
 A screw-on cartridge that turns a standard 28 mm PET bottle into a squeeze filter designed to reduce bacteria and protozoa: a steel mesh, a replaceable carbon capsule and a bought hollow-fibre module, backflushed with a syringe. It is not a virus barrier, so where viruses are a risk the water is also treated with chlorine (solution D).
 
 > **Release limitation.** Nothing here is a validated water treatment product. No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
-
-![Helpful Water B1 squeeze cartridge on a 1 L PET bottle, concept render with a hand for scale](media/hero.png)
-
-The photoreal render (`media/render-hero.png`) and the options picture need Blender and are waiting in the render queue; the picture above is the kit's concept render.
 
 [Interactive 3D model](media/viewer.html) · [Concept blueprint (PDF)](media/concept-blueprint.pdf) · [General arrangement HWB-DWG-001 (PDF)](cad/drawings/HWB-DWG-001.pdf) · [Section HWB-DWG-002 (PDF)](cad/drawings/HWB-DWG-002.pdf) · [Sizing note HWB-CAL-001](docs/04-calcs/01-sizing.md) · [STEM check](docs/01b-stem-check.md) · [Concept options](docs/02a-concept-options.md) · [Prototype build plan](docs/05-build-plan.md) · [Decisions](docs/06-design-decisions.md) · [Review note](docs/REVIEW.md)
 
@@ -59,7 +59,9 @@ Squeezing the bottle pushes water through a 150 um 316L mesh, a 6.8 g bed of coc
 
 ## Concept options
 
-Three working principles were modelled at detail level D3 and scored ([HWB-OPT-001](docs/02a-concept-options.md)): **B1 squeeze cartridge (246 of 310)**, **B2 gravity drip stand (222)** and B3 press cup (209). B1 and B2 are within 10 %, so both go to Amish without a pick (HWB-DEC-001 D1); B1 is carried to the drawings, BOM and build plan. None of the options uses the suction and inside-out flow of claim 1 of US 8,852,439 B2 (HWB-OPT-001; not legal advice). The options picture (`media/options.png`) waits for its Blender render.
+Three working principles were modelled at detail level D3 and scored ([HWB-OPT-001](docs/02a-concept-options.md)): **B1 squeeze cartridge (246 of 310)**, **B2 gravity drip stand (222)** and B3 press cup (209). B1 and B2 are within 10 %, so both went to Amish, who chose B1 on 2026-11-11 (HWB-DEC-001 D1); B1 is carried to the drawings, BOM and build plan. None of the options uses the suction and inside-out flow of claim 1 of US 8,852,439 B2 (HWB-OPT-001; not legal advice). The options picture is rendered in Blender (`media/options.png`).
+
+![Concept options, rendered from the D3 models with the same scale reference](media/options.png)
 
 ## STEM check
 

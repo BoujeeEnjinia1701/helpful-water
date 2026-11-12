@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-CAL-001
-title: "Helpful Water D: chlorine add-on for viruses sizing calculations"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on sizing calculations"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Calculation note
 version: "0.2"
 status: Draft
@@ -19,7 +19,7 @@ revisions:
     change: CT by the EPA definition (51); Morris pKa; Haberman-Sayre wall factor and a 45 minute timer that reads 30 minutes at 40 C; D2 drops by Tate's law; bottle range, wrong-tablet, squeeze tolerance and timer expansion figures (independent review, HWD-DDR-004)
 ---
 
-# Helpful Water D: chlorine add-on for viruses sizing calculations
+# Helpful Water D: chlorine co-treatment add-on sizing calculations
 
 At the household rate of about 2 mg/L in clear water, the free chlorine left after 30 minutes is estimated at 1.7 mg/L and the CT at 51 mg min/L (residual at the end of the wait x time, the EPA definition), about six times the US EPA value for 4-log virus inactivation at 5 C, so the dose and wait of D1 have margin for viruses in clear, near-neutral water; they have none for *Cryptosporidium*. The figures are first-order estimates from `docs/04-calcs/sizing.py`, which reads `cad/src/model.py` PARAMS and writes `sizing_results.json`; every assumption is marked "assumed". Nothing here is measured. Option D1 is described; D2 and D3 are sized only as far as the options comparison needs (HWD-OPT-001).
 
@@ -115,7 +115,7 @@ Table 4. Cost per litre and per year (humanitarian tablet price CHF 0.01, about 
 | Personal, 1 L tablets at retail (USD 0.22 each, CampSaver) | 2,190 | USD 0.22 | Not viable as the main route |
 | D2, 1.25 % liquid (USD 0.33 per 150 mL, E4C) | 1,000 per bottle | USD 0.0003 | Liquid only |
 
-Dosing in the 20 L bucket is about twenty times cheaper per litre than dosing bottle by bottle, which is a decision for Amish (HWD-DEC-001 D5).
+Dosing in the 20 L bucket is about twenty times cheaper per litre than dosing bottle by bottle, so Amish made the household 20 L bucket the main route on 2026-11-11 (HWD-DEC-001 D5).
 
 ## 11. Results against requirements
 

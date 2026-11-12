@@ -1,4 +1,4 @@
-"""Helpful Water A filter straw: concept media from the TRL 3 model (option A1, recommended; choice awaiting Amish).
+"""Helpful Water A filter straw: concept media from the TRL 3 model (option A1, chosen by Amish on 2026-11-11).
 
 Run from the solution folder:  python cad/src/concept_media.py [hero|cutaway|exploded|flow|web|blueprint ...]
 With no argument it draws everything; on a small machine run one picture per process. Geometry comes from
@@ -35,7 +35,7 @@ def parts(context=False, small=True):
 
 def hero():
     return K._render(parts(context=True), MD / "hero.png", title=PROJECT, size=(8, 7),
-                     note="Option A1 (recommended, awaiting Amish). Seen from the front right and above, 24 deg elevation. "
+                     note="Option A1 (chosen by Amish on 2026-11-11). Seen from the front right and above, 24 deg elevation. "
                           "Grey: an adult hand for scale; the straw is 205 mm long and 26 mm across")
 
 

@@ -4,7 +4,7 @@ Run from the solution folder:  python .kit/cad_check.py --export
 Every main dimension is in PARAMS (cad/src/params.py); docs/04-calcs/sizing.py (HWC-CAL-001) and
 docs/04-calcs/stem_check.py read the same file.
 
-Options (HWC-OPT-001; the choice is proposed, awaiting Amish):
+Options (HWC-OPT-001; chosen by Amish on 2026-11-11):
   C1  Two-bucket hollow-fibre filter on a timber stand: raw 20 L bucket on the top shelf (cloth prefilter in the
       lid, settling zone below a raised strainer outlet, dosing port for solution D, ball valve), a silicone hose
       down to a bought, pre-potted outside-in hollow-fibre module standing on the stand leg, a clean-side tee with
@@ -46,7 +46,7 @@ PRINCIPLES = {
     "C3": "A biologically active sand bed (CAWST version 10 layers) in a plastic body: batches of 18 L poured onto a "
           "diffuser filter down through 540 mm of fine sand; a biolayer ripens over weeks; outlet to a clean bucket.",
 }
-CHOSEN = "C1"   # carried to the drawing, BOM and build plan; the concept choice itself is proposed, awaiting Amish
+CHOSEN = "C1"   # carried to the drawing, BOM and build plan; the concept choice was made by Amish on 2026-11-11
 OPTION_VIEWS = {"C1": dict(el=16, az=-50, scale="person", keep_context=True, ground_z=0),
                 "C2": dict(el=16, az=-50, scale="person", keep_context=True, ground_z=0),
                 "C3": dict(el=16, az=-50, scale="person", keep_context=True, ground_z=0)}

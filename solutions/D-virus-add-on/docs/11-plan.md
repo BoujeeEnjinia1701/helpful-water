@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-PLN-001
-title: "Helpful Water D: chlorine add-on for viruses project plan"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on project plan"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Project plan
 version: "0.1"
 status: Draft
@@ -15,9 +15,9 @@ revisions:
     change: First plan for D, carrying the kill criteria and the parts of HWP-PLN-001 that apply
 ---
 
-# Helpful Water D: chlorine add-on for viruses project plan
+# Helpful Water D: chlorine co-treatment add-on project plan
 
-D is at TRL 3 on paper (stage P3, the portfolio cap): a constructable dose cap with calculations, drawings, a priced BOM and a build plan. The next gate, P4 (a functional prototype checked with known potable test water and the TJ chlorine-dosing family), stays closed until Amish opens it with Helpful Engineering. Decisions requested now: HWD-DEC-001 D1 to D6, of which D3 (no residual after the filter) and D4 (C interface) need the C team.
+D is at TRL 3 on paper (stage P3, the portfolio cap): a constructable dose cap with calculations, drawings, a priced BOM and a build plan. The next gate, P4 (a functional prototype checked with known potable test water and the TJ chlorine-dosing family), stays closed until Amish opens it with Helpful Engineering. Amish decided HWD-DEC-001 D1 to D7 on 2026-11-11, including D3 (C stays carbon-free) and D4 (the 28 mm port in C's lid); no decision is open.
 
 ## Purpose
 
@@ -29,7 +29,7 @@ From HWP-PLN-001, applied to D, with D's own: stop or pause if the dose cannot b
 
 ## Targets and key performance indicators
 
-Table 1. Targets for D (Proposed, awaiting Amish).
+Table 1. Targets for D (Decided by Amish on 2026-11-11).
 
 | Category | Target | Basis |
 | --- | --- | --- |
@@ -104,9 +104,9 @@ Table 6. Gated plan.
 
 A water chemist to own the dosing tests; introductions to a WASH partner that distributes NaDCC (tablet sizes, resupply, ministry approvals); a laboratory able to run a virus protocol on the combined systems.
 
-## Next steps and decision requested
+## Next steps and decisions
 
-Amish to decide D1 to D6 (HWD-DEC-001). The design looks ready for a TRL 4 build once D1 and D4 are decided and the tablets are measured; that is a recommendation, not a start.
+D1 to D7 were decided by Amish on 2026-11-11 (HWD-DEC-001). The design looks ready for a TRL 4 build once the tablets are measured; that is a recommendation, not a start.
 
 ## References
 

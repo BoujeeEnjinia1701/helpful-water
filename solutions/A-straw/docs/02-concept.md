@@ -3,7 +3,7 @@ doc_id: HWA-PRC-001
 title: "Helpful Water A: filter straw design precis"
 project: "Helpful Water A: filter straw"
 doc_type: Precis
-version: "0.2"
+version: "0.4"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,11 +17,20 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Figures updated after the independent STEM review (HWA-STM-001 v0.2): permeabilities at 20 C, flows 110 to 179 mL/min at 10 kPa; air check, priming, first flush and syringe water described"
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+  - version: "0.4"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water A: filter straw design precis
 
-Option A1 is a personal filter straw, 205 mm long and 26 mm across, that is designed to reduce bacteria and protozoa in clear freshwater: a rinseable 316L mesh, a bought pre-potted hollow-fibre module run outside-in, a clean header with a capped backflush socket that bypasses the carbon, a 2 g carbon bed for chlorine taste and a bayonet mouthpiece. It does not remove viruses. Its weak point is flow: about 120 to 200 mL/min at a 10 kPa sip, depending on the membrane grade Amish chooses (HWA-DEC-001 D2), and 50 to 80 mL/min for a child. The concept choice is **Proposed, awaiting Amish** (HWA-DEC-001 D1).
+Option A1 is a personal filter straw, 205 mm long and 26 mm across, that is designed to reduce bacteria and protozoa in clear freshwater: a rinseable 316L mesh, a bought pre-potted hollow-fibre module run outside-in, a clean header with a capped backflush socket that bypasses the carbon, a 2 g carbon bed for chlorine taste and a bayonet mouthpiece. It does not remove viruses. Its weak point is flow: about 120 to 200 mL/min at a 10 kPa sip, depending on the membrane grade Amish chooses (HWA-DEC-001 D2), and 50 to 80 mL/min for a child. The concept choice is **decided by Amish on 2026-11-11** (HWA-DEC-001 D1).
 
 > **Release limitation.** No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001). Prototypes are tested with known potable test water only.
 
@@ -37,7 +46,7 @@ Option A1 is a personal filter straw, 205 mm long and 26 mm across, that is desi
 
 **Backflush.** With the mouthpiece cap on (its plug closes the bore, so the carbon is dead-ended), the user pulls the tethered plug out of the socket on the header, fills the supplied 20 mL syringe with water already treated (boiled, tablet-treated or bottled; never from the source), pushes it in gently at about 50 kPa and lets it run out of the intake; three strokes take about a minute. Backflush water never passes the carbon (HWA-DEC-001 F4).
 
-**Air check (proposed, D4).** With the straw wet and the cap on, the user pushes a syringe of air into the socket to the 6 mL mark and holds it for 10 s; if the plunger keeps moving, a fibre or collar seal is broken and the straw is retired. The check finds gross defects only (5.6 um and larger), not bacterial-size flaws. Afterwards the straw is re-primed under water.
+**Air check (HWA-DEC-001 D4).** With the straw wet and the cap on, the user pushes a syringe of air into the socket to the 6 mL mark and holds it for 10 s; if the plunger keeps moving, a fibre or collar seal is broken and the straw is retired. The check finds gross defects only (5.6 um and larger), not bacterial-size flaws. Afterwards the straw is re-primed under water.
 
 **Priming and first use.** A new straw primes itself on the first sips while the fibres are dry; the first 3 x 40 mL are spat out (first flush). Between uses the intake cover stays on so the dirty shell stays full of water; air trapped in it cuts the flow (HWA-CAL-001 section 4.2). With a chlorine co-treatment, the contact time is completed in the container before drinking through the straw.
 
@@ -55,7 +64,7 @@ Option A1 is a personal filter straw, 205 mm long and 26 mm across, that is desi
 | 13, 14 | Tethered socket plug and band; intake cover | Made (cast) | Silicone |
 | 15, 16, 17 | Split ring, lanyard, 20 mL syringe | Bought | Stainless, polyester, PP |
 
-## Key design choices (proposed, awaiting Amish unless marked)
+## Key design choices (decided by Amish on 2026-11-11)
 
 - Outside-in flow into single-ended fibres whose bores open into the clean header: the reverse of claim 1 of US 8,852,439 B2 (HWA-OPT-001; attorney to confirm, C4).
 - Bundle fills the bore and the central permeate tube is dropped (F2, made under the standing instruction).
@@ -90,7 +99,7 @@ Option A1 is a personal filter straw, 205 mm long and 26 mm across, that is desi
 
 ## Open questions
 
-The open decisions are in HWA-DEC-001: concept (D1), membrane grade (D2), flow target and length (D3), the air-hold check (D4), the syringe (D5), a combined carbon and mouthpiece top (D6), carbon at all (D7), mesh aperture (D8), a mouthpiece valve (D9).
+The decisions, all made by Amish on 2026-11-11, are in HWA-DEC-001: concept (D1), membrane grade (D2), flow target and length (D3), the air-hold check (D4), the syringe (D5), a combined carbon and mouthpiece top (D6), carbon at all (D7), mesh aperture (D8), a mouthpiece valve (D9).
 
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

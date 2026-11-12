@@ -1,9 +1,9 @@
-"""Helpful Water D: chlorine add-on for viruses. Parametric model (kit 1.9 interface, STANDARDS section 24), D3.
+"""Helpful Water D: chlorine co-treatment add-on. Parametric model (kit 1.9 interface, STANDARDS section 24), D3.
 
 Run from the solution folder:  python .kit/cad_check.py --export
 Every main dimension is in PARAMS; docs/04-calcs/sizing.py (HWD-CAL-001) and docs/04-calcs/stem_check.py read it.
 
-Options (HWD-OPT-001; the choice is proposed, awaiting Amish):
+Options (HWD-OPT-001; chosen by Amish on 2026-11-11):
   D1  Tablet dose cap: a cap for the 28 mm PCO 1881 bottle neck (B's neck; also the fill port proposed for C's raw
       bucket lid) with a keyed tablet well that takes one NaDCC tablet matched to the container (1 L or 20 L), a
       clear screw plug to see the tablet dissolve, and a flip-over ball timer that runs about 45 minutes at 25 C (at least 30 up to 40 C).
@@ -34,7 +34,7 @@ import cad_parts as cp  # noqa: E402
 from cad_parts import part  # noqa: E402
 import hw_parts as H  # noqa: E402
 
-TITLE = "Helpful Water D: chlorine add-on for viruses"
+TITLE = "Helpful Water D: chlorine co-treatment add-on"
 OPTIONS = {"D1": "Tablet dose cap with ball timer", "D2": "Metered liquid doser with ball timer",
            "D3": "Erosion feeder in the raw bucket (dropped)"}
 PRINCIPLES = {
@@ -46,7 +46,7 @@ PRINCIPLES = {
     "D3": "Chlorine tablets in a perforated tube hung in the raw-water bucket dissolve slowly; a sleeve sets the "
           "open holes. Dropped: the dose grows with standing time and cannot stay in range.",
 }
-CHOSEN = "D1"   # carried to the drawing, BOM and build plan; the concept choice itself is proposed, awaiting Amish
+CHOSEN = "D1"   # carried to the drawing, BOM and build plan; the concept choice was made by Amish on 2026-11-11
 OPTION_VIEWS = {"D1": dict(el=18, az=-55, scale="hand", keep_context=True),
                 "D2": dict(el=18, az=-55, scale="hand", keep_context=True, ground_z=0),
                 "D3": dict(el=22, az=-55, scale="none", keep_context=True, ground_z=0)}

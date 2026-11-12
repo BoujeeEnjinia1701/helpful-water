@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-RSK-001
-title: "Helpful Water D: chlorine add-on for viruses risk register and hazard analysis"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on risk register and hazard analysis"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Risk register
 version: "0.2"
 status: Draft
@@ -19,7 +19,7 @@ revisions:
     change: Four FMEA rows and two hazard rows updated from the independent review (F7, F8, F11, C5, D7)
 ---
 
-# Helpful Water D: chlorine add-on for viruses risk register and hazard analysis
+# Helpful Water D: chlorine co-treatment add-on risk register and hazard analysis
 
 The highest risks are a user drinking water before the wait or without the filter, and a false sense that D makes any water safe; the design answers them with the timer, the clear plug, the sequence pictograms and the HWP-CLM-001 wording, but only human-factors trials (TH) can show they work. The highest design FMEA items are a wrong-size tablet that the key does not stop (until tablet sizes are measured) and a timer that runs fast. Likelihood, impact, severity, occurrence and detection are scored 1 to 5 (detection 5 = hard to detect).
 

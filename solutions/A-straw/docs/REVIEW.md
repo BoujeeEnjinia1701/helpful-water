@@ -1,5 +1,26 @@
 # Helpful Water A: filter straw review note
 
+## Session 2026-11-11 (decisions): every pending decision settled
+
+Amish, 2026-11-11: "for any pending decisions go with a recommendation. Don't leave any pending decisions in the file for Amish to make at this time." Each pending decision in HWA-DEC-001 was settled on its recommendation and is recorded as his; no decision is open. Later sections of this note are kept as the record of what was proposed at the time.
+
+- D1: A1 hollow-fibre straw with backflush.
+- D2: Prototype both (a) 0.1 um and (b) 0.2 um in the same housing. The grade is then selected on the laboratory log reductions (HWP-VER-001 TA, TB) at the flow each gives, and only a grade with an absolute rating, a *B. diminuta* retention challenge and a supplier challenge report for at least 6 log bacteria is accepted. This is a selection rule, not an open decision.
+- D3: (d): PR-002 becomes 150 mL/min at 10 kPa on clean water at 20 C, upright and primed, stated as an upper bound. It is met on paper with the 0.2 um grade (179) and not met with the 0.1 um grade (110). The 205 mm body stays; the 245 mm body of (c) is kept as the TRL 4 revision if persona trials ask for more flow. The child target (PR-003, 80 mL/min at 5 kPa) stays and is reported as not met on paper (45 to 74).
+- D4: (a), the 50 kPa plunger-hold air check, provided the module supplier rates the membrane for 60 kPa reverse pressure and the laboratory shows a cut fibre and a missing collar O-ring (TA, TF); if either condition fails, (b).
+- D5: (a): a 20 mL luer-slip syringe in the kit (BOM 17).
+- D6: (a) for the prototype as modelled; (b), one replaceable top per user, for the next revision after the persona trials.
+- D7: Both, from the same housing: carbon cartridge as standard, a spacer in its place for the no-carbon variant; the field partner chooses per deployment.
+- D8: 250 um baseline; 150 and 350 um only in the fouling tests (TE).
+- D9: (a): no mouthpiece valve; revisit only if blow-back fouls the carbon in trials.
+- D10: (a) now; (b) tested in TC; (c) only if (a) and (b) both fail in trials, with its own integrity test.
+- D11: Set by the module reverse rating (C2): (a) if the rating is 200 kPa or more; (b), a luer pressure relief in the syringe line, if it is under 200 kPa.
+- D12: (a) for the prototype; (b) is asked of makers and (c) is studied with D6 for the next revision.
+
+PR-002 is now 150 mL/min at 10 kPa (upper bound): met on paper with the 0.2 um grade (179), not with 0.1 um (110). PR-003 (child, 80 mL/min at 5 kPa) stays not met on paper (45 to 74). STEM rows S2, S3 and S5 are closed by D2 and D3. `stem_check` stays `open` only because Plausible rows need TRL 4 evidence (laboratory tests, supplier data); no row fails. The options picture now shows the chosen option, and `docs/03b-traceability.md` was regenerated.
+
+Recommended next step: create the program repo as public (Amish, 2026-11-11); TRL 4 (prototype and accredited testing under HWP-VER-001) opens only when Amish opens it with Helpful Engineering.
+
 ## Session 2026-11-11 (second): independent STEM review and fixes
 
 Brief: run an independent STEM reviewer on HWA-STM-001, verify its findings, apply the fix rule, and record the review. Nothing has been built or tested; everything below is on paper.
@@ -37,9 +58,9 @@ Brief: run an independent STEM reviewer on HWA-STM-001, verify its findings, app
 
 ### STEM check
 
-A1: 32 rows; 20 within known science (8 closed by fixes), 9 plausible and open for TRL 4 evidence, 3 "Fails, fix proposed" awaiting Amish (S2, S3, S5: the flow target against the grade). A2 and A3: Fails, dropped. `stem_check: open`. The open item "independent review not run" is closed.
+A1: 32 rows; 20 within known science (8 closed by fixes), 9 plausible and open for TRL 4 evidence, 3 "Fails, fix proposed" (closed by Amish\'s decisions of 2026-11-11) (S2, S3, S5: the flow target against the grade). A2 and A3: Fails, dropped. `stem_check: open`. The open item "independent review not run" is closed.
 
-### Decisions proposed and awaiting Amish
+### Decisions proposed at the time (all settled by Amish on 2026-11-11; see the top section)
 
 D2 and D3 updated with the new numbers (and a new option D3 (d), a lower clean-water target). New: **D10** air trapped in the shell (instructions now; re-prime step or a hydrophobic vent, the vent being a safety trade-off); **D11** backflush pressure limit; **D12** socket bypass (tethered plug as now, a self-closing socket, or the backflush entry moved into the mouthpiece cap). New confirm items C7 (absolute rating with *B. diminuta* report) and wider C2, C3, C5, C6.
 
@@ -62,7 +83,7 @@ Brief: take solution A from P0 to P3 (TRL 3) under the common brief and the solu
 
 ### What was done
 
-- `project.yaml`: stage P3, TRL 3, `stem_check: open`, `concept_options: [A1, A2, A3]`, `concept_chosen: "proposed: A1, awaiting Amish"`, `design_state: constructable`, `budget_usd: 25` (value-engineering target), `trl_evidence`.
+- `project.yaml`: stage P3, TRL 3, `stem_check: open`, `concept_options: [A1, A2, A3]`, `concept_chosen: "A1"`, `design_state: constructable`, `budget_usd: 25` (value-engineering target), `trl_evidence`.
 - STEM check first: `docs/01b-stem-check.md` (HWA-STM-001) with `docs/04-calcs/stem_check.py`, `stem_results.csv` (A1) and `stem_results_dropped.csv` (A2, A3), with the water checks of STANDARDS 25.6.
 - Controlled documents: HWA-PRB-001, HWA-STM-001, HWA-PRC-001, HWA-OPT-001, HWA-URS-001, HWA-PRS-001, HWA-RTM-001 (generated), HWA-CAL-001 (`docs/04-calcs/01-sizing.md`, `sizing.py`, `sizing_results.json`), HWA-BLD-001 with pictures, HWA-DEC-001, HWA-DDR-001 to 003, HWA-REG-001, HWA-FEA-001, HWA-RSK-001 (PHA and design FMEA), HWA-MKT-001, HWA-PLN-001.
 - CAD at D3 for all three options: `cad/src/model.py` with `cad/src/straw_parts.py`; `cad/fidelity.json` passes (A1 26 parts, A2 25, A3 20; bare share 0 %; one fastener each, the lanyard split ring). STEP per part in `cad/step/A1/` and an assembly STEP per option (about 12 MB in total). STL in `cad/stl/`.
@@ -99,9 +120,9 @@ Brief: take solution A from P0 to P3 (TRL 3) under the common brief and the solu
 
 ### STEM check
 
-A1: 26 rows; 18 within known science (4 closed by fixes F1 to F4; F5 closes S14), 7 plausible and open for TRL 4 evidence (S2, S6, S15, S19, S20, S22, S23), 1 "Fails, fix proposed" awaiting Amish (S3, membrane grade against the flow target). A2 and A3: Fails, dropped. `stem_check: open`. The independent reviewer pass was not run in this first session; it was run later the same day (see the second session above).
+A1: 26 rows; 18 within known science (4 closed by fixes F1 to F4; F5 closes S14), 7 plausible and open for TRL 4 evidence (S2, S6, S15, S19, S20, S22, S23), 1 "Fails, fix proposed" (closed by Amish\'s decisions of 2026-11-11) (S3, membrane grade against the flow target). A2 and A3: Fails, dropped. `stem_check: open`. The independent reviewer pass was not run in this first session; it was run later the same day (see the second session above).
 
-### Decisions proposed and awaiting Amish (HWA-DEC-001)
+### Decisions proposed at the time (all settled by Amish on 2026-11-11; see the top section) (HWA-DEC-001)
 
 D1 concept (A1); D2 membrane grade 0.1 or 0.2 um (safety trade-off); D3 flow target and a possible 245 mm body; D4 user air-hold check; D5 supplied syringe; D6 carbon and mouthpiece as one replaceable top; D7 a no-carbon variant; D8 mesh aperture; D9 no mouthpiece valve. Fixes F1 to F5 were made under the standing instruction of 2026-10-23 and can be reversed.
 

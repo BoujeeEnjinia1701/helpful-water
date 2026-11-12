@@ -1,7 +1,7 @@
 ---
 doc_id: HWD-FEA-001
-title: "Helpful Water D: chlorine add-on for viruses feasibility assessment"
-project: "Helpful Water D: chlorine add-on for viruses"
+title: "Helpful Water D: chlorine co-treatment add-on feasibility assessment"
+project: "Helpful Water D: chlorine co-treatment add-on"
 doc_type: Feasibility assessment
 version: "0.2"
 status: Draft
@@ -19,7 +19,7 @@ revisions:
     change: CT restated by the US EPA definition (51) after the independent review
 ---
 
-# Helpful Water D: chlorine add-on for viruses feasibility assessment
+# Helpful Water D: chlorine co-treatment add-on feasibility assessment
 
 D1 is highly feasible on chemistry, materials and supply, because it relies on a long-established household chlorination practice and on tablets already in humanitarian supply; its two engineering unknowns are small (the ball timer's fluid grade and the tablet sizes), and its largest risk sits outside the cap, in the program sequence that removes the residual (HWD-DEC-001 D3). Links: HWD-STM-001, HWD-CAL-001.
 

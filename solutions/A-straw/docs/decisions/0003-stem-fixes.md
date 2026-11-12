@@ -3,7 +3,7 @@ doc_id: HWA-DDR-003
 title: "Helpful Water A: filter straw STEM check fixes"
 project: "Helpful Water A: filter straw"
 doc_type: Design decision record
-version: "0.2"
+version: "0.3"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -17,6 +17,11 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: Fixes F6 to F11 after the independent STEM review; F3 restated at the 25 C datasheet basis
+  - version: "0.3"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # 0003: STEM check fixes F1 to F11
@@ -46,7 +51,7 @@ HWA-STM-001 found five details of the Rev A specification, and its independent r
 
 ## Consequences
 
-STEM rows S1, S4, S11, S14, S17, S18, S31 and S32 close; S2, S3 and S5 stay open until Amish decides D2 and D3, and D10 to D12 are proposed for what instructions alone cannot close. The model, drawings, CAL, BOM, build plan and PRS carry the fixes; F6 to F11 change specifications and instructions only, not geometry.
+STEM rows S1, S4, S11, S14, S17, S18, S31 and S32 close; S2, S3 and S5 closed when Amish decided D2 and D3 on 2026-11-11, and D10 to D12, decided the same day, cover what instructions alone cannot close. The model, drawings, CAL, BOM, build plan and PRS carry the fixes; F6 to F11 change specifications and instructions only, not geometry.
 
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

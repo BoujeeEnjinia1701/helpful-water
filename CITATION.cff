@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use or build on this design, please cite it as below."
 type: software
 title: "Helpful Water"
-abstract: "Open, unpowered point-of-use water treatment, from a personal straw to a household gravity filter, with a chlorine add-on for viruses. Design Molecule Labs with Helpful Engineering."
+abstract: "Open, unpowered point-of-use water treatment, from a personal straw to a household gravity filter, with a chlorine co-treatment add-on. Design Molecule Labs with Helpful Engineering."
 authors:
   - given-names: Amish
     family-names: Chadha

@@ -21,7 +21,7 @@ revisions:
 
 # Helpful Water B: concept selection
 
-**Status: Proposed, awaiting Amish.** B1 (squeeze cartridge) scored 246 and B2 (gravity drip stand) 222 of 310 in HWB-OPT-001; B2 is 9.8 % below B1, inside the 10 % band of STANDARDS section 21, so both go to Amish without a pick. B3 (press cup, 209) is not recommended.
+**Status: Decided by Amish on 2026-11-11 (recommendation adopted).** B1 (squeeze cartridge) scored 246 and B2 (gravity drip stand) 222 of 310 in HWB-OPT-001; B2 is 9.8 % below B1, inside the 10 % band of STANDARDS section 21, so both went to Amish. Amish chose B1 on 2026-11-11: it has the higher score and is already carried to the drawings, BOM and build plan; B2's stand is a possible later accessory. B3 (press cup, 209) is not carried.
 
 ## Context
 
@@ -39,6 +39,6 @@ The TRL 3 drawings, BOM and build plan describe B1, since B2's cartridge is the 
 
 ## Decision
 
-None yet. Proposed, awaiting Amish (HWB-DEC-001 D1).
+B1, decided by Amish on 2026-11-11 (HWB-DEC-001 D1).
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

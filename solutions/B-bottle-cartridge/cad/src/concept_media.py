@@ -1,5 +1,5 @@
 """Helpful Water B concept media from the TRL 3 model (option B1, the squeeze cartridge carried to the drawing, BOM
-and build plan; the concept choice is proposed, awaiting Amish).
+and build plan; the concept choice was made by Amish on 2026-11-11).
 
 Run from the solution folder:  python cad/src/concept_media.py [hero|cutaway|exploded|flow|web|blueprint ...]
 With no argument it draws everything; on a small machine run one picture per process. Geometry comes from

@@ -1,6 +1,23 @@
 # Review note: Helpful Water C, household gravity filter (TRL 1 to TRL 3, 2026-11-11)
 
-Session run under the common brief and the solution C brief (kit 1.9.1-he), `/to-trl3` path: STEM check first, concept options, D3 CAD of every option, calculations, drawings, priced BOM, build plan, pipeline documents. Nothing was built or tested; no git command was run. Stage P3, `trl: 3`, `design_state: constructable`, `stem_check: open`, `concept_chosen: "proposed: C1, awaiting Amish"`.
+## Session 2026-11-11 (decisions): every pending decision settled
+
+Amish, 2026-11-11: "for any pending decisions go with a recommendation. Don't leave any pending decisions in the file for Amish to make at this time." Each pending decision in HWC-DEC-001 was settled on its recommendation and is recorded as his; no decision is open. Later sections of this note are kept as the record of what was proposed at the time.
+
+- D1: C1 two-bucket hollow-fibre filter.
+- D2: 0.1 um microfiltration with solution D, in line with "no virus claim, co-treat"; suppliers quote both classes so a UF module can be tested at TRL 4.
+- D3: No carbon stage; chlorine taste is accepted and tested (consistent with HWD-DEC-001 D3).
+- D4: Wall strap fitted wherever children are about.
+- D5: 900 mm top shelf for the prototype, tested with the household carer persona.
+- D6: Blue raw side, white clean side, with pictograms.
+- D7: The HWD-DEC-001 D4 interface: a 28 mm PCO 1881 port with the orange insert in the raw-bucket lid, and the outlet closed for the full wait.
+- D8: Tick card for the prototype.
+
+The cost remains over the value-engineering target (USD 86.40 against 60). `stem_check` stays `open` only because Plausible rows need TRL 4 evidence (laboratory tests, supplier data); no row fails. The options picture now shows the chosen option, and `docs/03b-traceability.md` was regenerated.
+
+Recommended next step: create the program repo as public (Amish, 2026-11-11); TRL 4 (prototype and accredited testing under HWP-VER-001) opens only when Amish opens it with Helpful Engineering.
+
+Session run under the common brief and the solution C brief (kit 1.9.1-he), `/to-trl3` path: STEM check first, concept options, D3 CAD of every option, calculations, drawings, priced BOM, build plan, pipeline documents. Nothing was built or tested; no git command was run. Stage P3, `trl: 3`, `design_state: constructable`, `stem_check: open`, `concept_chosen: "C1"`.
 
 ## What was done
 
@@ -20,7 +37,7 @@ Session run under the common brief and the solution C brief (kit 1.9.1-he), `/to
 - Household day: 45 L for five people (Sphere: drinking and food 2.5 to 3 L, cooking 3 to 6 L per person).
 - STEM: 36 claims; 25 within known science, 11 plausible and open, none fails. Five detail failures fixed under the standing instruction of 2026-10-23 (HWC-DDR-003): F1 560 mm feet (the 420 mm frame tipped at 14.2 deg loaded; now 18.7 deg); F2 module upright, inlet on top, bleed screw (shell air); F3 17 L fill line and 2.5 L refill line (overflow, even from a brim-full raw bucket); F4 dosing port and a 30 minute valve tag (chlorine contact before filtering); F5 luer check valve on the backflush port (found by the independent review: one syringe stroke cannot reach the air-test pressure).
 - Independent review: 28 "within" rows attacked; 14 hold, 12 weakened, 2 refuted (the air test as first written, and a mass total that double-counted water). All changes are listed in HWC-STM-001 Table 3.
-- Options: C1 286, C2 234, C3 227 of 345. C1 leads by 22 %; recommended, Proposed, awaiting Amish.
+- Options: C1 286, C2 234, C3 227 of 345. C1 leads by 22 %; recommended, Decided by Amish on 2026-11-11.
 
 ## TRL 3 section: results (estimates; assumed membrane permeability 1,000 L/(m2 h bar))
 
@@ -56,7 +73,7 @@ C2: about 4 L/h, about 19 h of filtering for the 45 L day. C3: up to 0.4 L/min, 
 
 Stand designed as bolted timber with notched lower shelf on rails; clean bucket moved 75 mm forward so its tap overhangs; module moved beside the leg so the P-clip screws land on the leg's centre line (the first model had them 1.5 mm from its edge); foot coach screws shortened to 80 mm (they reached the rail bolts); labels tilted to the bucket taper; check valve cap spaced off the valve.
 
-## Decisions proposed and awaiting Amish
+## Decisions proposed at the time (all settled by Amish on 2026-11-11; see the top section)
 
 D1 concept choice (C1 recommended); D2 membrane class (0.1 um with D; quote 0.02 um UF too); D3 no carbon stage; D4 wall strap for the stand (recommended where children are about); D5 top shelf height (900 mm, test filling); D6 blue and white colour coding; D7 the solution D dosing interface (60 mm port, to agree with D); D8 batch tally card. Items to confirm when parts are bought: C1 to C7 in HWC-DEC-001.
 
@@ -82,4 +99,4 @@ D1 concept choice (C1 recommended); D2 membrane class (0.1 um with D; quote 0.02
 
 ## Recommended next step
 
-Amish decides D1 to D8; then render the options picture and product views from the render queue on the Mac and run `python .kit/cards.py .`. The design is ready to be built and tested at TRL 4 once Amish opens P4: two prototypes to HWC-BLD-001, a flux map with known potable test water, and module quotations.
+Amish decided D1 to D8 on 2026-11-11; then render the options picture and product views from the render queue on the Mac and run `python .kit/cards.py .`. The design is ready to be built and tested at TRL 4 once Amish opens P4: two prototypes to HWC-BLD-001, a flux map with known potable test water, and module quotations.

@@ -13,9 +13,9 @@ area: Food and water security
 trl: 3                   # TRL 3 on paper, 2026-11-11 (HWA-CAL-001, HWA-BLD-001); see docs/REVIEW.md
 trl_target: 3
 stage: P3                # pipeline stage, STANDARDS section 19
-stem_check: open         # HWA-STM-001 v0.2: no Fails row on A1; S2, S3, S5 (flow target) await Amish; independent review done 2026-11-11 (13 hold, 10 weak, 4 refuted; fixes F6 to F11)
+stem_check: open         # HWA-STM-001: no Fails row on A1; S2, S3, S5 closed by HWA-DEC-001 D2, D3 (Amish, 2026-11-11); 9 plausible rows wait on TRL 4 evidence; independent review done 2026-11-11
 concept_options: [A1, A2, A3]   # HWA-OPT-001; A2 and A3 dropped at the STEM check
-concept_chosen: "proposed: A1, awaiting Amish"   # HWA-DEC-001 D1, HWA-DDR-001
+concept_chosen: "A1"   # decided by Amish on 2026-11-11 (recommendation adopted), HWA-DEC-001 D1
 design_state: constructable   # STANDARDS section 18; made constructable 2026-11-11 (HWA-DDR-002)
 pitch: >-
   An open, unpowered personal filter straw: a rinseable steel mesh, a bought hollow-fibre membrane and a small carbon bed in a 205 mm by 26 mm body, with a capped backflush socket that cleans the fibres without passing the carbon. Designed to reduce bacteria and protozoa in clear freshwater; it does not remove viruses.

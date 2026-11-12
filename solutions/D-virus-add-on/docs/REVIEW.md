@@ -1,4 +1,20 @@
-# Review note: Helpful Water D, chlorine add-on for viruses (TRL 1 to TRL 3, 2026-11-11)
+# Review note: Helpful Water D, chlorine co-treatment add-on (TRL 1 to TRL 3, 2026-11-11)
+
+## Session 2026-11-11 (decisions): every pending decision settled
+
+Amish, 2026-11-11: "for any pending decisions go with a recommendation. Don't leave any pending decisions in the file for Amish to make at this time." Each pending decision in HWD-DEC-001 was settled on its recommendation and is recorded as his; no decision is open. Later sections of this note are kept as the record of what was proposed at the time.
+
+- D1: D1 tablet dose cap with ball timer; D2's timer is offered as a clip where SWS liquid is distributed.
+- D2: Closed (independent review run 2026-11-11).
+- D3: (a) for A and B; (c) for C: C has no carbon stage (HWC-DEC-001 D3), so the residual protects its stored water.
+- D4: A 28 mm port with the orange insert in C's lid and a closed outlet during the wait, with pour-through and a 30 s stir (F7). Dropping the tablet into the empty bucket before filling, with the cap kept as the timer, is printed on the label as the fallback method.
+- D5: Household 20 L as the main route; 1 L for personal and field use.
+- D6: Ball timer; the hand-set dial is the fall-back if the fall time cannot be held within 10 %.
+- D7: (b) free chlorine test strips in the household kit; (c) a colour comparator for partners. The strip cost is to assess.
+
+STEM rows S16 and S43 are closed by D3 and D7. The solution is renamed "chlorine co-treatment add-on" so its name makes no virus claim. `stem_check` stays `open` only because Plausible rows need TRL 4 evidence (laboratory tests, supplier data); no row fails. The options picture now shows the chosen option, and `docs/03b-traceability.md` was regenerated.
+
+Recommended next step: create the program repo as public (Amish, 2026-11-11); TRL 4 (prototype and accredited testing under HWP-VER-001) opens only when Amish opens it with Helpful Engineering.
 
 Solution D was taken from a scaffold (TRL 1, P0) to a constructable design on paper (TRL 3, P3) under kit 1.9.1-he, following the briefs for the Helpful Water program. No prototype exists; nothing was built or tested.
 
@@ -13,7 +29,7 @@ Solution D was taken from a scaffold (TRL 1, P0) to a constructable design on pa
 
 ## TRL 2 section: concept
 
-- Options: D1 tablet dose cap with ball timer 174 of 215; D2 metered liquid doser 143; D3 erosion feeder 85 and dropped on the STEM check (a contact-time release gives a dose proportional to standing time: about 96 mg/L overnight if set for 2 mg/L at 30 minutes). D1 is 17.8 % ahead of D2, so one recommendation is made: D1, **Proposed, awaiting Amish**.
+- Options: D1 tablet dose cap with ball timer 174 of 215; D2 metered liquid doser 143; D3 erosion feeder 85 and dropped on the STEM check (a contact-time release gives a dose proportional to standing time: about 96 mg/L overnight if set for 2 mg/L at 30 minutes). D1 is 17.8 % ahead of D2, so one recommendation is made: D1, **decided by Amish on 2026-11-11**.
 - STEM verdicts (D1 and D2), after the independent review: 22 Within known science, 19 Plausible, 2 Fails, fix proposed (S16 and S43, sent to Amish), 0 Fails, over 43 rows (S1 to S43). Dropped D3: 4 Fails. `stem_check: open`.
 - Fixes under the standing instruction of 2026-10-23 (HWD-DDR-003): F1 turbid-water rule and a two-tablet well; F2 colour-keyed 1 L and 20 L inserts; F3 a plug stop that leaves room for two tablets, not three; F4 a cold-water run count on the timer; F5 an O-ring groove that had no squeeze; F6 a 34 minute timer nominal for tolerance.
 - Independent second-agent STEM review: run on 2026-11-11 (see the section below); HWD-DEC-001 D2 is closed.
@@ -49,7 +65,7 @@ Timer pivot changed from a through pin (it would block the ball) to moulded trun
 - Fixes under the standing instruction (HWD-DDR-004): F7 pour-through and stir on the 20 L bucket; F8 bottle range 1 to 1.5 L on the label; F9 D2 orifice 2.0 mm, five drops; F10 groove root 17.9 mm with tolerances (15 to 28 % squeeze); F11 timer nominal 45 min, at least 30 min up to 40 C, run count one, two, three; F12 no PC in the well plug. Calculation corrections: EPA CT definition, Morris pKa, Haberman-Sayre wall factor; six rows moved to Plausible.
 - Files changed: `cad/src/model.py`, `docs/04-calcs/sizing.py`, `stem_check.py`, `stem_results*.csv`, `sizing_results.json`, `bom/bom.csv` (specs only, total unchanged at USD 9.15), `docs/01b-stem-check.md`, `01-sizing.md`, `02-concept.md`, `02a-concept-options.md`, `03-requirements.md`, `05-build-plan.md`, `06-design-decisions.md`, `09-risk.md`, `decisions/0003-stem-fixes.md`, new `decisions/0004-independent-review-fixes.md`, README; regenerated `cad/fidelity.json`, STEP and STL, HWD-DWG-001, 002, 101 to 103, `media/cutaway.png`, `flow.png`, `concept-blueprint`, `model.glb`, and the traceability matrix.
 
-## Decisions proposed and awaiting Amish (HWD-DEC-001)
+## Decisions proposed at the time (all settled by Amish on 2026-11-11; see the top section) (HWD-DEC-001)
 
 D1 concept (recommend D1); D3 residual after the filter (recommend accepting no residual for A and B, and asking C to drop or move its carbon since C stores water); D4 C interface (28 mm port and closed outlet; the review showed the bucket needs a pour-and-stir step, and dropping the tablet into the empty bucket before filling is the simpler alternative to weigh); D5 main route (household 20 L tablets are about twenty times cheaper per litre than 1 L tablets); D6 timer type (ball timer, dial as fall-back); D7 field check of the residual (new: free chlorine test strips in the household kit, cost to assess; recommended, since a wrong, weak or missing dose is otherwise silent).
 
@@ -74,4 +90,4 @@ D1 concept (recommend D1); D3 residual after the filter (recommend accepting no 
 
 ## Recommended next step
 
-Decide D1, D4 and D7, and measure the partner's tablets. After that the design looks ready for a TRL 4 bench build with known potable test water; that is a recommendation only, and P4 stays closed until Amish opens it.
+(D1, D4 and D7 were decided on 2026-11-11.) Measure the partner's tablets. After that the design looks ready for a TRL 4 bench build with known potable test water; that is a recommendation only, and P4 stays closed until Amish opens it.

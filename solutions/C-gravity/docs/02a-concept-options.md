@@ -3,7 +3,7 @@ doc_id: HWC-OPT-001
 title: "Helpful Water C: household gravity filter concept options"
 project: "Helpful Water C: household gravity filter"
 doc_type: Concept options
-version: "0.1"
+version: "0.2"
 status: Draft
 date: 2026-11-11
 author: Amish Chadha
@@ -13,11 +13,16 @@ revisions:
     date: 2026-11-11
     author: Amish Chadha
     change: "Three options with different working principles, modelled at D3 and scored against HWC-URS-001 (kit 1.9.1-he)"
+  - version: "0.2"
+    date: 2026-11-11
+    author: Amish Chadha
+    change: Decisions recorded as Amish's (all pending decisions settled on their recommendations, 2026-11-11)
+
 ---
 
 # Helpful Water C: household gravity filter concept options
 
-Recommendation: **C1, the two-bucket hollow-fibre filter (286 of 345)**, ahead of C2 ceramic candles (234) by 22 % and C3 biosand (227); the choice is **Proposed, awaiting Amish** (HWC-DEC-001 D1, HWC-DDR-001). C1 is the only option that treats the 45 L day in a few hours, needs no ripening, removes *Cryptosporidium* after a chlorine dose and leaves the chlorine residual in the stored water. Its best graft from the runners-up is C3's discipline of dosing chlorine where it protects storage, and C2's tool-free stacking where no stand can be built. Method: STANDARDS section 21. Every option is modelled at detail level D3 in `cad/src/model.py`; the options picture (`media/options.png`) is rendered with Blender Cycles on Amish's Mac from the scenes in the render queue, so it is not yet in this folder.
+Decision: **C1, the two-bucket hollow-fibre filter (286 of 345)**, ahead of C2 ceramic candles (234) by 22 % and C3 biosand (227); chosen by Amish on 2026-11-11 (HWC-DEC-001 D1, HWC-DDR-001). C1 is the only option that treats the 45 L day in a few hours, needs no ripening, removes *Cryptosporidium* after a chlorine dose and leaves the chlorine residual in the stored water. Its best graft from the runners-up is C3's discipline of dosing chlorine where it protects storage, and C2's tool-free stacking where no stand can be built. Method: STANDARDS section 21. Every option is modelled at detail level D3 in `cad/src/model.py`; the options picture (`media/options.png`) is rendered with Blender Cycles on Amish's Mac from the scenes exported by `python .kit/options.py --export`.
 
 > **Release limitation.** No prototype is used to treat water for drinking until its pathogen performance, materials safety, integrity, source suitability and claims are validated by qualified laboratories (HWP-CLM-001).
 
@@ -96,6 +101,6 @@ Claim 1 of US 8,852,439 B2 (HWP-FTO-001) covers drinking through a straw that ho
 
 ## Recommendation
 
-C1 is recommended: it is the only option that meets the household day in a few hours from the first day, pairs with D in the order that covers both viruses and *Cryptosporidium*, and keeps the stored water closed with a residual. Grafts from the runners-up: from C2, a stacked arrangement (raw bucket on the clean bucket's lid with the module between) as a fallback where no stand can be built, at the cost of head; from C3, the CAWST practice of dosing chlorine in storage during any period when the filter's performance is in doubt. Recorded as "Proposed, awaiting Amish" in HWC-DEC-001 (D1) and argued in HWC-DDR-001.
+C1 is recommended: it is the only option that meets the household day in a few hours from the first day, pairs with D in the order that covers both viruses and *Cryptosporidium*, and keeps the stored water closed with a residual. Grafts from the runners-up: from C2, a stacked arrangement (raw bucket on the clean bucket's lid with the module between) as a fallback where no stand can be built, at the cost of head; from C3, the CAWST practice of dosing chlorine in storage during any period when the filter's performance is in doubt. Recorded as "Decided by Amish on 2026-11-11" in HWC-DEC-001 (D1) and argued in HWC-DDR-001.
 
 Licence: this document is licensed under CC-BY-4.0 (Creative Commons Attribution 4.0 International), following the Helpful Engineering licensing guide. Design Molecule Labs with Helpful Engineering.

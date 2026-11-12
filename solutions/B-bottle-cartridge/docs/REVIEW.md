@@ -1,5 +1,22 @@
 # Review note: Helpful Water B, bottle cartridge (TRL 1 to TRL 3, 2026-11-11)
 
+## Session 2026-11-11 (decisions): every pending decision settled
+
+Amish, 2026-11-11: "for any pending decisions go with a recommendation. Don't leave any pending decisions in the file for Amish to make at this time." Each pending decision in HWB-DEC-001 was settled on its recommendation and is recorded as his; no decision is open. Later sections of this note are kept as the record of what was proposed at the time.
+
+- D1: B1 squeeze cartridge (246, the higher score, already carried to the drawings, BOM and build plan). B2's drip stand is recorded as a possible later accessory, outside the current scope.
+- D2: PCO 1881.
+- D3: No adapter in the first prototype; a 38 mm adapter is added after the neck survey only if the local 38 mm finish is common.
+- D4: A B-specific size target of 250 mm long and 50 mm across, since the bottle is 80 mm across; PR-014 is met (46 mm).
+- D5: Desk search of squeeze-filter patents before P4 opens; patent attorney opinion before any distribution.
+- D7: Report both design lives until the fouling tests set the module life.
+- D8: (a) until the next geometry revision, then (b).
+- D9: 20 C for the paper design, with the 10 C figures stated beside it; the rating temperature is reset once the co-design partners give source temperatures.
+
+PR-014 is met at the B-specific 250 x 50 mm (46 mm across). `stem_check` stays `open` only because Plausible rows need TRL 4 evidence (laboratory tests, supplier data); no row fails. The options picture now shows the chosen option, and `docs/03b-traceability.md` was regenerated.
+
+Recommended next step: create the program repo as public (Amish, 2026-11-11); TRL 4 (prototype and accredited testing under HWP-VER-001) opens only when Amish opens it with Helpful Engineering.
+
 Session run under the common brief and the solution B brief (kit 1.9.1-he), `/to-trl3` path: STEM check first, concept options, D3 CAD of every option, calculations, drawings, priced BOM, build plan, pipeline documents. Nothing was built or tested; no git command was run. Stage P3, `trl: 3`, `design_state: constructable`, `stem_check: open`.
 
 ## What was done
@@ -18,7 +35,7 @@ Session run under the common brief and the solution B brief (kit 1.9.1-he), `/to
 ## TRL 2 section: concept
 
 - STEM (first pass): 27 claims; the script gave 16 within known science and 11 plausible (the first summary said 18 and 9 in error), none fails. After the independent review: 33 claims, 14 within, 19 plausible, none fails. Four detail failures were found and fixed under the standing instruction of 2026-10-23 (HWB-DDR-003): F1 carbon moved upstream of the membrane (the briefed downstream carbon would grow bacteria on the clean side); F2 duckbill air valve (a wet membrane blocks air, so the squeezed bottle would stay crushed); F3 B2 base widened to 230 mm (tipped at 9.9 deg, now 17.2 deg); F4 B2 vent tube (the inverted bottle would vacuum-lock).
-- Options: B1 246, B2 222, B3 209 of 310. B1 and B2 are within 10 % (9.8 %), so both go to Amish without a pick.
+- Options: B1 246, B2 222, B3 209 of 310. B1 and B2 are within 10 % (9.8 %), so both went to Amish (B1 chosen on 2026-11-11).
 - Independent STEM review: **run on 2026-11-11** (see "Independent STEM review" below); D6 closed.
 
 ## TRL 3 section: results (estimates; assumed membrane permeability 1,000 L/(m2 h bar))
@@ -53,9 +70,9 @@ B2: about 6.2 minutes per litre clean (11.9 fouled), heads 2.5 to 5.2 kPa. B3: 5
 
 Collar seals on the neck lip so one collar fits PCO 1881 and 1810; collar and housing threaded with an O-ring so the mesh and capsule are reachable; module held by the end wall with two header O-rings as the single dirty-to-clean seal; fibre count cut from 450 to 400 for potting room; capsule pull tab replaced by finger notches (it hit the module); housing wall 2 mm; dust cover on a stainless pin added.
 
-## Decisions proposed and awaiting Amish (HWB-DEC-001)
+## Decisions proposed at the time (all settled by Amish on 2026-11-11; see the top section) (HWB-DEC-001)
 
-D1 concept (B1, B2, or B1 with B2's stand as an accessory; no pick, within 10 %); D2 prototype neck finish PCO 1881; D3 38 mm adapter after a neck survey; D4 B-specific width target of 50 mm; D5 squeeze-filter patent search before P4; D7 report the cost per user per year at both 9 and 12 months; D8 housing end wall at a blocked backflush (recommend 6.5 mm at the next geometry revision, procedure until then); D9 rating temperature for flow (recommend 20 C with the 10 C figures stated). D6 (independent STEM review) is closed: the review was run on 2026-11-11. `concept_chosen` reads "proposed: B1 or B2 (within 10 %), awaiting Amish".
+D1 concept (B1, B2, or B1 with B2's stand as an accessory; B1 chosen on 2026-11-11); D2 prototype neck finish PCO 1881; D3 38 mm adapter after a neck survey; D4 B-specific width target of 50 mm; D5 squeeze-filter patent search before P4; D7 report the cost per user per year at both 9 and 12 months; D8 housing end wall at a blocked backflush (recommend 6.5 mm at the next geometry revision, procedure until then); D9 rating temperature for flow (recommend 20 C with the 10 C figures stated). D6 (independent STEM review) is closed: the review was run on 2026-11-11. `concept_chosen` now reads "B1".
 
 ## Independent STEM review (2026-11-11)
 
@@ -87,4 +104,4 @@ D1 concept (B1, B2, or B1 with B2's stand as an accessory; no pick, within 10 %)
 
 ## Recommended next step
 
-Decide D1. Then run the independent STEM review, render the queued options picture and product views on the Mac, and, when P4 opens, request module quotations with flux at 10 kPa and the backwash limit (C1 to C3). The design is ready for TRL 4 prototyping on paper once a module is chosen; that is Amish's call.
+(Superseded: D1 was decided and the review run on 2026-11-11.) Then render the queued options picture and product views on the Mac, and, when P4 opens, request module quotations with flux at 10 kPa and the backwash limit (C1 to C3). The design is ready for TRL 4 prototyping on paper once a module is chosen; that is Amish's call.
